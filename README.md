@@ -24,15 +24,8 @@ yarn test
 # build the project in production mode. The build artifacts will be stored in the `build/` directory
 yarn build
 
-# remove the single build dependency from your project
-# Note: this is a one-way operation. Once you `eject`, you can’t go back!
-yarn eject
-
 # extracts i18n messages from source code
 yarn extract-i18n
-
-# watch and serve a dev server with fake API server
-yarn start:api
 ```
 
 ## Reference
