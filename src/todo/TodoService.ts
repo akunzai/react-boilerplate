@@ -1,6 +1,6 @@
 import { Observable, of } from 'rxjs';
 import { fromFetch } from 'rxjs/fetch';
-import { switchMap, catchError, map, tap } from 'rxjs/operators';
+import { catchError, map, switchMap } from 'rxjs/operators';
 
 import Todo from './Todo';
 
@@ -9,7 +9,7 @@ const HEADERS = new Headers({
 });
 
 export default class TodoService {
-  private todosUrl = process.env.REACT_APP_TODO_URL!;
+  private todosUrl = '/api/todos';
 
   getTodos(): Observable<Todo[]> {
     return fromFetch(this.todosUrl).pipe(
@@ -17,19 +17,17 @@ export default class TodoService {
         return response.json();
       }),
       map((data) => data as Todo[]),
-      tap((_) => this.log('fetched todos')),
       catchError(this.handleError<Todo[]>('getTodos', []))
     );
   }
 
-  getTodo(id: number): Observable<Todo|undefined> {
+  getTodo(id: number): Observable<Todo | undefined> {
     const url = `${this.todosUrl}/${id}`;
     return fromFetch(url).pipe(
       switchMap((response) => {
         return response.json();
       }),
       map((data) => data as Todo),
-      tap((_) => this.log(`fetched todo[${id}]`)),
       catchError(this.handleError<Todo>(`getTodo id=${id}`))
     );
   }
@@ -44,9 +42,6 @@ export default class TodoService {
         return response.json();
       }),
       map((data) => data as Todo),
-      tap((newTodo: Todo) =>
-        this.log(`added todo[${newTodo.id}] with ${JSON.stringify(todo)}`)
-      ),
       catchError(this.handleError<Todo>('addTodo'))
     );
   }
@@ -61,7 +56,6 @@ export default class TodoService {
         return response.json();
       }),
       map((data) => data as Todo),
-      tap((_) => this.log(`deleted todo[${todo.id}]`)),
       catchError(this.handleError<Todo>('deleteTask'))
     );
   }
@@ -72,15 +66,7 @@ export default class TodoService {
       method: 'PUT',
       headers: HEADERS,
       body: JSON.stringify(todo),
-    }).pipe(
-      switchMap((response) => {
-        return response.json();
-      }),
-      tap((_) =>
-        this.log(`updated todo[${todo.id}] with ${JSON.stringify(todo)}`)
-      ),
-      catchError(this.handleError<any>('updateTodo'))
-    );
+    }).pipe(catchError(this.handleError<any>('updateTodo')));
   }
 
   /**
@@ -95,9 +81,5 @@ export default class TodoService {
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
-  }
-
-  log(message: string) {
-    console.log(message);
   }
 }

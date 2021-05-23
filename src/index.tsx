@@ -5,6 +5,12 @@ import './i18n';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Start the mocking conditionally.
+if (process.env.NODE_ENV === 'development') {
+  const { worker } = require('./mocks/browser');
+  worker.start();
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
