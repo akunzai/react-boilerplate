@@ -35,4 +35,4 @@ yarn extract-i18n
 - [React-RxJS](https://react-rxjs.org/)
 - [react-i18next](https://react.i18next.com/)
 - [react-service-container](https://github.com/traviskaufman/react-service-container)
-- [JSON Server](https://github.com/typicode/json-server)
+- [Mock Service Worker](https://mswjs.io/docs/)
