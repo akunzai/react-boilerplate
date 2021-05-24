@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import { ServiceContainer } from "react-service-container";
@@ -14,17 +13,9 @@ import './App.scss';
 export default function App() {
   const baseUrl = document.getElementsByTagName('base')[0]?.getAttribute('href');
 
-  // loading component for suspense fallback
-  const Loader = () => (
-    <div className="App">
-      <div>loading...</div>
-    </div>
-  )
-
   // here app catches the suspense from page in case translations are not yet loaded
   return (
-    <Suspense fallback={<Loader />}>
-      <Router basename={baseUrl || ''}>
+    <Router basename={baseUrl || ''}>
         <ServiceContainer providers={[TodoService]}>
           <Layout>
             <Route exact path='/' component={Home} />
@@ -34,6 +25,5 @@ export default function App() {
           </Layout>
         </ServiceContainer>
       </Router>
-    </Suspense>
   );
 }
