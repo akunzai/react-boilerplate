@@ -13,12 +13,7 @@ export default class TodoService {
 
   getTodos(): Observable<Todo[]> {
     return fromFetch(this.todosUrl).pipe(
-      switchMap((response) => {
-        if (response.ok) {
-          return (response.headers.get('Content-Type')?.endsWith('json')) ? response.json() : response.text();
-        }
-        throw response.statusText;
-      }),
+      switchMap((response) => this.handleResponse(response)),
       map((data) => data as Todo[]),
       catchError(this.handleError<Todo[]>('getTodos', []))
     );
@@ -27,12 +22,7 @@ export default class TodoService {
   getTodo(id: number): Observable<Todo | undefined> {
     const url = `${this.todosUrl}/${id}`;
     return fromFetch(url).pipe(
-      switchMap((response) => {
-        if (response.ok) {
-          return (response.headers.get('Content-Type')?.endsWith('json')) ? response.json() : response.text();
-        }
-        throw response.statusText;
-      }),
+      switchMap((response) => this.handleResponse(response)),
       map((data) => data as Todo),
       catchError(this.handleError<Todo>(`getTodo id=${id}`))
     );
@@ -44,12 +34,7 @@ export default class TodoService {
       headers: HEADERS,
       body: JSON.stringify(todo),
     }).pipe(
-      switchMap((response) => {
-        if (response.ok) {
-          return (response.headers.get('Content-Type')?.endsWith('json')) ? response.json() : response.text();
-        }
-        throw response.statusText;
-      }),
+      switchMap((response) => this.handleResponse(response)),
       map((data) => data as Todo),
       catchError(this.handleError<Todo>('addTodo'))
     );
@@ -61,12 +46,7 @@ export default class TodoService {
       method: 'DELETE',
       headers: HEADERS,
     }).pipe(
-      switchMap((response) => {
-        if (response.ok) {
-          return (response.headers.get('Content-Type')?.endsWith('json')) ? response.json() : response.text();
-        }
-        throw response.statusText;
-      }),
+      switchMap((response) => this.handleResponse(response)),
       map((data) => data as Todo),
       catchError(this.handleError<Todo>('deleteTask'))
     );
@@ -79,14 +59,18 @@ export default class TodoService {
       headers: HEADERS,
       body: JSON.stringify(todo),
     }).pipe(
-      switchMap((response) => {
-        if (response.ok) {
-          return (response.headers.get('Content-Type')?.endsWith('json')) ? response.json() : response.text();
-        }
-        throw response.statusText;
-      }),
+      switchMap((response) => this.handleResponse(response)),
       catchError(this.handleError<any>('updateTodo'))
     );
+  }
+
+  private handleResponse(response: Response) {
+    if (response.ok) {
+      return response.headers.get('Content-Type')?.endsWith('json')
+        ? response.json()
+        : response.text();
+    }
+    throw response.statusText;
   }
 
   /**
