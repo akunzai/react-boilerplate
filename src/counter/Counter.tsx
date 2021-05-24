@@ -7,8 +7,12 @@ export default function Counter() {
   return (
     <div>
       <h1>{t('Counter')}</h1>
-      <p aria-live="polite">{t('Current count')}: <strong>{count}</strong></p>
-      <button className="btn btn-primary" onClick={() => setCount(count + 1)}>{t('Increment')}</button>
+      <p aria-live="polite">
+        {t('Current count')}: <strong>{count}</strong>
+      </p>
+      <button className="btn btn-primary" onClick={() => setCount(count + 1)}>
+        {t('Increment')}
+      </button>
     </div>
   );
 }

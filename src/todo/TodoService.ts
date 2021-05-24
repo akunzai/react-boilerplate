@@ -14,7 +14,10 @@ export default class TodoService {
   getTodos(): Observable<Todo[]> {
     return fromFetch(this.todosUrl).pipe(
       switchMap((response) => {
-        return response.json();
+        if (response.ok) {
+          return (response.headers.get('Content-Type')?.endsWith('json')) ? response.json() : response.text();
+        }
+        throw response.statusText;
       }),
       map((data) => data as Todo[]),
       catchError(this.handleError<Todo[]>('getTodos', []))
@@ -25,7 +28,10 @@ export default class TodoService {
     const url = `${this.todosUrl}/${id}`;
     return fromFetch(url).pipe(
       switchMap((response) => {
-        return response.json();
+        if (response.ok) {
+          return (response.headers.get('Content-Type')?.endsWith('json')) ? response.json() : response.text();
+        }
+        throw response.statusText;
       }),
       map((data) => data as Todo),
       catchError(this.handleError<Todo>(`getTodo id=${id}`))
@@ -39,7 +45,10 @@ export default class TodoService {
       body: JSON.stringify(todo),
     }).pipe(
       switchMap((response) => {
-        return response.json();
+        if (response.ok) {
+          return (response.headers.get('Content-Type')?.endsWith('json')) ? response.json() : response.text();
+        }
+        throw response.statusText;
       }),
       map((data) => data as Todo),
       catchError(this.handleError<Todo>('addTodo'))
@@ -53,7 +62,10 @@ export default class TodoService {
       headers: HEADERS,
     }).pipe(
       switchMap((response) => {
-        return response.json();
+        if (response.ok) {
+          return (response.headers.get('Content-Type')?.endsWith('json')) ? response.json() : response.text();
+        }
+        throw response.statusText;
       }),
       map((data) => data as Todo),
       catchError(this.handleError<Todo>('deleteTask'))
@@ -66,7 +78,15 @@ export default class TodoService {
       method: 'PUT',
       headers: HEADERS,
       body: JSON.stringify(todo),
-    }).pipe(catchError(this.handleError<any>('updateTodo')));
+    }).pipe(
+      switchMap((response) => {
+        if (response.ok) {
+          return (response.headers.get('Content-Type')?.endsWith('json')) ? response.json() : response.text();
+        }
+        throw response.statusText;
+      }),
+      catchError(this.handleError<any>('updateTodo'))
+    );
   }
 
   /**

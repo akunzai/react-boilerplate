@@ -36,3 +36,5 @@ yarn extract-i18n
 - [react-i18next](https://react.i18next.com/)
 - [react-service-container](https://github.com/traviskaufman/react-service-container)
 - [Mock Service Worker](https://mswjs.io/docs/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+- [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library)
