@@ -1,5 +1,5 @@
-import { MemoryRouter } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
+import { MemoryRouter } from 'react-router-dom';
 
 import { fireEvent, render, screen } from '@testing-library/react';
 
@@ -27,10 +27,11 @@ test('support to toggle navigation', () => {
   expect(navbar.getAttribute('class')).toContain('show');
 });
 
-test.skip('support to switch languages', () => {
+test('support to switch languages', () => {
   fireEvent.click(screen.getByRole('button', { name: /Toggle Languages/i }));
   fireEvent.click(screen.getByRole('button', { name: /English/i }));
   expect(localStorage.getItem('i18nextLng')).toBe('en');
+  fireEvent.click(screen.getByRole('button', { name: /Toggle Languages/i }));
   fireEvent.click(screen.getByRole('button', { name: /正體中文/i }));
   expect(localStorage.getItem('i18nextLng')).toBe('zh-Hant');
 });
