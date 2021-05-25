@@ -15,16 +15,8 @@ export default function NavMenu({ title }: Props) {
     setExpanded(false);
   });
 
-  const getLanguage = () => {
-    return (
-      i18n.language ||
-      (typeof window !== 'undefined' &&
-        window.localStorage.getItem('i18nextLng')) ||
-      'en'
-    );
-  };
   const isCurrentLanguage = (pattern: RegExp) => {
-    return getLanguage().match(pattern);
+    return i18n.languages[0]?.match(pattern);
   };
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
