@@ -60,6 +60,17 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/mocks/**",
+      "!src/index.tsx",
+      "!src/i18n*.ts",
+      "!src/reportWebVitals.ts",
+      "!src/setupTests.ts"
+    ]
+  },
   "msw": {
     "workerDirectory": "public"
   }

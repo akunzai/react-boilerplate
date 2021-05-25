@@ -1,5 +1,12 @@
 # My React Boilerplate
 
+[![Build Status][ci-badge]][ci] [![Code Coverage][codecov-badge]][codecov]
+
+[ci]: https://github.com/akunzai/react-boilerplate/actions?query=workflow%3ACI
+[ci-badge]: https://github.com/akunzai/react-boilerplate/workflows/CI/badge.svg
+[codecov]: https://codecov.io/gh/akunzai/react-boilerplate
+[codecov-badge]: https://codecov.io/gh/akunzai/react-boilerplate/branch/main/graph/badge.svg?token=gEZ8y4Ta6p
+
 [React](https://reactjs.org/) boilerplate to kick-start new project with SCSS + Bootstrap
 
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
