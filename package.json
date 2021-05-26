@@ -64,9 +64,10 @@
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
       "!src/**/*.d.ts",
-      "!src/mocks/**",
       "!src/index.tsx",
-      "!src/i18n*.ts",
+      "!src/i18n.ts",
+      "!src/i18nForTests.ts",
+      "!src/mocks/**",
       "!src/reportWebVitals.ts",
       "!src/setupTests.ts"
     ]
