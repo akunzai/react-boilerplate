@@ -9,7 +9,7 @@ import TodoService from './TodoService';
 
 export default function TodoDetail() {
   const { id } = useParams<{ id: string }>();
-  const [loaded,setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState<string | undefined>();
   const [done, setDone] = useState(false);
@@ -36,7 +36,7 @@ export default function TodoDetail() {
     });
   };
 
-  if (!loaded) return (<div>Loading...</div>);
+  if (!loaded) return <div>Loading...</div>;
 
   return (
     <form onSubmit={handleSubmit}>
