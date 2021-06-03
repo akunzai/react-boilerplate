@@ -32,7 +32,7 @@ yarn test
 yarn build
 
 # extracts i18n messages from source code
-yarn extract-i18n
+yarn i18n:extract
 ```
 
 ## Reference
