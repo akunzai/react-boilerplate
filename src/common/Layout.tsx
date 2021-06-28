@@ -1,10 +1,11 @@
+import { ReactNode } from 'react';
 import NavMenu from './NavMenu';
 
 type Props = {
-  children: any;
+  children: ReactNode;
 };
 
-export default function Layout({ children }: Props) {
+export default function Layout({ children }: Props): JSX.Element {
   return (
     <div>
       <NavMenu title={document.title} />

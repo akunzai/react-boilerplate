@@ -11,7 +11,7 @@ import TodoDetail from './TodoDetail';
 import TodoService from './TodoService';
 
 beforeAll(() => {
-  jest.spyOn(global.console, 'error').mockImplementation(() => {});
+  jest.spyOn(global.console, 'error').mockImplementation(() => undefined);
 });
 
 test('without Todo should render nothing', async () => {

@@ -11,7 +11,7 @@ import TodoDetail from './todo/TodoDetail';
 import TodoList from './todo/TodoList';
 import TodoService from './todo/TodoService';
 
-export default function App() {
+export default function App(): JSX.Element {
   const baseUrl = document
     .getElementsByTagName('base')[0]
     ?.getAttribute('href');

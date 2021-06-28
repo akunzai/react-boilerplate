@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import Todo from './Todo';
 import TodoService from './TodoService';
 
-export default function TodoList() {
+export default function TodoList(): JSX.Element {
   const [title, setTitle] = useState('');
   const [todos, setTodos] = useState<Todo[]>([]);
   const todoService = useService(TodoService);
@@ -25,11 +25,11 @@ export default function TodoList() {
   };
 
   const handleUpdate = (id: number, done: boolean) => {
-    let todo = todos.find((x) => x.id === id);
+    const todo = todos.find((x) => x.id === id);
     if (todo === undefined) return;
     const newTodo = Object.assign(todo, { done: done });
     todoService.updateTodo(newTodo).subscribe((_) => {
-      let index = todos.findIndex((x) => x.id === id);
+      const index = todos.findIndex((x) => x.id === id);
       if (index > -1) {
         const newTodos = [...todos];
         newTodos[index] = newTodo;
@@ -40,7 +40,7 @@ export default function TodoList() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let trimmedTitle = title.trim();
+    const trimmedTitle = title.trim();
     if (!trimmedTitle) {
       return;
     }

@@ -7,7 +7,7 @@ type Props = {
   title: string;
 };
 
-export default function NavMenu({ title }: Props) {
+export default function NavMenu({ title }: Props): JSX.Element {
   const [collapsed, setCollapsed] = useState(true);
   const [expanded, setExpanded] = useState(false);
   const { i18n } = useTranslation();
@@ -15,10 +15,10 @@ export default function NavMenu({ title }: Props) {
     setExpanded(false);
   });
 
-  const isCurrentLanguage = (pattern: RegExp) => {
-    return i18n.languages[0]?.match(pattern);
+  const isCurrentLanguage = (pattern: RegExp): boolean => {
+    return pattern.test(i18n.languages[0]);
   };
-  const changeLanguage = (lang: string) => {
+  const changeLanguage = (lang: string): void => {
     i18n.changeLanguage(lang);
     setExpanded(false);
   };
