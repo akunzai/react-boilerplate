@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import Todo from './Todo';
 import TodoService from './TodoService';
 
-export default function TodoDetail() {
+export default function TodoDetail(): JSX.Element {
   const { id } = useParams<{ id: string }>();
   const [loaded, setLoaded] = useState(false);
   const [title, setTitle] = useState('');
