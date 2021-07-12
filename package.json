@@ -40,7 +40,7 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "i18next-parser": "^4.2.0",
-    "msw": "^0.30.1",
+    "msw": "^0.31.0",
     "react-test-renderer": "^17.0.2"
   },
   "eslintConfig": {
