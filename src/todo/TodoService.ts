@@ -1,6 +1,5 @@
-import { Observable, of } from 'rxjs';
+import { catchError, map, Observable, of, switchMap } from 'rxjs';
 import { fromFetch } from 'rxjs/fetch';
-import { catchError, map, switchMap } from 'rxjs/operators';
 
 import Todo from './Todo';
 
