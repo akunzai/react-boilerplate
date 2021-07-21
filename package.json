@@ -23,7 +23,7 @@
     "@types/react-router-dom": "^5.1.8",
     "bootstrap": "5.0.2",
     "bootstrap-icons": "^1.5.0",
-    "i18next": "^20.3.3",
+    "i18next": "^20.3.4",
     "i18next-browser-languagedetector": "^6.1.2",
     "react": "^17.0.2",
     "react-cool-onclickoutside": "^1.6.2",
@@ -42,6 +42,10 @@
     "i18next-parser": "^4.2.0",
     "msw": "^0.32.1",
     "react-test-renderer": "^17.0.2"
+  },
+  "resolutions": {
+    "browserslist": "4.16.5",
+    "glob-parent": "5.1.2"
   },
   "eslintConfig": {
     "extends": [
