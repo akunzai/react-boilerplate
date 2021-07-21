@@ -43,6 +43,10 @@
     "msw": "^0.32.1",
     "react-test-renderer": "^17.0.2"
   },
+  "resolutions": {
+    "browserslist": "4.16.5",
+    "glob-parent": "5.1.2"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
