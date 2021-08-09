@@ -6104,10 +6104,10 @@ i18next-browser-languagedetector@^6.1.2:
   dependencies:
     "@babel/runtime" "^7.14.6"
 
-i18next-parser@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/i18next-parser/-/i18next-parser-4.3.0.tgz#77200571662ae7b3a7b3179c24dc8f2f3a56d028"
-  integrity sha512-jI3ToFtswGvMqiYZDq0wSq6UhJGlyde3gNg1+tQWsMzUYsYO6C0bRZzgrB+rv7IRpbyNft2K5vC4ef8QuM9wkw==
+i18next-parser@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/i18next-parser/-/i18next-parser-4.4.0.tgz#5c1166c7b1154784cc65977a31689184b175a7a0"
+  integrity sha512-+fuvFFtEB3wQZPxkxpNXJtvg8EyKIQz4VwT/6UILjTqQkv8SHjkFG18DGAdqOdtLo098k3vkYAc9OTSyGlKJfg==
   dependencies:
     broccoli-plugin "^4.0.5"
     cheerio "^1.0.0-rc.2"
