@@ -44,7 +44,7 @@
     "react-test-renderer": "17.0.2"
   },
   "resolutions": {
-    "browserslist": "4.16.5",
+    "browserslist": "4.16.8",
     "glob-parent": "5.1.2"
   },
   "eslintConfig": {
