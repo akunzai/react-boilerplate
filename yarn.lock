@@ -13004,14 +13004,14 @@ fsevents@^1.2.7:
     i18next-browser-languagedetector: 6.1.2
     i18next-parser: 4.4.0
     msw: 0.35.0
-    react: ^17.0.2
+    react: 17.0.2
     react-cool-onclickoutside: 1.6.2
-    react-dom: ^17.0.2
+    react-dom: 17.0.2
     react-i18next: 11.11.4
     react-router-dom: ^5.2.0
     react-scripts: 4.0.3
     react-service-container: 0.2.6
-    react-test-renderer: ^17.0.2
+    react-test-renderer: 17.0.2
     rxjs: 7.3.0
     sass: 1.38.1
     typescript: 4.3.5
@@ -13060,7 +13060,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^17.0.2":
+"react-dom@npm:17.0.2":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
   dependencies:
@@ -13250,7 +13250,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-test-renderer@npm:^17.0.2":
+"react-test-renderer@npm:17.0.2":
   version: 17.0.2
   resolution: "react-test-renderer@npm:17.0.2"
   dependencies:
@@ -13264,7 +13264,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react@npm:^17.0.2":
+"react@npm:17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:
