@@ -8207,7 +8207,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"i18next@npm:20.4.0, i18next@npm:^20.2.1":
+"i18next@npm:20.6.0":
+  version: 20.6.0
+  resolution: "i18next@npm:20.6.0"
+  dependencies:
+    "@babel/runtime": ^7.12.0
+  checksum: 71ba3b871e6161ddd54055440cbc1cb3da4c5ff22991e8f80b7c2ddd23c49a9fe72a254f3dc39245311043a93ef2978255f0aada39500f049bd7d59fda71b2a5
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^20.2.1":
   version: 20.4.0
   resolution: "i18next@npm:20.4.0"
   dependencies:
@@ -13000,7 +13009,7 @@ fsevents@^1.2.7:
     bootstrap: 5.1.0
     bootstrap-icons: 1.5.0
     cross-env: 7.0.3
-    i18next: 20.4.0
+    i18next: 20.6.0
     i18next-browser-languagedetector: 6.1.2
     i18next-parser: 4.4.0
     msw: 0.35.0
