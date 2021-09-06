@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import useOnclickOutside from 'react-cool-onclickoutside';
 
@@ -26,9 +26,9 @@ export default function NavMenu({ title }: Props): JSX.Element {
     <header>
       <nav className="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div className="container">
-          <Link className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/">
             {title}
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -48,19 +48,19 @@ export default function NavMenu({ title }: Props): JSX.Element {
           >
             <ul className="navbar-nav flex-grow">
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/">
+                <NavLink className="nav-link" exact to="/">
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/counter">
+                <NavLink className="nav-link" to="/counter">
                   Counter
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/todo-list">
+                <NavLink className="nav-link" to="/todo-list">
                   Todo
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
                 <button
