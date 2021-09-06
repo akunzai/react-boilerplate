@@ -1,21 +1,18 @@
-import '../i18nForTests';
-
-import { MemoryRouter } from 'react-router-dom';
-import { ServiceContainer } from 'react-service-container';
-
 import {
   fireEvent,
   render,
   screen,
   waitFor,
-  waitForElementToBeRemoved,
+  waitForElementToBeRemoved
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-
+import { MemoryRouter } from 'react-router-dom';
+import { ServiceContainer } from 'react-service-container';
+import '../i18nForTests';
 import { rest, server } from '../mocks/server';
+import Todo from './Todo';
 import TodoList from './TodoList';
 import TodoService from './TodoService';
-import Todo from './Todo';
 
 beforeEach(() => {
   render(

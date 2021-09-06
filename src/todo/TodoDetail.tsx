@@ -1,9 +1,8 @@
 import { FormEvent, useEffect, useState } from 'react';
-import { useService } from 'react-service-container';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 import { useHistory } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-
+import { useService } from 'react-service-container';
 import Todo from './Todo';
 import TodoService from './TodoService';
 

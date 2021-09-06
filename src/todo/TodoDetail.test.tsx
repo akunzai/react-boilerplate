@@ -1,12 +1,9 @@
-import '../i18nForTests';
-
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { createMemoryHistory } from 'history';
 import { MemoryRouter, Route, Router } from 'react-router-dom';
 import { ServiceContainer } from 'react-service-container';
-
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-
+import '../i18nForTests';
 import TodoDetail from './TodoDetail';
 import TodoService from './TodoService';
 
