@@ -1,6 +1,5 @@
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
 import { fromFetch } from 'rxjs/fetch';
-
 import Todo from './Todo';
 
 const HEADERS = new Headers({

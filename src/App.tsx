@@ -1,9 +1,7 @@
-import './App.scss';
-
 import { Route } from 'react-router';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ServiceContainer } from 'react-service-container';
-
+import './App.scss';
 import Home from './common/Home';
 import Layout from './common/Layout';
 import Counter from './counter/Counter';
