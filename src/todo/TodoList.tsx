@@ -72,7 +72,7 @@ export default function TodoList(): JSX.Element {
             <button
               className="btn btn-outline-secondary"
               type="submit"
-              id="button-addon2"
+              aria-label="Add"
             >
               <i className="bi bi-plus"></i>
             </button>

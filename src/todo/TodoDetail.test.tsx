@@ -27,7 +27,8 @@ test('without Todo should render nothing', async () => {
 describe('with Todo', () => {
   const history = createMemoryHistory();
   history.goBack = jest.fn();
-  beforeEach(() => {
+
+  beforeEach(async () => {
     window.history.back = jest.fn();
     render(
       <ServiceContainer providers={[TodoService]}>
@@ -39,12 +40,12 @@ describe('with Todo', () => {
       </ServiceContainer>
     );
     history.push('/todo/1');
-  });
-
-  test('should renders as expected', async () => {
     await waitFor(() => {
       expect(screen.getByDisplayValue('Pay bills')).toBeInTheDocument();
     });
+  });
+
+  test('should renders as expected', async () => {
     const title = screen.getByRole('textbox', {
       name: /Title/i,
     }) as HTMLInputElement;
