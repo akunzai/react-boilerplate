@@ -13039,7 +13039,7 @@ fsevents@^1.2.7:
     react-service-container: 0.2.6
     react-test-renderer: 17.0.2
     rxjs: 7.3.0
-    sass: 1.39.2
+    sass: 1.40.0
     typescript: 4.4.3
     web-vitals: 2.1.0
   languageName: unknown
@@ -14033,14 +14033,14 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"sass@npm:1.39.2":
-  version: 1.39.2
-  resolution: "sass@npm:1.39.2"
+"sass@npm:1.40.0":
+  version: 1.40.0
+  resolution: "sass@npm:1.40.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
   bin:
     sass: sass.js
-  checksum: 7b3d96e5db3c579f4d48064bf3ec6582999255aab7fa3226d5db4711434b7aa54cc8f656ca4763c4e65c92520d6820651aecd38148b560997b445ba86b3e3c77
+  checksum: 3b3c72b33a1ce2a2179242e8aeab8b2ca89828fb64b749652c73690180ba24866d40052ee9ce6ac0efa576e59c59e9621444dfbb0c463797bb8ce0e4a0fc2ff1
   languageName: node
   linkType: hard
 
