@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './i18n';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
 // Start the mocking conditionally.
