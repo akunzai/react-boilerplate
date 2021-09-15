@@ -7,7 +7,7 @@ type Props = {
   title: string;
 };
 
-export default function NavMenu({ title }: Props): JSX.Element {
+export function NavMenu({ title }: Props): JSX.Element {
   const [collapsed, setCollapsed] = useState(true);
   const [expanded, setExpanded] = useState(false);
   const { i18n } = useTranslation();

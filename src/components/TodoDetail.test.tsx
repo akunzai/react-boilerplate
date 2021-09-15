@@ -3,9 +3,9 @@ import userEvent from '@testing-library/user-event';
 import { createMemoryHistory } from 'history';
 import { MemoryRouter, Route, Router } from 'react-router-dom';
 import { ServiceContainer } from 'react-service-container';
+import { TodoService } from '../api';
 import '../i18nForTests';
-import TodoDetail from './TodoDetail';
-import TodoService from './TodoService';
+import { TodoDetail } from './TodoDetail';
 
 beforeAll(() => {
   jest.spyOn(global.console, 'error').mockImplementation(() => undefined);

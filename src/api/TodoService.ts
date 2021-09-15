@@ -1,12 +1,12 @@
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
 import { fromFetch } from 'rxjs/fetch';
-import Todo from './Todo';
+import { Todo } from './Todo';
 
 const HEADERS = new Headers({
   'Content-Type': 'application/json',
 });
 
-export default class TodoService {
+export class TodoService {
   private todosUrl = '/api/todos';
 
   getTodos(): Observable<Todo[]> {

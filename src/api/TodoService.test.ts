@@ -1,6 +1,6 @@
 import { server, rest } from '../mocks/server';
-import Todo from './Todo';
-import TodoService from './TodoService';
+import { Todo } from './Todo';
+import { TodoService } from './TodoService';
 
 const service = new TodoService();
 

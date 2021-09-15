@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { I18nextProvider } from 'react-i18next';
 import { MemoryRouter } from 'react-router-dom';
 import i18n from '../i18nForTests';
-import NavMenu from './NavMenu';
+import { NavMenu } from './NavMenu';
 
 beforeEach(() => {
   render(
