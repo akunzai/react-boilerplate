@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import '../i18nForTests';
-import Counter from './Counter';
+import { Counter } from './Counter';
 
 beforeEach(() => {
   render(<Counter />);

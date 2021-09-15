@@ -1,12 +1,8 @@
 import { Route } from 'react-router';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ServiceContainer } from 'react-service-container';
-import Home from './common/Home';
-import Layout from './common/Layout';
-import Counter from './counter/Counter';
-import TodoDetail from './todo/TodoDetail';
-import TodoList from './todo/TodoList';
-import TodoService from './todo/TodoService';
+import { TodoService } from './api';
+import { Counter, Home, Layout, TodoDetail, TodoList } from './components';
 
 export default function App(): JSX.Element {
   const baseUrl = document
