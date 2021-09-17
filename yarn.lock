@@ -8223,9 +8223,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"i18next-parser@npm:4.6.0":
-  version: 4.6.0
-  resolution: "i18next-parser@npm:4.6.0"
+"i18next-parser@npm:4.7.0":
+  version: 4.7.0
+  resolution: "i18next-parser@npm:4.7.0"
   dependencies:
     broccoli-plugin: ^4.0.5
     cheerio: ^1.0.0-rc.2
@@ -8245,7 +8245,7 @@ fsevents@^1.2.7:
     vue-template-compiler: ^2.6.11
   bin:
     i18next: bin/cli.js
-  checksum: 291c6a4bcceea9f0d7815e25963742f00fb60588b03e4b749b8678d35601002f0548982f32c591846d1d4cbd0d9d76194ccee032069b224a0dcd5a7b8e584436
+  checksum: 11d4c053e683d5b19e62ddae9fbe848e54e8f6c78843e60368483a5049ca742f0a35ac69c6da97756a6ad70864ae85983f47ea94caa60022a748e312fc9b18d1
   languageName: node
   linkType: hard
 
@@ -13060,7 +13060,7 @@ fsevents@^1.2.7:
     formik: 2.2.9
     i18next: 20.6.1
     i18next-browser-languagedetector: 6.1.2
-    i18next-parser: 4.6.0
+    i18next-parser: 4.7.0
     msw: 0.35.0
     react: 17.0.2
     react-cool-onclickoutside: 1.6.2
