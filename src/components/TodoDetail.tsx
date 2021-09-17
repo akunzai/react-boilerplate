@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 import { useHistory } from 'react-router-dom';
 import { useService } from 'react-service-container';
-import { Todo, TodoService } from '../api';
+import { TodoService } from '../api';
+import { Todo } from '../types';
 
 export function TodoDetail(): JSX.Element {
   const { id } = useParams<{ id: string }>();

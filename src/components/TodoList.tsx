@@ -2,7 +2,8 @@ import { FormEvent, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useService } from 'react-service-container';
-import { Todo, TodoService } from '../api';
+import { TodoService } from '../api';
+import { Todo } from '../types';
 
 export function TodoList(): JSX.Element {
   const [title, setTitle] = useState('');

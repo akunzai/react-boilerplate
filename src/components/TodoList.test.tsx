@@ -8,9 +8,10 @@ import {
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { ServiceContainer } from 'react-service-container';
-import { Todo, TodoService } from '../api';
+import { TodoService } from '../api';
 import '../i18nForTests';
 import { rest, server } from '../mocks/server';
+import { Todo } from '../types';
 import { TodoList } from './TodoList';
 
 beforeEach(async () => {
