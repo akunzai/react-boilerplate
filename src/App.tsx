@@ -1,4 +1,4 @@
-import { Route } from 'react-router';
+import { Redirect, Route, Switch } from 'react-router';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ServiceContainer } from 'react-service-container';
 import { TodoService } from './api';
@@ -14,10 +14,13 @@ export default function App(): JSX.Element {
     <Router basename={baseUrl || ''}>
       <ServiceContainer providers={[TodoService]}>
         <Layout>
-          <Route exact path="/" component={Home} />
-          <Route path="/counter" component={Counter} />
-          <Route path="/todo-list" component={TodoList} />
-          <Route path="/todo/:id" component={TodoDetail} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/counter" component={Counter} />
+            <Route exact path="/todo-list" component={TodoList} />
+            <Route exact path="/todo/:id" component={TodoDetail} />
+            <Redirect to="/" />
+          </Switch>
         </Layout>
       </ServiceContainer>
     </Router>
