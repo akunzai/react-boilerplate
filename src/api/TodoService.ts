@@ -11,7 +11,7 @@ export class TodoService {
 
   getTodos(): Observable<Todo[]> {
     return fromFetch(this.todosUrl).pipe(
-      switchMap((response) => this.handleResponse(response)),
+      switchMap(this.handleResponse),
       map((data) => data as Todo[]),
       catchError(this.handleError<Todo[]>('getTodos', []))
     );
@@ -20,7 +20,7 @@ export class TodoService {
   getTodo(id: number): Observable<Todo | undefined> {
     const url = `${this.todosUrl}/${id}`;
     return fromFetch(url).pipe(
-      switchMap((response) => this.handleResponse(response)),
+      switchMap(this.handleResponse),
       map((data) => data as Todo),
       catchError(this.handleError<Todo>(`getTodo id=${id}`))
     );
@@ -32,7 +32,7 @@ export class TodoService {
       headers: HEADERS,
       body: JSON.stringify(todo),
     }).pipe(
-      switchMap((response) => this.handleResponse(response)),
+      switchMap(this.handleResponse),
       map((data) => data as Todo),
       catchError(this.handleError<Todo>('addTodo'))
     );
@@ -44,7 +44,7 @@ export class TodoService {
       method: 'DELETE',
       headers: HEADERS,
     }).pipe(
-      switchMap((response) => this.handleResponse(response)),
+      switchMap(this.handleResponse),
       map((data) => data as Todo),
       catchError(this.handleError<Todo>('deleteTask'))
     );
@@ -57,7 +57,7 @@ export class TodoService {
       headers: HEADERS,
       body: JSON.stringify(todo),
     }).pipe(
-      switchMap((response) => this.handleResponse(response)),
+      switchMap(this.handleResponse),
       catchError(this.handleError<unknown>('updateTodo'))
     );
   }
