@@ -7617,12 +7617,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"glob-parent@npm:6.0.1":
-  version: 6.0.1
-  resolution: "glob-parent@npm:6.0.1"
+"glob-parent@npm:6.0.2":
+  version: 6.0.2
+  resolution: "glob-parent@npm:6.0.2"
   dependencies:
-    is-glob: ^4.0.1
-  checksum: 0468cf300b8c7a483dbd8c031704fa1003331cbc65ded095f768328ed35eec78dd199c224c7436db997569863c0cbc0b7fd7c3cb45508e6134c502be9e691dc5
+    is-glob: ^4.0.3
+  checksum: c13ee97978bef4f55106b71e66428eb1512e71a7466ba49025fc2aec59a5bfb0954d5abd58fc5ee6c9b076eef4e1f6d3375c2e964b88466ca390da4419a786a8
   languageName: node
   linkType: hard
 
@@ -8815,6 +8815,15 @@ fsevents@^1.2.7:
   dependencies:
     is-extglob: ^2.1.1
   checksum: 84627cad11b4e745f5db5a163f32c47b711585a5ff6e14f8f8d026db87f4cdd3e2c95f6fa1f94ad22e469f36d819ae2814f03f9c668b164422ac3354a94672d3
+  languageName: node
+  linkType: hard
+
+"is-glob@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "is-glob@npm:4.0.3"
+  dependencies:
+    is-extglob: ^2.1.1
+  checksum: d381c1319fcb69d341cc6e6c7cd588e17cd94722d9a32dbd60660b993c4fb7d0f19438674e68dfec686d09b7c73139c9166b47597f846af387450224a8101ab4
   languageName: node
   linkType: hard
 
