@@ -8233,9 +8233,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"i18next-parser@npm:4.7.0":
-  version: 4.7.0
-  resolution: "i18next-parser@npm:4.7.0"
+"i18next-parser@npm:5.0.0":
+  version: 5.0.0
+  resolution: "i18next-parser@npm:5.0.0"
   dependencies:
     broccoli-plugin: ^4.0.5
     cheerio: ^1.0.0-rc.2
@@ -8245,9 +8245,10 @@ fsevents@^1.2.7:
     eol: ^0.9.1
     fs-extra: ^10.0.0
     gulp-sort: ^2.0.0
-    i18next: ^20.2.1
+    i18next: ^21.2.0
     js-yaml: 4.1.0
     rsvp: ^4.8.2
+    sort-keys: ^4.2.0
     through2: ~4.0.2
     typescript: ^4.2.4
     vinyl: ~2.2.1
@@ -8255,25 +8256,16 @@ fsevents@^1.2.7:
     vue-template-compiler: ^2.6.11
   bin:
     i18next: bin/cli.js
-  checksum: 11d4c053e683d5b19e62ddae9fbe848e54e8f6c78843e60368483a5049ca742f0a35ac69c6da97756a6ad70864ae85983f47ea94caa60022a748e312fc9b18d1
+  checksum: 8704d55e72769f2e9a1c1557397e9dea2ae4a79a58f426e9944ff95c18cb3b92cbc676c4eaa9a2ee2f899e11585259cbb0762a9f8e3b63384de479e0facf6807
   languageName: node
   linkType: hard
 
-"i18next@npm:21.2.3":
+"i18next@npm:21.2.3, i18next@npm:^21.2.0":
   version: 21.2.3
   resolution: "i18next@npm:21.2.3"
   dependencies:
     "@babel/runtime": ^7.12.0
   checksum: 94bcacaceb0d2bcc3006b669b4b50a93bc72986050fe73bbc33d46b2dc745f2810f5ba57d089192d0ae05e836c6b607b858e3adf69d152e2a3ece73745b000dd
-  languageName: node
-  linkType: hard
-
-"i18next@npm:^20.2.1":
-  version: 20.4.0
-  resolution: "i18next@npm:20.4.0"
-  dependencies:
-    "@babel/runtime": ^7.12.0
-  checksum: e2e3697132317f241b6290d4d0b549b0e445a9b400666505f549d62d38cd2f8347fb511e79c6f88f59021f0c9976c6f18cfe345fa3f223c110a3b0072a256f66
   languageName: node
   linkType: hard
 
@@ -8937,6 +8929,13 @@ fsevents@^1.2.7:
   version: 1.1.0
   resolution: "is-plain-obj@npm:1.1.0"
   checksum: 0ee04807797aad50859652a7467481816cbb57e5cc97d813a7dcd8915da8195dc68c436010bf39d195226cde6a2d352f4b815f16f26b7bf486a5754290629931
+  languageName: node
+  linkType: hard
+
+"is-plain-obj@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "is-plain-obj@npm:2.1.0"
+  checksum: cec9100678b0a9fe0248a81743041ed990c2d4c99f893d935545cfbc42876cbe86d207f3b895700c690ad2fa520e568c44afc1605044b535a7820c1d40e38daa
   languageName: node
   linkType: hard
 
@@ -13093,7 +13092,7 @@ fsevents@^1.2.7:
     formik: 2.2.9
     i18next: 21.2.3
     i18next-browser-languagedetector: 6.1.2
-    i18next-parser: 4.7.0
+    i18next-parser: 5.0.0
     msw: 0.35.0
     react: 17.0.2
     react-cool-onclickoutside: 1.6.2
@@ -14563,6 +14562,15 @@ resolve@^2.0.0-next.3:
   dependencies:
     is-plain-obj: ^1.0.0
   checksum: 5963fd191a2a185a5ec86f06e47721e8e04713eda43bb04ae60d2a8afb21241553dd5bc9d863ed2bd7c3d541b609b0c8d0e58836b1a3eb6764c09c094bcc8b00
+  languageName: node
+  linkType: hard
+
+"sort-keys@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "sort-keys@npm:4.2.0"
+  dependencies:
+    is-plain-obj: ^2.0.0
+  checksum: 1535ffd5a789259fc55107d5c3cec09b3e47803a9407fcaae37e1b9e0b813762c47dfee35b6e71e20ca7a69798d0a4791b2058a07f6cab5ef17b2dae83cedbda
   languageName: node
   linkType: hard
 
