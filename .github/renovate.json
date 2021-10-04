@@ -1,4 +1,5 @@
 {
   "extends": ["config:base"],
-  "ignoreDeps": ["sass", "typescript"]
+  "ignoreDeps": ["sass", "typescript"],
+  "automerge": true
 }
