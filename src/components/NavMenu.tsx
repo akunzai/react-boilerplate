@@ -44,7 +44,7 @@ export function NavMenu({ title }: Props): JSX.Element {
             className={`navbar-collapse collapse d-sm-inline-flex justify-content-end ${
               collapsed ? '' : 'show'
             }`}
-            data-testid="navbar-collapse"
+            role="menu"
           >
             <ul className="navbar-nav flex-grow">
               <li className="nav-item">
