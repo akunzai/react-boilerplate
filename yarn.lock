@@ -13104,28 +13104,19 @@ fsevents@^1.2.7:
     i18next-parser: 5.0.0
     msw: 0.35.0
     react: 17.0.2
-    react-cool-onclickoutside: 1.7.0
     react-dom: 17.0.2
     react-i18next: 11.12.0
     react-router-dom: 5.3.0
     react-scripts: 4.0.3
     react-service-container: 0.2.6
     react-test-renderer: 17.0.2
+    rooks: 5.7.2
     rxjs: 7.4.0
     sass: 1.39.2
     typescript: 4.3.5
     web-vitals: 2.1.1
   languageName: unknown
   linkType: soft
-
-"react-cool-onclickoutside@npm:1.7.0":
-  version: 1.7.0
-  resolution: "react-cool-onclickoutside@npm:1.7.0"
-  peerDependencies:
-    react: ">= 16.8.0"
-  checksum: 52041d867ff275ee9e925b2fc0616febd17964a372b2319007e4c8ae375a9c583da79ab0f27238a36d7fb7e486ec2293f94b2a2362e9c48db44303884c97b2d4
-  languageName: node
-  linkType: hard
 
 "react-dev-utils@npm:^11.0.3":
   version: 11.0.4
@@ -13972,6 +13963,19 @@ resolve@^2.0.0-next.3:
   bin:
     rollup: dist/bin/rollup
   checksum: 3a02731c20c71321fae647c9c9cab0febee0580c6af029fdcd5dd6f424b8c85119d92c8554c6837327fd323c2458e92d955bbebc90ca6bed87cc626695e7c31f
+  languageName: node
+  linkType: hard
+
+"rooks@npm:5.7.2":
+  version: 5.7.2
+  resolution: "rooks@npm:5.7.2"
+  dependencies:
+    lodash.debounce: ^4.0.8
+    raf: ^3.4.1
+  peerDependencies:
+    react: ^16.8.0  || ^17.0.0
+    react-dom: ^16.8.0  || ^17.0.0
+  checksum: 402e049f349faa22957cb4a29a6c13f3b58d294a3a899ebf30d2b44a550868b494af2b874f58a03cb63a6fb87eeec42272895d5c2a281c57959c7076c5215dc1
   languageName: node
   linkType: hard
 
