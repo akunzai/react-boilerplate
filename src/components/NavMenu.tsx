@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import useOnclickOutside from 'react-cool-onclickoutside';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
+import { useOutsideClickRef } from "rooks";
 
 type Props = {
   title: string;
@@ -11,7 +11,7 @@ export function NavMenu({ title }: Props): JSX.Element {
   const [collapsed, setCollapsed] = useState(true);
   const [expanded, setExpanded] = useState(false);
   const { i18n } = useTranslation();
-  const ref = useOnclickOutside(() => {
+  const [ref] = useOutsideClickRef(() => {
     setExpanded(false);
   });
 
