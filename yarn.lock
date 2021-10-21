@@ -2554,10 +2554,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.10.2":
-  version: 16.10.2
-  resolution: "@types/node@npm:16.10.2"
-  checksum: 83c1c3c68e7500103908c3f16094e458879c840a719c15b6ea577f81fe1f24a1b3473bb6c8e8091fe79a82543ca7639c6b1088fcf80292ec091d1d1c9504a87e
+"@types/node@npm:16.11.2":
+  version: 16.11.2
+  resolution: "@types/node@npm:16.11.2"
+  checksum: 1617b61160943121165ff89d72d3f7b4d55265a0129fd2ab6eb0ce81a3340ce9b3bd2ce8ec2d9f0f8b3702b434870596cd327ba472ba6e7d1faa5eedb8208e3a
   languageName: node
   linkType: hard
 
@@ -13091,7 +13091,7 @@ fsevents@^1.2.7:
     "@testing-library/react": 12.1.2
     "@testing-library/user-event": 13.5.0
     "@types/jest": 27.0.2
-    "@types/node": 16.10.2
+    "@types/node": 16.11.2
     "@types/react": 17.0.31
     "@types/react-dom": 17.0.10
     "@types/react-router-dom": 5.3.1
