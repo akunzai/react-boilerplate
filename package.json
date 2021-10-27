@@ -87,5 +87,5 @@
   "msw": {
     "workerDirectory": "public"
   },
-  "packageManager": "yarn@3.0.2"
+  "packageManager": "yarn@3.1.0"
 }
