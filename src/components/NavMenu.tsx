@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
-import { useOutsideClickRef } from "rooks";
+import { useOutsideClickRef } from 'rooks';
 
 type Props = {
   title: string;
@@ -48,7 +48,7 @@ export function NavMenu({ title }: Props): JSX.Element {
           >
             <ul className="navbar-nav flex-grow">
               <li className="nav-item">
-                <NavLink className="nav-link" exact to="/">
+                <NavLink className="nav-link" to="/">
                   Home
                 </NavLink>
               </li>

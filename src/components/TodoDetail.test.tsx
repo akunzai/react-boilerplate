@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createMemoryHistory } from 'history';
-import { MemoryRouter, Route, Router } from 'react-router-dom';
+import { MemoryRouter, Route, Router, Routes } from 'react-router-dom';
 import { ServiceContainer } from 'react-service-container';
 import { TodoService } from '../api';
 import '../i18nForTests';
@@ -15,9 +15,9 @@ test('without Todo should render nothing', async () => {
   render(
     <ServiceContainer providers={[TodoService]}>
       <MemoryRouter initialEntries={['/todo/0']}>
-        <Route path="/todo/:id">
-          <TodoDetail />
-        </Route>
+        <Routes>
+          <Route path="/todo/:id" element={<TodoDetail />}></Route>
+        </Routes>
       </MemoryRouter>
     </ServiceContainer>
   );
@@ -26,20 +26,19 @@ test('without Todo should render nothing', async () => {
 
 describe('with Todo', () => {
   const history = createMemoryHistory();
-  history.goBack = jest.fn();
+  history.go = jest.fn();
 
   beforeEach(async () => {
     window.history.back = jest.fn();
     render(
       <ServiceContainer providers={[TodoService]}>
-        <Router history={history}>
-          <Route path="/todo/:id">
-            <TodoDetail />
-          </Route>
+        <Router navigator={history} location="/todo/1">
+          <Routes>
+            <Route path="/todo/:id" element={<TodoDetail />}></Route>
+          </Routes>
         </Router>
       </ServiceContainer>
     );
-    history.push('/todo/1');
     await waitFor(() => {
       expect(screen.getByDisplayValue('Pay bills')).toBeInTheDocument();
     });
@@ -60,7 +59,7 @@ describe('with Todo', () => {
 
   test('should goes back when close button clicked', async () => {
     fireEvent.click(await screen.findByRole('button', { name: /Close/i }));
-    expect(history.goBack).toBeCalled();
+    expect(history.go).toBeCalledWith(-1);
   });
 
   test('should update values and goes back when form submitted', async () => {
@@ -71,7 +70,7 @@ describe('with Todo', () => {
     userEvent.type(input, 'Test');
     fireEvent.click(screen.getByRole('button', { name: /Save/i }));
     await waitFor(() => {
-      expect(history.goBack).toBeCalled();
+      expect(history.go).toBeCalledWith(-1);
     });
   });
 });
