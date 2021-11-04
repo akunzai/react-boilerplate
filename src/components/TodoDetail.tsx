@@ -1,17 +1,16 @@
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router';
-import { useHistory } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useService } from 'react-service-container';
 import { TodoService } from '../api';
 import { Todo } from '../types';
 
 export function TodoDetail(): JSX.Element {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams();
   const { t } = useTranslation();
   const todoService = useService(TodoService);
-  const history = useHistory();
+  const navigate = useNavigate();
   const [loaded, setLoaded] = useState(false);
   const [todo, setTodo] = useState<Todo>(
     new Todo(Number(id), '', undefined, false)
@@ -34,7 +33,7 @@ export function TodoDetail(): JSX.Element {
       initialValues={todo}
       onSubmit={(values) => {
         todoService.updateTodo(values).subscribe(() => {
-          history.goBack();
+          navigate(-1);
         });
       }}
     >
@@ -43,7 +42,7 @@ export function TodoDetail(): JSX.Element {
           type="button"
           className="btn-close float-end"
           aria-label="Close"
-          onClick={history.goBack}
+          onClick={() => navigate(-1)}
         ></button>
         <div className="mb-3">
           <label className="form-label" htmlFor="title">
