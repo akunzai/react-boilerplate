@@ -1609,7 +1609,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.7.6":
+"@babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.7.6":
   version: 7.16.0
   resolution: "@babel/runtime@npm:7.16.0"
   dependencies:
@@ -4186,7 +4186,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"broccoli-plugin@npm:^4.0.5":
+"broccoli-plugin@npm:^4.0.7":
   version: 4.0.7
   resolution: "broccoli-plugin@npm:4.0.7"
   dependencies:
@@ -8239,11 +8239,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"i18next-parser@npm:5.0.0":
-  version: 5.0.0
-  resolution: "i18next-parser@npm:5.0.0"
+"i18next-parser@npm:5.1.0":
+  version: 5.1.0
+  resolution: "i18next-parser@npm:5.1.0"
   dependencies:
-    broccoli-plugin: ^4.0.5
+    "@babel/runtime": ^7.15.4
+    broccoli-plugin: ^4.0.7
     cheerio: ^1.0.0-rc.2
     colors: ~1.4.0
     commander: ~8.2.0
@@ -8262,7 +8263,7 @@ fsevents@^1.2.7:
     vue-template-compiler: ^2.6.11
   bin:
     i18next: bin/cli.js
-  checksum: 8704d55e72769f2e9a1c1557397e9dea2ae4a79a58f426e9944ff95c18cb3b92cbc676c4eaa9a2ee2f899e11585259cbb0762a9f8e3b63384de479e0facf6807
+  checksum: e75396fc4c88536a0f3fc47926b881dc8be64b89c2242d83f810853049dacdcfcfde732ff199ccc7e2e8d0d4fb04d36f8ec31ed2c5603ff83f722e25211a1710
   languageName: node
   linkType: hard
 
@@ -13078,7 +13079,7 @@ fsevents@^1.2.7:
     formik: 2.2.9
     i18next: 21.4.0
     i18next-browser-languagedetector: 6.1.2
-    i18next-parser: 5.0.0
+    i18next-parser: 5.1.0
     msw: 0.35.0
     react: 17.0.2
     react-dom: 17.0.2
