@@ -8239,9 +8239,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"i18next-parser@npm:5.1.0":
-  version: 5.1.0
-  resolution: "i18next-parser@npm:5.1.0"
+"i18next-parser@npm:5.2.0":
+  version: 5.2.0
+  resolution: "i18next-parser@npm:5.2.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     broccoli-plugin: ^4.0.7
@@ -8263,7 +8263,7 @@ fsevents@^1.2.7:
     vue-template-compiler: ^2.6.11
   bin:
     i18next: bin/cli.js
-  checksum: e75396fc4c88536a0f3fc47926b881dc8be64b89c2242d83f810853049dacdcfcfde732ff199ccc7e2e8d0d4fb04d36f8ec31ed2c5603ff83f722e25211a1710
+  checksum: 7622a7903d7ba54157689696d588672a50d716d48a942593c883fa66e3151fd97a25ac2ae87e49f450b8e06439e5048293422964d1e985f0fc7af397418f0b7e
   languageName: node
   linkType: hard
 
@@ -13079,7 +13079,7 @@ fsevents@^1.2.7:
     formik: 2.2.9
     i18next: 21.4.2
     i18next-browser-languagedetector: 6.1.2
-    i18next-parser: 5.1.0
+    i18next-parser: 5.2.0
     msw: 0.35.0
     react: 17.0.2
     react-dom: 17.0.2
