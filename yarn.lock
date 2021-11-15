@@ -4288,9 +4288,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:4.18.0":
-  version: 4.18.0
-  resolution: "browserslist@npm:4.18.0"
+"browserslist@npm:4.18.1":
+  version: 4.18.1
+  resolution: "browserslist@npm:4.18.1"
   dependencies:
     caniuse-lite: ^1.0.30001280
     electron-to-chromium: ^1.3.896
@@ -4299,7 +4299,7 @@ __metadata:
     picocolors: ^1.0.0
   bin:
     browserslist: cli.js
-  checksum: 8bf8867d05d8709ba936bbe6d7c5055fb07e4c3227866e64b795044e7c44be1ff0c65cb9e95e8f53d3119ed92bd783ebbb4a54a9d69b5cbb9f8b17ec2864067a
+  checksum: ae58322deef15960fc2e601d71bc081b571cfab6705999a3d24db5325b9cfadf5f676615f4460207a93e600549c33d60d37b4502007fe9e737b3cc19e20575d5
   languageName: node
   linkType: hard
 
