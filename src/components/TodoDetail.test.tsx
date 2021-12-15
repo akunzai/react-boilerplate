@@ -28,8 +28,7 @@ describe('with Todo', () => {
   const history = createMemoryHistory();
   history.go = jest.fn();
 
-  beforeEach(async () => {
-    window.history.back = jest.fn();
+  const setup = async () => {
     render(
       <ServiceContainer providers={[TodoService]}>
         <Router navigator={history} location="/todo/1">
@@ -42,9 +41,14 @@ describe('with Todo', () => {
     await waitFor(() => {
       expect(screen.getByDisplayValue('Pay bills')).toBeInTheDocument();
     });
+  };
+
+  beforeEach(async () => {
+    window.history.back = jest.fn();
   });
 
   test('should renders as expected', async () => {
+    await setup();
     const title = screen.getByRole('textbox', {
       name: /Title/i,
     }) as HTMLInputElement;
@@ -58,11 +62,13 @@ describe('with Todo', () => {
   });
 
   test('should goes back when close button clicked', async () => {
+    await setup();
     fireEvent.click(await screen.findByRole('button', { name: /Close/i }));
     expect(history.go).toBeCalledWith(-1);
   });
 
   test('should update values and goes back when form submitted', async () => {
+    await setup();
     const input = await screen.findByRole('textbox', {
       name: /Title/i,
     });
