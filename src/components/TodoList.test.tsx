@@ -14,7 +14,7 @@ import { rest, server } from '../mocks/server';
 import { Todo } from '../types';
 import { TodoList } from './TodoList';
 
-beforeEach(async () => {
+const setup = async () => {
   render(
     <ServiceContainer providers={[TodoService]}>
       <MemoryRouter>
@@ -23,9 +23,10 @@ beforeEach(async () => {
     </ServiceContainer>
   );
   await waitFor(() => expect(screen.getAllByRole('link').length).toBe(3));
-});
+};
 
 test('should renders as expected', async () => {
+  await setup();
   const links = screen.getAllByRole('link');
   expect(links.length).toBe(3);
   expect(links[0].textContent).toContain('Pay bills');
@@ -45,6 +46,7 @@ test('should renders as expected', async () => {
 });
 
 test('should remove item when delete button clicked', async () => {
+  await setup();
   server.use(
     rest.delete('/api/todos/3', (req, res, ctx) => {
       return res(ctx.json(req.body));
@@ -61,12 +63,13 @@ test('should remove item when delete button clicked', async () => {
   const buttons = screen.getAllByRole('button', { name: /Close/i });
   fireEvent.click(buttons[2]);
   await waitForElementToBeRemoved(
-    screen.getByRole('link', { name: /Buy eggs/ })
+    screen.queryByRole('link', { name: /Buy eggs/ })
   );
   expect(screen.getAllByRole('link').length).toBe(2);
 });
 
 test('should update item when checkbox checked', async () => {
+  await setup();
   const inputs = screen.getAllByRole('checkbox');
   fireEvent.click(inputs[2]);
   await waitFor(() => {
@@ -77,20 +80,23 @@ test('should update item when checkbox checked', async () => {
 });
 
 test('should not add item without any input', async () => {
+  await setup();
   fireEvent.click(screen.getByRole('button', { name: /Add/i }));
   expect((await screen.findAllByRole('link')).length).toBe(3);
 });
 
 test('should not add item with blank input', async () => {
+  await setup();
   userEvent.type(screen.getByRole('textbox'), '   ');
   fireEvent.click(screen.getByRole('button', { name: /Add/i }));
   expect((await screen.findAllByRole('link')).length).toBe(3);
 });
 
 test('should add item and clears the input', async () => {
+  await setup();
   userEvent.type(screen.getByRole('textbox'), 'Test');
   fireEvent.click(screen.getByRole('button', { name: /Add/i }));
-  await waitFor(() => expect(screen.getByText('Test')).toBeInTheDocument());
+  await screen.findByText('Test');
   const link = screen.getByRole('link', { name: /Test/i });
   expect(link.textContent).toContain('Test');
   expect(link.getAttribute('href')).toBe('/todo/4');
