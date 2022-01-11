@@ -46,7 +46,7 @@
   "resolutions": {
     "browserslist": "4.19.1",
     "glob-parent": "6.0.2",
-    "immer": "9.0.7",
+    "immer": "9.0.12",
     "set-value": "^4.1.0"
   },
   "eslintConfig": {
