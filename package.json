@@ -48,7 +48,8 @@
     "follow-redirects": "1.14.7",
     "glob-parent": "6.0.2",
     "immer": "9.0.12",
-    "set-value": "^4.1.0"
+    "node-forge": "1.2.1",
+    "set-value": "4.1.0"
   },
   "eslintConfig": {
     "extends": [
