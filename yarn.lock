@@ -10798,7 +10798,7 @@ __metadata:
     react-scripts: 5.0.0
     react-service-container: 0.2.6
     react-test-renderer: 17.0.2
-    rooks: 5.8.0
+    rooks: 5.9.0
     rxjs: 7.5.2
     sass: 1.49.0
     typescript: 4.5.4
@@ -11440,16 +11440,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rooks@npm:5.8.0":
-  version: 5.8.0
-  resolution: "rooks@npm:5.8.0"
+"rooks@npm:5.9.0":
+  version: 5.9.0
+  resolution: "rooks@npm:5.9.0"
   dependencies:
     lodash.debounce: ^4.0.8
     raf: ^3.4.1
   peerDependencies:
     react: ^16.8.0  || ^17.0.0
     react-dom: ^16.8.0  || ^17.0.0
-  checksum: bbb258dddb8c5f83d59b4785cee858340f5f538af2b985f0c902dd70f626803af25bf26887baaf3db0536e0736a9304f8a07642d233a5fa119f6c033eccab5ed
+  checksum: f9c9aa76a5707d6fa2e4227275371b2754fdc2d81155d45221b828b3a8c5194a7e8fe0f36a73f5055bce9f899766b1ee98ec4fd258ea1f2a4ed6d9173e9ce974
   languageName: node
   linkType: hard
 
