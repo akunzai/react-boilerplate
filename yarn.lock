@@ -8911,9 +8911,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:0.36.4":
-  version: 0.36.4
-  resolution: "msw@npm:0.36.4"
+"msw@npm:0.36.5":
+  version: 0.36.5
+  resolution: "msw@npm:0.36.5"
   dependencies:
     "@mswjs/cookies": ^0.1.6
     "@mswjs/interceptors": ^0.12.7
@@ -8937,7 +8937,7 @@ __metadata:
     yargs: ^17.3.0
   bin:
     msw: cli/index.js
-  checksum: 1eb8d37a4c1323118204ea117e978ac24f73c5867661c3252c01ab29918814b71fa323cfb99ed0ac43fe58862bdb0529ef046361b7d2b554a6ba4f0749c5168b
+  checksum: 2c1b679a27631ae6349f3b0e379694dc4772c12bfb19eb71be934ab3a22924cf6b79bc320832650fd5efe60c5cbfe59376edc8b08fbc39086def1752e10accf0
   languageName: node
   linkType: hard
 
@@ -10790,7 +10790,7 @@ __metadata:
     i18next: 21.6.6
     i18next-browser-languagedetector: 6.1.2
     i18next-parser: 5.4.0
-    msw: 0.36.4
+    msw: 0.36.5
     react: 17.0.2
     react-dom: 17.0.2
     react-i18next: 11.15.3
