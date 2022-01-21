@@ -2404,10 +2404,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:17.0.8":
-  version: 17.0.8
-  resolution: "@types/node@npm:17.0.8"
-  checksum: f4cadeb9e602027520abc88c77142697e33cf6ac98bb02f8b595a398603cbd33df1f94d01c055c9f13cde0c8eaafc5e396ca72645458d42b4318b845bc7f1d0f
+"@types/node@npm:17.0.10":
+  version: 17.0.10
+  resolution: "@types/node@npm:17.0.10"
+  checksum: 979e83d642a2b4f18fa1a4233f884822c05abc7acd0836024aa964187f8446432b21f7913e72fe2b3927c4a811c27a0b6cd60ac7c4ac6a6762cfbab70782aa6a
   languageName: node
   linkType: hard
 
@@ -8911,9 +8911,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:0.36.4":
-  version: 0.36.4
-  resolution: "msw@npm:0.36.4"
+"msw@npm:0.36.5":
+  version: 0.36.5
+  resolution: "msw@npm:0.36.5"
   dependencies:
     "@mswjs/cookies": ^0.1.6
     "@mswjs/interceptors": ^0.12.7
@@ -8937,7 +8937,7 @@ __metadata:
     yargs: ^17.3.0
   bin:
     msw: cli/index.js
-  checksum: 1eb8d37a4c1323118204ea117e978ac24f73c5867661c3252c01ab29918814b71fa323cfb99ed0ac43fe58862bdb0529ef046361b7d2b554a6ba4f0749c5168b
+  checksum: 2c1b679a27631ae6349f3b0e379694dc4772c12bfb19eb71be934ab3a22924cf6b79bc320832650fd5efe60c5cbfe59376edc8b08fbc39086def1752e10accf0
   languageName: node
   linkType: hard
 
@@ -10779,7 +10779,7 @@ __metadata:
     "@testing-library/react": 12.1.2
     "@testing-library/user-event": 13.5.0
     "@types/jest": 27.4.0
-    "@types/node": 17.0.8
+    "@types/node": 17.0.10
     "@types/react": 17.0.38
     "@types/react-dom": 17.0.11
     "@types/react-router-dom": 5.3.3
@@ -10790,7 +10790,7 @@ __metadata:
     i18next: 21.6.6
     i18next-browser-languagedetector: 6.1.2
     i18next-parser: 5.4.0
-    msw: 0.36.4
+    msw: 0.36.5
     react: 17.0.2
     react-dom: 17.0.2
     react-i18next: 11.15.3
@@ -10802,7 +10802,7 @@ __metadata:
     rxjs: 7.5.2
     sass: 1.49.0
     typescript: 4.5.5
-    web-vitals: 2.1.3
+    web-vitals: 2.1.4
   languageName: unknown
   linkType: soft
 
@@ -13219,10 +13219,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:2.1.3":
-  version: 2.1.3
-  resolution: "web-vitals@npm:2.1.3"
-  checksum: 6d5d961b5e7eb5a3b0c4b05c9692b8765f469be9bc2c077331dbc3f2f38bf9bd5cbb4d1cad9129dfd7ce454c00a442851ce42c235f27678fd07e962bce4ac12e
+"web-vitals@npm:2.1.4":
+  version: 2.1.4
+  resolution: "web-vitals@npm:2.1.4"
+  checksum: 03d3f47dbf55c3dce07beb0ff5de8ddd52e2d0a53a8df5c84e7a16dda93543341d67231fa79b1d9772b091419af4ec0fd395b8bcf451a0e26846e3f76b3d0efc
   languageName: node
   linkType: hard
 
