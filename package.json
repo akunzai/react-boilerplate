@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "cross-env REACT_APP_MOCK=true react-scripts start",
-    "build": "react-scripts build",
+    "start": "cross-env REACT_APP_MOCK=true GENERATE_SOURCEMAP=false react-scripts start",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject",
@@ -40,7 +40,7 @@
   "devDependencies": {
     "cross-env": "7.0.3",
     "i18next-parser": "5.4.0",
-    "msw": "0.36.5",
+    "msw": "0.36.7",
     "react-test-renderer": "17.0.2"
   },
   "resolutions": {
