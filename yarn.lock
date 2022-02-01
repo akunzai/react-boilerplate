@@ -10779,7 +10779,7 @@ __metadata:
     react-test-renderer: 17.0.2
     rooks: 5.10.0
     rxjs: 7.5.2
-    sass: 1.49.4
+    sass: 1.49.7
     typescript: 4.5.5
     web-vitals: 2.1.4
   languageName: unknown
@@ -11530,16 +11530,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.49.4":
-  version: 1.49.4
-  resolution: "sass@npm:1.49.4"
+"sass@npm:1.49.7":
+  version: 1.49.7
+  resolution: "sass@npm:1.49.7"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: b4ddfcff93df823e5369fd10664938437945655956d8cd7800faeda3d6ee0bc26f7324098e259105f1a2cdd70c49d1f89e80a9deaa532e04c2cb849bd2c34b1b
+  checksum: 514d1abff594aa56afdc9eb7e40d1cbd9cf1ed6954c4e0ef494266d18965151c6f936e137cd118a138f7677a7bb98f2bbf2d1a485a3f5f66c78be0007506cc9b
   languageName: node
   linkType: hard
 
