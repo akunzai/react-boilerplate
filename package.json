@@ -45,7 +45,7 @@
   },
   "resolutions": {
     "browserslist": "4.19.1",
-    "follow-redirects": "1.14.7",
+    "follow-redirects": "1.14.8",
     "glob-parent": "6.0.2",
     "immer": "9.0.12",
     "nanoid": "^3.1.31",
