@@ -11057,7 +11057,7 @@ __metadata:
     typescript: 4.5.5
     web-vitals: 2.1.4
   peerDependencies:
-    postcss: 8.4.6
+    postcss: 8.4.7
   languageName: unknown
   linkType: soft
 
