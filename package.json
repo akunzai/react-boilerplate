@@ -44,7 +44,7 @@
     "react-test-renderer": "17.0.2"
   },
   "peerDependencies": {
-    "postcss": "8.4.7"
+    "postcss": "8.4.8"
   },
   "resolutions": {
     "browserslist": "4.20.0",
