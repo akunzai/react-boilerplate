@@ -13,7 +13,7 @@ export function NavMenu({ title }: Props): JSX.Element {
   const { i18n } = useTranslation();
   const [ref] = useOutsideClickRef(() => {
     setExpanded(false);
-  });
+  }, expanded);
 
   const isCurrentLanguage = (pattern: RegExp): boolean => {
     return pattern.test(i18n.languages[0]);
@@ -71,12 +71,12 @@ export function NavMenu({ title }: Props): JSX.Element {
                   data-bs-auto-close="true"
                   aria-expanded={expanded}
                   onClick={() => setExpanded(!expanded)}
+                  ref={ref}
                 >
                   <i className="bi bi-globe"></i>
                 </button>
                 {expanded && (
                   <ul
-                    ref={ref}
                     className={`dropdown-menu ${expanded ? 'show' : ''}`}
                     aria-labelledby="i18nDropdown"
                   >
@@ -97,7 +97,7 @@ export function NavMenu({ title }: Props): JSX.Element {
                         }`}
                         onClick={() => changeLanguage('zh-Hant')}
                       >
-                        正體中文
+                        中文(繁體)
                       </button>
                     </li>
                   </ul>
