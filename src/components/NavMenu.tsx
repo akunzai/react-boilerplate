@@ -20,7 +20,6 @@ export function NavMenu({ title }: Props): JSX.Element {
   };
   const changeLanguage = (lang: string): void => {
     i18n.changeLanguage(lang);
-    setExpanded(false);
   };
   return (
     <header>
@@ -75,33 +74,31 @@ export function NavMenu({ title }: Props): JSX.Element {
                 >
                   <i className="bi bi-globe"></i>
                 </button>
-                {expanded && (
-                  <ul
-                    className={`dropdown-menu ${expanded ? 'show' : ''}`}
-                    aria-labelledby="i18nDropdown"
-                  >
-                    <li>
-                      <button
-                        className={`dropdown-item ${
-                          isCurrentLanguage(/^en/i) ? 'active' : ''
-                        }`}
-                        onClick={() => changeLanguage('en')}
-                      >
-                        English
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        className={`dropdown-item ${
-                          isCurrentLanguage(/^zh/i) ? 'active' : ''
-                        }`}
-                        onClick={() => changeLanguage('zh-Hant')}
-                      >
-                        中文(繁體)
-                      </button>
-                    </li>
-                  </ul>
-                )}
+                <ul
+                  className={`dropdown-menu ${expanded ? 'show' : 'd-none'}`}
+                  aria-labelledby="i18nDropdown"
+                >
+                  <li>
+                    <button
+                      className={`dropdown-item ${
+                        isCurrentLanguage(/^en/i) ? 'active' : ''
+                      }`}
+                      onClick={() => changeLanguage('en')}
+                    >
+                      English
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      className={`dropdown-item ${
+                        isCurrentLanguage(/^zh/i) ? 'active' : ''
+                      }`}
+                      onClick={() => changeLanguage('zh-Hant')}
+                    >
+                      中文(繁體)
+                    </button>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
