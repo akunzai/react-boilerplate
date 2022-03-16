@@ -10859,7 +10859,7 @@ __metadata:
     typescript: 4.6.2
     web-vitals: 2.1.4
   peerDependencies:
-    postcss: 8.4.11
+    postcss: 8.4.12
   languageName: unknown
   linkType: soft
 
