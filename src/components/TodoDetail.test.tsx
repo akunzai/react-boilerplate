@@ -72,8 +72,8 @@ describe('with Todo', () => {
     const input = await screen.findByRole('textbox', {
       name: /Title/i,
     });
-    userEvent.clear(input);
-    userEvent.type(input, 'Test');
+    await userEvent.clear(input);
+    await userEvent.type(input, 'Test');
     fireEvent.click(screen.getByRole('button', { name: /Save/i }));
     await waitFor(() => {
       expect(history.go).toBeCalledWith(-1);
