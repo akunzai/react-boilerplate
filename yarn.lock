@@ -2256,16 +2256,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:13.0.0-alpha.6":
-  version: 13.0.0-alpha.6
-  resolution: "@testing-library/react@npm:13.0.0-alpha.6"
+"@testing-library/react@npm:13.0.0-alpha.7":
+  version: 13.0.0-alpha.7
+  resolution: "@testing-library/react@npm:13.0.0-alpha.7"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@testing-library/dom": ^8.5.0
+    "@types/react-dom": "*"
   peerDependencies:
-    react: 18.0.0-rc.1
-    react-dom: 18.0.0-rc.1
-  checksum: 8b2140f983fc1af0514b8b96bce49118230b3d9d151e5b84301fe4df739b25334d803141a9b849fe3f535c0213711bec6743a2fbb12fa7ba917a546a69d07391
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: ee2630a36b90c43e2f7430428d9abb4fa05984956606355965b2dac7b4559611527359c259eeaec4f74f505f7f4f7982569e687c166f42ec95f9a39eda68f6d4
   languageName: node
   linkType: hard
 
@@ -2610,7 +2611,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.14":
+"@types/react-dom@npm:*, @types/react-dom@npm:17.0.14":
   version: 17.0.14
   resolution: "@types/react-dom@npm:17.0.14"
   dependencies:
@@ -10835,7 +10836,7 @@ __metadata:
   resolution: "react-boilerplate@workspace:."
   dependencies:
     "@testing-library/jest-dom": 5.16.3
-    "@testing-library/react": 13.0.0-alpha.6
+    "@testing-library/react": 13.0.0-alpha.7
     "@testing-library/user-event": 14.0.0
     "@types/jest": 27.4.1
     "@types/node": 17.0.23
