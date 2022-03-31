@@ -2256,9 +2256,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:13.0.0-alpha.7":
-  version: 13.0.0-alpha.7
-  resolution: "@testing-library/react@npm:13.0.0-alpha.7"
+"@testing-library/react@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@testing-library/react@npm:13.0.0"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@testing-library/dom": ^8.5.0
@@ -2266,7 +2266,7 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: ee2630a36b90c43e2f7430428d9abb4fa05984956606355965b2dac7b4559611527359c259eeaec4f74f505f7f4f7982569e687c166f42ec95f9a39eda68f6d4
+  checksum: 75c2348cff6ac00f22c997c72f1444a802ebe6e671c8db70f203070d0e5d4c5a7e31d62cd86e2eedde68558834b256f99a972fe45b15fd2356e3c65b5515e197
   languageName: node
   linkType: hard
 
@@ -10836,7 +10836,7 @@ __metadata:
   resolution: "react-boilerplate@workspace:."
   dependencies:
     "@testing-library/jest-dom": 5.16.3
-    "@testing-library/react": 13.0.0-alpha.7
+    "@testing-library/react": 13.0.0
     "@testing-library/user-event": 14.0.0
     "@types/jest": 27.4.1
     "@types/node": 17.0.23
