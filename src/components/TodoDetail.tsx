@@ -46,7 +46,7 @@ export function TodoDetail(): JSX.Element {
         ></button>
         <div className="mb-3">
           <label className="form-label" htmlFor="title">
-            {t('Title')}
+            {t('Title') as string}
           </label>
           <Field
             name="title"
@@ -58,7 +58,7 @@ export function TodoDetail(): JSX.Element {
         </div>
         <div className="mb-3">
           <label className="form-label" htmlFor="description">
-            {t('Description')}
+            {t('Description') as string}
           </label>
           <Field
             as="textarea"
@@ -72,12 +72,12 @@ export function TodoDetail(): JSX.Element {
           <div className="form-check">
             <Field name="done" type="checkbox" className="form-check-input" />
             <label className="form-check-label" htmlFor="done">
-              {t('Done')}
+              {t('Done') as string}
             </label>
           </div>
         </div>
         <button type="submit" className="btn btn-primary" aria-label="Save">
-          {t('Save')}
+          {t('Save') as string}
         </button>
       </Form>
     </Formik>
