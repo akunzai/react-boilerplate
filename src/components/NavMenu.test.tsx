@@ -1,16 +1,14 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { I18nextProvider } from 'react-i18next';
 import { MemoryRouter } from 'react-router-dom';
-import i18n from '../i18nForTests';
+import '../i18nForTests';
 import { NavMenu } from './NavMenu';
 
-const setup = () => render(
-  <MemoryRouter>
-    <I18nextProvider i18n={i18n}>
+const setup = () =>
+  render(
+    <MemoryRouter>
       <NavMenu title="Test" />
-    </I18nextProvider>
-  </MemoryRouter>
-);
+    </MemoryRouter>
+  );
 
 test('should render with title: Test', () => {
   setup();

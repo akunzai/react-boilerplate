@@ -57,7 +57,7 @@ export function TodoList(): JSX.Element {
   return (
     <div className="row justify-content-md-center">
       <div className="col-6">
-        <h1>{t('Todo List')}</h1>
+        <h1>{t('Todo List') as string}</h1>
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <input
