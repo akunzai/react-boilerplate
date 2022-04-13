@@ -47,7 +47,7 @@
     "postcss": "8.4.12"
   },
   "resolutions": {
-    "async": "3.2.2",
+    "async": "3.2.3",
     "browserslist": "4.20.2",
     "follow-redirects": "1.14.9",
     "glob-parent": "6.0.2",
