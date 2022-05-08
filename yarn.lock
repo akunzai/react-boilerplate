@@ -7096,12 +7096,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:21.7.1":
-  version: 21.7.1
-  resolution: "i18next@npm:21.7.1"
+"i18next@npm:21.8.0":
+  version: 21.8.0
+  resolution: "i18next@npm:21.8.0"
   dependencies:
     "@babel/runtime": ^7.17.2
-  checksum: 20732b3c5b31ad0651c29fe92ba0b9d595b5ae5412f34bc4efb0a5885830e6379925debc799cca8a2dc3d0fe42609aa3678e12063a1bb7ea64add0a763feeb53
+  checksum: f9d74ccc9d811f1e66b7462e450d5ddf8fe186d10e6bd48e3fb7a7fe208067f9d8bc3f9e9dfa85edf6edb58fd7f27fcbad2236cf334341a3dceb84653b4f55f9
   languageName: node
   linkType: hard
 
@@ -10868,7 +10868,7 @@ __metadata:
     bootstrap-icons: 1.8.1
     cross-env: 7.0.3
     formik: 2.2.9
-    i18next: 21.7.1
+    i18next: 21.8.0
     i18next-browser-languagedetector: 6.1.4
     i18next-parser: 6.4.0
     msw: 0.39.2
