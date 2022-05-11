@@ -52,7 +52,7 @@
     "ejs": "3.1.7",
     "follow-redirects": "1.15.0",
     "glob-parent": "6.0.2",
-    "immer": "9.0.12",
+    "immer": "9.0.13",
     "minimist": "1.2.6",
     "nanoid": "3.3.4",
     "nth-check": "2.0.1",
