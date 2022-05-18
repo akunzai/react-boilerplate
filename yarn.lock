@@ -2517,17 +2517,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*":
-  version: 27.4.1
-  resolution: "@types/jest@npm:27.4.1"
-  dependencies:
-    jest-matcher-utils: ^27.0.0
-    pretty-format: ^27.0.0
-  checksum: 5184f3eef4832d01ee8f59bed15eec45ccc8e29c724a5e6ce37bf74396b37bdf04f557000f45ba4fc38ae6075cf9cfcce3d7a75abc981023c61ceb27230a93e4
-  languageName: node
-  linkType: hard
-
-"@types/jest@npm:27.5.1":
+"@types/jest@npm:*, @types/jest@npm:27.5.1":
   version: 27.5.1
   resolution: "@types/jest@npm:27.5.1"
   dependencies:
@@ -2572,10 +2562,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:17.0.30":
-  version: 17.0.30
-  resolution: "@types/node@npm:17.0.30"
-  checksum: b3cd2db6474aae3ddac5a312f340f6e4ca200429371e62cb74698fe7f23d7414d0200f643204ddfaa797846328539359e3797d7f2baaf3cdd643b159cf53baa6
+"@types/node@npm:*, @types/node@npm:17.0.34":
+  version: 17.0.34
+  resolution: "@types/node@npm:17.0.34"
+  checksum: eb9a640ab85b62e8f7b9db1f19b674cc4ff49b94d55085ab6c28c997dbe90356631c4df484fe686082c938bfc6fb02c9e85eb805d1415dfe6de7e31f47a09a70
   languageName: node
   linkType: hard
 
@@ -2621,21 +2611,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.0.4":
+"@types/react-dom@npm:18.0.4, @types/react-dom@npm:^18.0.0":
   version: 18.0.4
   resolution: "@types/react-dom@npm:18.0.4"
   dependencies:
     "@types/react": "*"
   checksum: decde42d02a90ac2fe94fd6bfd9c78d002c03762a2d940df9422bf61af89c03d05e2113fd55fe45521fe27fa872a79dfd654b7d6b89652b455425efdcb763c58
-  languageName: node
-  linkType: hard
-
-"@types/react-dom@npm:^18.0.0":
-  version: 18.0.3
-  resolution: "@types/react-dom@npm:18.0.3"
-  dependencies:
-    "@types/react": "*"
-  checksum: 5c87fb610e212f0942ebbf522dfca4c9dc2ac8afa4c601454415e7c42f993518868207faff7658d11974142937ba7af2f80e274c3a3f5e0e697bdd5547dbe1b0
   languageName: node
   linkType: hard
 
@@ -2660,18 +2641,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*":
-  version: 18.0.8
-  resolution: "@types/react@npm:18.0.8"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: 12d0e6bc390709926d8eaeb7d2edb4ef9c9fbe8eac41cb0619d958386700547bff91c880c2a12a9eb1e0d09afa4f1e86fd1b93164c627824465b72123f149f3b
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:18.0.9":
+"@types/react@npm:*, @types/react@npm:18.0.9":
   version: 18.0.9
   resolution: "@types/react@npm:18.0.9"
   dependencies:
@@ -7105,21 +7075,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:21.8.2":
+"i18next@npm:21.8.2, i18next@npm:^21.2.0":
   version: 21.8.2
   resolution: "i18next@npm:21.8.2"
   dependencies:
     "@babel/runtime": ^7.17.2
   checksum: 6114fafa9604073f783bdeb25c0b81cdadbe00ac7ae85a756576c52e4191f5ba3e4bc818bf57826493fc1770edfd69940fdcd337abb8a52dd50d0bc7819175cc
-  languageName: node
-  linkType: hard
-
-"i18next@npm:^21.2.0":
-  version: 21.6.16
-  resolution: "i18next@npm:21.6.16"
-  dependencies:
-    "@babel/runtime": ^7.17.2
-  checksum: f210130fd835ebd90bfdc6a497d3c1d992261174e030e995a03d070b099acba680e495a376eb9255bb8eb68b4e518fe8ea96ec71507e194fd043aecb3397c9a2
   languageName: node
   linkType: hard
 
@@ -9076,9 +9037,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:0.39.2":
-  version: 0.39.2
-  resolution: "msw@npm:0.39.2"
+"msw@npm:0.40.0":
+  version: 0.40.0
+  resolution: "msw@npm:0.40.0"
   dependencies:
     "@mswjs/cookies": ^0.2.0
     "@mswjs/interceptors": ^0.15.1
@@ -9099,9 +9060,14 @@ __metadata:
     strict-event-emitter: ^0.2.0
     type-fest: ^1.2.2
     yargs: ^17.3.1
+  peerDependencies:
+    typescript: 4.2.x
+  peerDependenciesMeta:
+    typescript:
+      optional: true
   bin:
     msw: cli/index.js
-  checksum: 4802f5568cbaadedd488f03b953523fb5dd7e1b8e48a85f142d7cfd1b8c25241729a0af4a06b9f2be543c18b67475c8777fa4924bdc6f1de19dbe142ea4a8405
+  checksum: e0b228bb01e7e9ddc72b689f5a0ee1e8ef8868ab2ed1fa13ffb24722ffe79a953c15e6972681ccb84d6487eeb24690c6f8bb3744e84333b649f3ebb1f679edff
   languageName: node
   linkType: hard
 
@@ -10869,7 +10835,7 @@ __metadata:
     "@testing-library/react": 13.2.0
     "@testing-library/user-event": 14.2.0
     "@types/jest": 27.5.1
-    "@types/node": 17.0.30
+    "@types/node": 17.0.34
     "@types/react": 18.0.9
     "@types/react-dom": 18.0.4
     "@types/react-router-dom": 5.3.3
@@ -10880,7 +10846,7 @@ __metadata:
     i18next: 21.8.2
     i18next-browser-languagedetector: 6.1.4
     i18next-parser: 6.4.0
-    msw: 0.39.2
+    msw: 0.40.0
     react: 18.1.0
     react-dom: 18.1.0
     react-i18next: 11.16.9
