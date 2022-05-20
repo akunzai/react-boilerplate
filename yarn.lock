@@ -2562,10 +2562,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:17.0.34":
-  version: 17.0.34
-  resolution: "@types/node@npm:17.0.34"
-  checksum: eb9a640ab85b62e8f7b9db1f19b674cc4ff49b94d55085ab6c28c997dbe90356631c4df484fe686082c938bfc6fb02c9e85eb805d1415dfe6de7e31f47a09a70
+"@types/node@npm:*, @types/node@npm:17.0.35":
+  version: 17.0.35
+  resolution: "@types/node@npm:17.0.35"
+  checksum: 7a24946ae7fd20267ed92466384f594e448bfb151081158d565cc635d406ecb29ea8fb85fcd2a1f71efccf26fb5bd3c6f509bde56077eb8b832b847a6664bc62
   languageName: node
   linkType: hard
 
@@ -7075,21 +7075,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:21.8.3":
+"i18next@npm:21.8.3, i18next@npm:^21.2.0":
   version: 21.8.3
   resolution: "i18next@npm:21.8.3"
   dependencies:
     "@babel/runtime": ^7.17.2
   checksum: c1b6c57255befb716e0b491d50584f9d0875f3f848b4b5a192421dc6302453d73f4f646eca5526eaea3874d742c5d1ff73ceffa3bbc84a5621a4183f71952432
-  languageName: node
-  linkType: hard
-
-"i18next@npm:^21.2.0":
-  version: 21.8.2
-  resolution: "i18next@npm:21.8.2"
-  dependencies:
-    "@babel/runtime": ^7.17.2
-  checksum: 6114fafa9604073f783bdeb25c0b81cdadbe00ac7ae85a756576c52e4191f5ba3e4bc818bf57826493fc1770edfd69940fdcd337abb8a52dd50d0bc7819175cc
   languageName: node
   linkType: hard
 
@@ -9046,9 +9037,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:0.40.0":
-  version: 0.40.0
-  resolution: "msw@npm:0.40.0"
+"msw@npm:0.40.1":
+  version: 0.40.1
+  resolution: "msw@npm:0.40.1"
   dependencies:
     "@mswjs/cookies": ^0.2.0
     "@mswjs/interceptors": ^0.15.1
@@ -9070,13 +9061,13 @@ __metadata:
     type-fest: ^1.2.2
     yargs: ^17.3.1
   peerDependencies:
-    typescript: 4.2.x
+    typescript: 4.2.x || 4.3.x
   peerDependenciesMeta:
     typescript:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: e0b228bb01e7e9ddc72b689f5a0ee1e8ef8868ab2ed1fa13ffb24722ffe79a953c15e6972681ccb84d6487eeb24690c6f8bb3744e84333b649f3ebb1f679edff
+  checksum: 1cdba54fc223179d036c039b4ef3102525e70dc6b15da2921ebab80e21298866224c78ed2f487a2c67467d41dd031ae2734c1ad19dc04b7f37c0cbc124e18c5c
   languageName: node
   linkType: hard
 
@@ -10844,7 +10835,7 @@ __metadata:
     "@testing-library/react": 13.2.0
     "@testing-library/user-event": 14.2.0
     "@types/jest": 27.5.1
-    "@types/node": 17.0.34
+    "@types/node": 17.0.35
     "@types/react": 18.0.9
     "@types/react-dom": 18.0.4
     "@types/react-router-dom": 5.3.3
@@ -10855,7 +10846,7 @@ __metadata:
     i18next: 21.8.3
     i18next-browser-languagedetector: 6.1.4
     i18next-parser: 6.4.0
-    msw: 0.40.0
+    msw: 0.40.1
     react: 18.1.0
     react-dom: 18.1.0
     react-i18next: 11.16.9
