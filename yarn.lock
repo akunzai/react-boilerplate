@@ -9272,12 +9272,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nth-check@npm:2.1.0":
-  version: 2.1.0
-  resolution: "nth-check@npm:2.1.0"
+"nth-check@npm:2.1.1":
+  version: 2.1.1
+  resolution: "nth-check@npm:2.1.1"
   dependencies:
     boolbase: ^1.0.0
-  checksum: c555b2f7ccd2525aa5eb372cefd490b8a0d1310d751762593489de0e1338b1ce9a27b2c2f22094c0d0da9f9df725307f72df74bf0c22ea76392afb9f5e1bfc03
+  checksum: 5afc3dafcd1573b08877ca8e6148c52abd565f1d06b1eb08caf982e3fa289a82f2cae697ffb55b5021e146d60443f1590a5d6b944844e944714a5b549675bcd3
   languageName: node
   linkType: hard
 
