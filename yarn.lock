@@ -2562,10 +2562,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:17.0.35":
-  version: 17.0.35
-  resolution: "@types/node@npm:17.0.35"
-  checksum: 7a24946ae7fd20267ed92466384f594e448bfb151081158d565cc635d406ecb29ea8fb85fcd2a1f71efccf26fb5bd3c6f509bde56077eb8b832b847a6664bc62
+"@types/node@npm:*, @types/node@npm:17.0.36":
+  version: 17.0.36
+  resolution: "@types/node@npm:17.0.36"
+  checksum: 11055fde0a1e1421113849b5e32c7022911efc0be670729947bf0162970e79962d804b1eb8a9afb291380cac97cf0e684511415d586ae5fe1560322c940fe188
   languageName: node
   linkType: hard
 
@@ -2611,21 +2611,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.0.5":
+"@types/react-dom@npm:18.0.5, @types/react-dom@npm:^18.0.0":
   version: 18.0.5
   resolution: "@types/react-dom@npm:18.0.5"
   dependencies:
     "@types/react": "*"
   checksum: cd48b81950f499b52a3f0c08261f00046f9b7c96699fa249c9664e257e820daf6ecac815cd1028cebc9d105094adc39d047d1efd79214394b8b2d515574c0787
-  languageName: node
-  linkType: hard
-
-"@types/react-dom@npm:^18.0.0":
-  version: 18.0.4
-  resolution: "@types/react-dom@npm:18.0.4"
-  dependencies:
-    "@types/react": "*"
-  checksum: decde42d02a90ac2fe94fd6bfd9c78d002c03762a2d940df9422bf61af89c03d05e2113fd55fe45521fe27fa872a79dfd654b7d6b89652b455425efdcb763c58
   languageName: node
   linkType: hard
 
@@ -7084,21 +7075,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:21.8.5":
+"i18next@npm:21.8.5, i18next@npm:^21.2.0":
   version: 21.8.5
   resolution: "i18next@npm:21.8.5"
   dependencies:
     "@babel/runtime": ^7.17.2
   checksum: 2652935c3bc0ff376f46bb7a777432d1a5ead2941302248abc3f4f51008dcbbb2459bf37c481095d1e81b83fb226ecacc6acb3a18cf4342a685f9acb498bf948
-  languageName: node
-  linkType: hard
-
-"i18next@npm:^21.2.0":
-  version: 21.8.3
-  resolution: "i18next@npm:21.8.3"
-  dependencies:
-    "@babel/runtime": ^7.17.2
-  checksum: c1b6c57255befb716e0b491d50584f9d0875f3f848b4b5a192421dc6302453d73f4f646eca5526eaea3874d742c5d1ff73ceffa3bbc84a5621a4183f71952432
   languageName: node
   linkType: hard
 
@@ -10853,7 +10835,7 @@ __metadata:
     "@testing-library/react": 13.3.0
     "@testing-library/user-event": 14.2.0
     "@types/jest": 27.5.1
-    "@types/node": 17.0.35
+    "@types/node": 17.0.36
     "@types/react": 18.0.9
     "@types/react-dom": 18.0.5
     "@types/react-router-dom": 5.3.3
@@ -12868,7 +12850,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.7.2":
+"typescript@npm:4.7.2, typescript@npm:^4.2.4":
   version: 4.7.2
   resolution: "typescript@npm:4.7.2"
   bin:
@@ -12878,33 +12860,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.2.4":
-  version: 4.6.4
-  resolution: "typescript@npm:4.6.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: e7bfcc39cd4571a63a54e5ea21f16b8445268b9900bf55aee0e02ad981be576acc140eba24f1af5e3c1457767c96cea6d12861768fb386cf3ffb34013718631a
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@4.7.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.7.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.2.4#~builtin<compat/typescript>":
   version: 4.7.2
   resolution: "typescript@patch:typescript@npm%3A4.7.2#~builtin<compat/typescript>::version=4.7.2&hash=7ad353"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 7e2b9a9f4a70fb7616f1b0d986977f8e34a74f046202fa7f24fdee79589598277810fa216b3776c20c0683a9235872c73be34fdb93f67f98c1efaca40999422f
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@^4.2.4#~builtin<compat/typescript>":
-  version: 4.6.4
-  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=7ad353"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 1cb434fbc637d347be90e3a0c6cd05e33c38f941713c8786d3031faf1842c2c148ba91d2fac01e7276b0ae3249b8633f1660e32686cc7a8c6a8fd5361dc52c66
   languageName: node
   linkType: hard
 
