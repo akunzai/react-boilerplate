@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "cross-env": "7.0.3",
-    "i18next-parser": "6.4.0",
+    "i18next-parser": "6.5.0",
     "msw": "0.42.0",
     "react-test-renderer": "18.1.0"
   },
