@@ -19,6 +19,9 @@
 ## [Getting Started](https://create-react-app.dev/docs/getting-started)
 
 ```sh
+# activate the yarn package manager
+corepack enable
+
 # install npm packages
 yarn install
 
