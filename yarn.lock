@@ -10915,7 +10915,7 @@ __metadata:
     msw: 0.42.3
     react: 18.2.0
     react-dom: 18.2.0
-    react-i18next: 11.17.2
+    react-i18next: 11.17.3
     react-router-dom: 6.3.0
     react-scripts: 5.0.1
     react-service-container: 0.2.6
@@ -10988,9 +10988,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:11.17.2":
-  version: 11.17.2
-  resolution: "react-i18next@npm:11.17.2"
+"react-i18next@npm:11.17.3":
+  version: 11.17.3
+  resolution: "react-i18next@npm:11.17.3"
   dependencies:
     "@babel/runtime": ^7.14.5
     html-escaper: ^2.0.2
@@ -11003,7 +11003,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: 9318b3c6ee669f73199b212bd1168004c30bb4de9fac43507ff284593661f988dff1f66bf510e3b7468f0d626c5984169da83b7974dbff44bd728921f8286267
+  checksum: 6b4959eb6257c7096f70e6dbc1e436ccc19258c0a8202a28fcc812c098c3574f4a0f4ec8f9dd8c7cbdbee1ac055125ec918f99ea1e1655574248f1c1e06c612c
   languageName: node
   linkType: hard
 
