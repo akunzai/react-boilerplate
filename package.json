@@ -41,7 +41,7 @@
   "devDependencies": {
     "cross-env": "7.0.3",
     "i18next-parser": "6.5.0",
-    "msw": "0.43.0",
+    "msw": "0.44.0",
     "react-test-renderer": "18.2.0"
   },
   "peerDependencies": {
