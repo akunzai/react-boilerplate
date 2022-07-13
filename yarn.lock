@@ -2533,17 +2533,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*":
-  version: 28.1.4
-  resolution: "@types/jest@npm:28.1.4"
-  dependencies:
-    jest-matcher-utils: ^28.0.0
-    pretty-format: ^28.0.0
-  checksum: 97e22c600397bb4f30e39b595f8285ae92e4eb29a1ef6d1689749e4a4da683d88ecfe717b64492f6adc4c17c1c989520c3546f938c84a7d435c6ac3acf1a2bdc
-  languageName: node
-  linkType: hard
-
-"@types/jest@npm:28.1.5":
+"@types/jest@npm:*, @types/jest@npm:28.1.5":
   version: 28.1.5
   resolution: "@types/jest@npm:28.1.5"
   dependencies:
@@ -2588,10 +2578,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.0.1":
-  version: 18.0.1
-  resolution: "@types/node@npm:18.0.1"
-  checksum: be14b251c54cc2b4ca78ac6eadf2fe5e831e487f2e17848f21d576295945b538271dcc674d0bba582b3f8d95b84f6826e99b6ba4710c76f165a8bdd4d4f0618e
+"@types/node@npm:*, @types/node@npm:18.0.3":
+  version: 18.0.3
+  resolution: "@types/node@npm:18.0.3"
+  checksum: 5dec59fbbc1186c808b53df1ca717dad034dbd6a901c75f5b052c845618b531b05f27217122c6254db99529a68618e4cfc534ae3dbf4e88754e9e572df80defa
   languageName: node
   linkType: hard
 
@@ -2637,21 +2627,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.0.6":
+"@types/react-dom@npm:18.0.6, @types/react-dom@npm:^18.0.0":
   version: 18.0.6
   resolution: "@types/react-dom@npm:18.0.6"
   dependencies:
     "@types/react": "*"
   checksum: db571047af1a567631758700b9f7d143e566df939cfe5fbf7535347cc0c726a1cdbb5e3f8566d076e54cf708b6c1166689de194a9ba09ee35efc9e1d45911685
-  languageName: node
-  linkType: hard
-
-"@types/react-dom@npm:^18.0.0":
-  version: 18.0.5
-  resolution: "@types/react-dom@npm:18.0.5"
-  dependencies:
-    "@types/react": "*"
-  checksum: cd48b81950f499b52a3f0c08261f00046f9b7c96699fa249c9664e257e820daf6ecac815cd1028cebc9d105094adc39d047d1efd79214394b8b2d515574c0787
   languageName: node
   linkType: hard
 
@@ -2676,18 +2657,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*":
-  version: 18.0.14
-  resolution: "@types/react@npm:18.0.14"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: 608eb57a383eedc54c79949673e5e8314f6b0c61542bff58721c8c47a18c23e2832e77c656050c2c2c004b62cf25582136c7c56fe1b6263a285c065fae31dbcf
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:18.0.15":
+"@types/react@npm:*, @types/react@npm:18.0.15":
   version: 18.0.15
   resolution: "@types/react@npm:18.0.15"
   dependencies:
@@ -7127,21 +7097,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:21.8.13":
+"i18next@npm:21.8.13, i18next@npm:^21.2.0":
   version: 21.8.13
   resolution: "i18next@npm:21.8.13"
   dependencies:
     "@babel/runtime": ^7.17.2
   checksum: 0cc9a5213326d5c33a25b7fd753cd759a8357574d8e878372eeb84fa4e1b0839d3e840b6193ae6b37317d3af6c385c67799c830bb5f3ca388462b0bcb4464a97
-  languageName: node
-  linkType: hard
-
-"i18next@npm:^21.2.0":
-  version: 21.8.12
-  resolution: "i18next@npm:21.8.12"
-  dependencies:
-    "@babel/runtime": ^7.17.2
-  checksum: e3bbb9ee633c0fa74971d1e057917b5a303245b8b5602ce4db86b45be2a5ad23d06ef039a65d76f4de08a4200a8ebc5beed8c992433840a467e8253ed1d40bde
   languageName: node
   linkType: hard
 
@@ -10940,7 +10901,7 @@ __metadata:
     "@testing-library/react": 13.3.0
     "@testing-library/user-event": 14.2.1
     "@types/jest": 28.1.5
-    "@types/node": 18.0.1
+    "@types/node": 18.0.3
     "@types/react": 18.0.15
     "@types/react-dom": 18.0.6
     "@types/react-router-dom": 5.3.3
@@ -11655,21 +11616,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:7.5.6":
+"rxjs@npm:7.5.6, rxjs@npm:^7.5.5":
   version: 7.5.6
   resolution: "rxjs@npm:7.5.6"
   dependencies:
     tslib: ^2.1.0
   checksum: fc05f01364a74dac57490fb3e07ea63b422af04017fae1db641a009073f902ef69f285c5daac31359620dc8d9aee7d81e42b370ca2a8573d1feae0b04329383b
-  languageName: node
-  linkType: hard
-
-"rxjs@npm:^7.5.5":
-  version: 7.5.5
-  resolution: "rxjs@npm:7.5.5"
-  dependencies:
-    tslib: ^2.1.0
-  checksum: e034f60805210cce756dd2f49664a8108780b117cf5d0e2281506e9e6387f7b4f1532d974a8c8b09314fa7a16dd2f6cff3462072a5789672b5dcb45c4173f3c6
   languageName: node
   linkType: hard
 
