@@ -3865,10 +3865,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap-icons@npm:1.8.3":
-  version: 1.8.3
-  resolution: "bootstrap-icons@npm:1.8.3"
-  checksum: c7f9cac462f1dce1798a067b5185968206b8e71d8e2934bcdae437b3eb94a624de7860f628d920d68ab5f744948ac5251d00812a90d21fc8fc0d4757b567e6ca
+"bootstrap-icons@npm:1.9.0":
+  version: 1.9.0
+  resolution: "bootstrap-icons@npm:1.9.0"
+  checksum: 2ef2c3aff8a114e5a8c5dea1714d804c4407583f603550c3e545d298a20a69ffdedcc2e80a7d1bcf13b93452135fff52ed2a78d473fd4772710a7f0808b45525
   languageName: node
   linkType: hard
 
@@ -11019,7 +11019,7 @@ __metadata:
     "@types/react-dom": 18.0.6
     "@types/react-router-dom": 5.3.3
     bootstrap: 5.1.3
-    bootstrap-icons: 1.8.3
+    bootstrap-icons: 1.9.0
     cross-env: 7.0.3
     formik: 2.2.9
     i18next: 21.8.14
