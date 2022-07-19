@@ -2544,17 +2544,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*":
-  version: 28.1.5
-  resolution: "@types/jest@npm:28.1.5"
-  dependencies:
-    jest-matcher-utils: ^28.0.0
-    pretty-format: ^28.0.0
-  checksum: 994bfc25a5e767ec1506a2a7d94e60a7a5645b2e4e8444c56ae902f3a3e27ae54e821e41c1b4e7c8d7f5022bf5abfdd0460ead223ba6f2d0a194e5b2bed1ad76
-  languageName: node
-  linkType: hard
-
-"@types/jest@npm:28.1.6":
+"@types/jest@npm:*, @types/jest@npm:28.1.6":
   version: 28.1.6
   resolution: "@types/jest@npm:28.1.6"
   dependencies:
@@ -4118,14 +4108,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001317":
-  version: 1.0.30001359
-  resolution: "caniuse-lite@npm:1.0.30001359"
-  checksum: e15dbf4ea445367e998ad525c54620275ae382446d0bc289d14bf014a159074a2207881b46406b011a72676686f8a734457ea8e8d4856dc3f700c3391e89b43e
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001366":
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001317, caniuse-lite@npm:^1.0.30001366":
   version: 1.0.30001366
   resolution: "caniuse-lite@npm:1.0.30001366"
   checksum: eeb878e0be4090a4247dd3de5392ff1a864d086e5401790c7c81697918ce6ce3dac75956a21f9404b5ac770bfdabdb18619d0f920dc2295f3211ee893355f697
@@ -7187,21 +7170,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:21.8.14":
+"i18next@npm:21.8.14, i18next@npm:^21.2.0":
   version: 21.8.14
   resolution: "i18next@npm:21.8.14"
   dependencies:
     "@babel/runtime": ^7.17.2
   checksum: 83b1a57d761c3d29b90f4e87eb9945902fa13d7750f11bc7f22e8c9999f7e5bf9b2a30c44a9b47569c8ea704573b02a562c2678cf2281073197ace07657d21be
-  languageName: node
-  linkType: hard
-
-"i18next@npm:^21.2.0":
-  version: 21.8.13
-  resolution: "i18next@npm:21.8.13"
-  dependencies:
-    "@babel/runtime": ^7.17.2
-  checksum: 0cc9a5213326d5c33a25b7fd753cd759a8357574d8e878372eeb84fa4e1b0839d3e840b6193ae6b37317d3af6c385c67799c830bb5f3ca388462b0bcb4464a97
   languageName: node
   linkType: hard
 
@@ -9213,9 +9187,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:0.44.0":
-  version: 0.44.0
-  resolution: "msw@npm:0.44.0"
+"msw@npm:0.44.2":
+  version: 0.44.2
+  resolution: "msw@npm:0.44.2"
   dependencies:
     "@mswjs/cookies": ^0.2.2
     "@mswjs/interceptors": ^0.17.2
@@ -9244,7 +9218,7 @@ __metadata:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: fd8baab3be02bb04f254fd7651237fb675197fda05bbfcfb082d457658c8a7de0c6f2ea6158d42ceddc4d66366ef26c8f0621eaa94c53148f65948c3638397fc
+  checksum: 739d536ee09d1c0a2cbc9dbe917f167c42115a6548f99780850ce9a63a5e7c377cf9b5f1a3b497e85ce7304025ab22966e997fe73adbd8d2ab968b8685f15a24
   languageName: node
   linkType: hard
 
@@ -11035,7 +11009,7 @@ __metadata:
     i18next: 21.8.14
     i18next-browser-languagedetector: 6.1.4
     i18next-parser: 6.5.0
-    msw: 0.44.0
+    msw: 0.44.2
     react: 18.2.0
     react-dom: 18.2.0
     react-i18next: 11.18.1
