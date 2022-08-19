@@ -3,10 +3,13 @@
   "configurations": [
     {
       "name": "Launch Chrome against localhost",
-      "type": "pwa-chrome",
+      "type": "chrome",
       "request": "launch",
       "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}"
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${workspaceFolder}/*"
+      }
     },
     {
       "name": "Debug All Tests",
@@ -15,11 +18,9 @@
       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
       "args": ["test", "--runInBand", "--no-cache", "--watchAll=false"],
       "cwd": "${workspaceRoot}",
-      "protocol": "inspector",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "env": { "CI": "true" },
-      "disableOptimisticBPs": true
     },
     {
       "name": "Debug Current Test",
@@ -34,11 +35,9 @@
         "--watchAll=false"
       ],
       "cwd": "${workspaceRoot}",
-      "protocol": "inspector",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "env": { "CI": "true" },
-      "disableOptimisticBPs": true
+      "env": { "CI": "true" }
     }
   ]
 }
