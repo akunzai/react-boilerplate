@@ -1,9 +1,23 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
   ],
-  "ignoreDeps": [
-    "msw"
-  ],
-  "automerge": true
+  "automerge": true,
+  "packageRules": [
+    {
+      "description": "Update the worker file for msw",
+      "matchPackageNames": [
+        "msw"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "pwd"
+        ],
+        "fileFilters": [
+          "public/mockServiceWorker.js"
+        ]
+      }
+    }
+  ]
 }
