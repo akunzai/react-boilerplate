@@ -9,7 +9,7 @@
   ],
   "packageRules": [
     {
-      "description": "Require typescript minor approval for react-scripts",
+      "description": "Require typescript minor approval for typescript-eslint",
       "matchPackageNames": ["typescript"],
       "matchUpdateTypes": ["minor"],
       "dependencyDashboardApproval": true
