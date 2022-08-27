@@ -9,6 +9,12 @@
   ],
   "packageRules": [
     {
+      "description": "Require typescript minor approval for react-scripts",
+      "matchPackageNames": ["typescript"],
+      "matchUpdateTypes": ["minor"],
+      "dependencyDashboardApproval": true
+    },
+    {
       "description": "Update the worker file for msw",
       "matchPackageNames": [
         "msw"
