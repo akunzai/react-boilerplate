@@ -12,7 +12,7 @@ export function TodoList(): JSX.Element {
   const { t } = useTranslation();
 
   useEffect(() => {
-    todoService.getTodos().subscribe((values) => {
+    todoService.getTodoList().subscribe((values) => {
       setTodos(values);
     });
   }, [todoService]);

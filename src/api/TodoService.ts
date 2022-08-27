@@ -1,78 +1,46 @@
-import { catchError, map, Observable, of, switchMap } from 'rxjs';
-import { fromFetch } from 'rxjs/fetch';
+import { catchError, from, map, Observable, of } from 'rxjs';
+import { axiosFactory } from '.';
 import { Todo } from '../types';
 
-const HEADERS = new Headers({
-  'Content-Type': 'application/json',
-});
-
 export class TodoService {
-  private todosUrl = '/api/todos';
+  private baseUrl = '/todos';
+  constructor(private axiosInstance = axiosFactory()) {}
 
-  getTodos(): Observable<Todo[]> {
-    return fromFetch(this.todosUrl).pipe(
-      switchMap(this.handleResponse),
-      map((data) => data as Todo[]),
-      catchError(this.handleError<Todo[]>('getTodos', []))
+  getTodoList(): Observable<Todo[]> {
+    return from(this.axiosInstance.get<Todo[]>(this.baseUrl)).pipe(
+      map((response) => response.data),
+      catchError(this.handleError<Todo[]>('getTodoList', []))
     );
   }
 
   getTodo(id: number): Observable<Todo | undefined> {
-    const url = `${this.todosUrl}/${id}`;
-    return fromFetch(url).pipe(
-      switchMap(this.handleResponse),
-      map((data) => data as Todo),
+    const url = `${this.baseUrl}/${id}`;
+    return from(this.axiosInstance.get<Todo>(url)).pipe(
+      map((response) => response.data),
       catchError(this.handleError<Todo>(`getTodo id=${id}`))
     );
   }
 
   addTodo(todo: Todo): Observable<Todo> {
-    return fromFetch(this.todosUrl, {
-      method: 'POST',
-      headers: HEADERS,
-      body: JSON.stringify(todo),
-    }).pipe(
-      switchMap(this.handleResponse),
-      map((data) => data as Todo),
+    return from(this.axiosInstance.post<Todo>(this.baseUrl, todo)).pipe(
+      map((response) => response.data),
       catchError(this.handleError<Todo>('addTodo'))
     );
   }
 
   deleteTodo(todo: Todo): Observable<Todo> {
-    const url = `${this.todosUrl}/${todo.id}`;
-    return fromFetch(url, {
-      method: 'DELETE',
-      headers: HEADERS,
-    }).pipe(
-      switchMap(this.handleResponse),
-      map((data) => data as Todo),
-      catchError(this.handleError<Todo>('deleteTask'))
+    const url = `${this.baseUrl}/${todo.id}`;
+    return from(this.axiosInstance.delete<Todo>(url)).pipe(
+      map((response) => response.data),
+      catchError(this.handleError<Todo>('deleteTodo'))
     );
   }
 
   updateTodo(todo: Todo): Observable<unknown> {
-    const url = `${this.todosUrl}/${todo.id}`;
-    return fromFetch(url, {
-      method: 'PUT',
-      headers: HEADERS,
-      body: JSON.stringify(todo),
-    }).pipe(
-      switchMap(this.handleResponse),
+    const url = `${this.baseUrl}/${todo.id}`;
+    return from(this.axiosInstance.put<Todo>(url, todo)).pipe(
       catchError(this.handleError<unknown>('updateTodo'))
     );
-  }
-
-  private handleResponse(response: Response) {
-    if (response.ok) {
-      return /json/.test(response.headers.get('Content-Type') || '')
-        ? response.json()
-        : response.text();
-    }
-    // eslint-disable-next-line no-throw-literal
-    throw {
-      status: response.status,
-      error: response.statusText,
-    };
   }
 
   /**
