@@ -3624,7 +3624,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.27.2":
+"axios@npm:0.27.2":
   version: 0.27.2
   resolution: "axios@npm:0.27.2"
   dependencies:
@@ -11109,7 +11109,7 @@ __metadata:
     "@types/react": 18.0.17
     "@types/react-dom": 18.0.6
     "@types/react-router-dom": 5.3.3
-    axios: ^0.27.2
+    axios: 0.27.2
     bootstrap: 5.2.0
     bootstrap-icons: 1.9.1
     cross-env: 7.0.3
