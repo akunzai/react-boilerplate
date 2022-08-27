@@ -4,6 +4,9 @@
     "config:base"
   ],
   "automerge": true,
+  "postUpdateOptions": [
+    "yarnDedupeHighest"
+  ],
   "packageRules": [
     {
       "description": "Update the worker file for msw",
