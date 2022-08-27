@@ -21,7 +21,7 @@
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "@types/react-router-dom": "5.3.3",
-    "axios": "^0.27.2",
+    "axios": "0.27.2",
     "bootstrap": "5.2.0",
     "bootstrap-icons": "1.9.1",
     "formik": "2.2.9",
