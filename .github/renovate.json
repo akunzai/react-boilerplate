@@ -21,10 +21,10 @@
       ],
       "postUpgradeTasks": {
         "commands": [
-          "pwd"
+          "yarn install"
         ],
         "fileFilters": [
-          "public/mockServiceWorker.js"
+          "**/mockServiceWorker.js"
         ]
       }
     }
