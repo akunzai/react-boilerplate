@@ -43,7 +43,7 @@
     "cross-env": "7.0.3",
     "graphql": "16.6.0",
     "i18next-parser": "6.5.0",
-    "msw": "0.45.0",
+    "msw": "0.46.0",
     "react-test-renderer": "18.2.0"
   },
   "resolutions": {
