@@ -1,29 +1,26 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    ":preserveSemverRanges",
+    ":widenPeerDependencies",
+    ":semanticCommits",
+    ":automergeMinor",
+    ":automergeLinters",
+    ":automergeTesters",
+    ":automergeTypes",
+    ":automergeRequireAllStatusChecks"
   ],
-  "automerge": true,
   "postUpdateOptions": [
     "yarnDedupeHighest"
   ],
   "packageRules": [
     {
-      "description": "Require typescript minor approval for typescript-eslint",
-      "matchPackageNames": [
-        "typescript"
-      ],
-      "matchUpdateTypes": [
-        "minor"
-      ],
-      "dependencyDashboardApproval": true
-    },
-    {
       "description": "Require manual update the worker file for msw",
       "matchPackageNames": [
         "msw"
       ],
-      "dependencyDashboardApproval": true
+      "automerge": false
     }
   ]
 }
