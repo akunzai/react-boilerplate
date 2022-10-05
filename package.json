@@ -84,6 +84,9 @@
       "!src/reportWebVitals.ts",
       "!src/setupTests.ts",
       "!src/types.ts"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(axios))"
     ]
   },
   "msw": {
