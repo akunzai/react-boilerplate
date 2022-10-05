@@ -21,7 +21,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",
-    "axios": "^0.27.2",
+    "axios": "^1.0.0",
     "bootstrap": "^5.2.1",
     "bootstrap-icons": "^1.9.1",
     "formik": "^2.2.9",
@@ -84,6 +84,9 @@
       "!src/reportWebVitals.ts",
       "!src/setupTests.ts",
       "!src/types.ts"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(axios))"
     ]
   },
   "msw": {
