@@ -2609,13 +2609,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*, @types/jest@npm:^29.1.2":
-  version: 29.1.2
-  resolution: "@types/jest@npm:29.1.2"
+"@types/jest@npm:*, @types/jest@npm:^29.2.0":
+  version: 29.2.0
+  resolution: "@types/jest@npm:29.2.0"
   dependencies:
     expect: ^29.0.0
     pretty-format: ^29.0.0
-  checksum: a6761b5ac132c641740886f9c0714607255ebffb6add5989f51ea9e392fc3c5cd474e7590f12b003d5b67ce177dfbc8d3d60d0baa335c48c50deeee6b755a473
+  checksum: 6779e63d8d7507b116a61b2935a200e48531849fc1ac74090212759fe17716777ca6d2c3a8d927a563e9cfa474ae91d40b1688376ae80e3a08974b3c9e9691e1
   languageName: node
   linkType: hard
 
@@ -2661,10 +2661,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^18.11.0":
-  version: 18.11.0
-  resolution: "@types/node@npm:18.11.0"
-  checksum: f27f899ab428e5732f04fadadc9203f44bdf3abf56474540ee27da90e4f2ba133faf87263cada4d2271955f92ee6a142bd50683c86290fe5070c19aac44fd654
+"@types/node@npm:*, @types/node@npm:^18.11.3":
+  version: 18.11.3
+  resolution: "@types/node@npm:18.11.3"
+  checksum: 3a2a9142d891a90a195c296149bf64a69cc0abcc42f543be911ab22b2e0ead85ff077f90af92f0f13f6e3e5e72501469200fd753dfd1101825d4646a89d3ee47
   languageName: node
   linkType: hard
 
@@ -9235,16 +9235,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:3.0.4":
-  version: 3.0.4
-  resolution: "minimatch@npm:3.0.4"
-  dependencies:
-    brace-expansion: ^1.1.7
-  checksum: 66ac295f8a7b59788000ea3749938b0970344c841750abd96694f80269b926ebcafad3deeb3f1da2522978b119e6ae3a5869b63b13a7859a456b3408bd18a078
-  languageName: node
-  linkType: hard
-
-"minimatch@npm:^3.0.2, minimatch@npm:^3.0.4, minimatch@npm:^3.1.2":
+"minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
   dependencies:
@@ -11201,8 +11192,8 @@ __metadata:
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.4.0
     "@testing-library/user-event": ^14.4.3
-    "@types/jest": ^29.1.2
-    "@types/node": ^18.11.0
+    "@types/jest": ^29.2.0
+    "@types/node": ^18.11.3
     "@types/react": ^18.0.21
     "@types/react-dom": ^18.0.6
     "@types/react-router-dom": ^5.3.3
@@ -11226,7 +11217,7 @@ __metadata:
     rxjs: ^7.5.7
     sass: ^1.55.0
     typescript: ~4.8.4
-    web-vitals: ^3.0.3
+    web-vitals: ^3.0.4
   languageName: unknown
   linkType: soft
 
@@ -13661,10 +13652,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "web-vitals@npm:3.0.3"
-  checksum: 77df36f83590afbab6872f94f01e9df536ec4b0a4421833b500306f5ee5f9cdebdcd9139cfd94801edfb555a56ad61d8a5d28529ade8c645f6c82b76aebca19e
+"web-vitals@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "web-vitals@npm:3.0.4"
+  checksum: b618a8e049e0c64948eea09c372db490802bcc8bcb30230a2bc69d9e243b1a2fa54d0f0ae19d5e63f19381df86db2a9260ca15ef620e10024888eab487a77d56
   languageName: node
   linkType: hard
 
