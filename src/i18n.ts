@@ -1,10 +1,12 @@
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
-import zhHant from './locales/zh-Hant/translation.json';
+import translation from './locales/zh-Hant/translation.json';
 
 export const resources = {
-  'zh-Hant': zhHant
+  'zh-Hant': {
+    translation
+  }
 } as const;
 
 i18n
