@@ -1,6 +1,11 @@
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
+import zhHant from './locales/zh-Hant/translation.json';
+
+export const resources = {
+  'zh-Hant': zhHant
+} as const;
 
 i18n
   // detect user language
@@ -16,14 +21,7 @@ i18n
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
-    resources: {
-      en: {
-        translation: {},
-      },
-      'zh-Hant': {
-        translation: require('./locales/zh-Hant/translation.json'),
-      },
-    },
+    resources
   });
 
 export default i18n;
