@@ -2609,13 +2609,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*, @types/jest@npm:^29.2.1":
-  version: 29.2.1
-  resolution: "@types/jest@npm:29.2.1"
+"@types/jest@npm:*, @types/jest@npm:^29.2.2":
+  version: 29.2.2
+  resolution: "@types/jest@npm:29.2.2"
   dependencies:
     expect: ^29.0.0
     pretty-format: ^29.0.0
-  checksum: 5610c9a44c57f6dc39cf54429ea8d04574ad4c3e3ddf9a2621882aa94a0758a42ca97a0d0aec41a8d0b149fa63bf3d077d1f07c1f1d82e3d89ad7408de211255
+  checksum: 13b1a48858c8c451109c2838205fdcee6f41d672674d2f0e3cada35e94f133370aba4f4b5c3f5b174f3e16244d76d7d718afa7cc67d4d6f90d1b87951f4c87c3
   languageName: node
   linkType: hard
 
@@ -2740,14 +2740,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.0.24":
-  version: 18.0.24
-  resolution: "@types/react@npm:18.0.24"
+"@types/react@npm:*, @types/react@npm:^18.0.25":
+  version: 18.0.25
+  resolution: "@types/react@npm:18.0.25"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 7d06125bac61e1c6661e5dfbeeeb56d5b6d1d4c743292faebaa6b0f30f8414c7af3cadf674923fd86e4ca14e82566ff9156cd40c56786be024600c31b97d6c03
+  checksum: 231d658c45abdef044a716b4502774f1585d8336d73b2f5bd68f181acbfc874b7a457686ecd29b415b43ed0922c309bab7e2cf96832d188a3f4f1b02f2af760a
   languageName: node
   linkType: hard
 
@@ -4012,10 +4012,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap-icons@npm:^1.9.1":
-  version: 1.9.1
-  resolution: "bootstrap-icons@npm:1.9.1"
-  checksum: b388264719b5d2526809df509b83aa7e696d467f3b976d79faefb6fc7f07cee5427a894331af90b00b1ceb8d28a99fc398f1ca0553afaa53eb77a7749bb73ea5
+"bootstrap-icons@npm:^1.10.2":
+  version: 1.10.2
+  resolution: "bootstrap-icons@npm:1.10.2"
+  checksum: 1d73556a70b05c1b219c379243c24ea8186c773990b3bc5e8248825e7eae1c8137be90a2b7dd81fd46060a99558763886a069587a65a7f70a362bf5934e795e7
   languageName: node
   linkType: hard
 
@@ -7276,12 +7276,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next-browser-languagedetector@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "i18next-browser-languagedetector@npm:7.0.0"
+"i18next-browser-languagedetector@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "i18next-browser-languagedetector@npm:7.0.1"
   dependencies:
     "@babel/runtime": ^7.19.4
-  checksum: 4430a0bab327ce4f7370c75b54cde67da1368c028b3b2972d796c42913b4f4ae20e9b493041fa2860a8572694fd3b302465a4dfec6e19873c5188b1a88155ea8
+  checksum: 03129614be8761988df59b630359ded4f7c989eec4553781b5968139fd898de1eb09128c4c69c1365b547649ad829ff9abe1f60161658f8789668bcc623adcf0
   languageName: node
   linkType: hard
 
@@ -7322,12 +7322,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:^22.0.4":
-  version: 22.0.4
-  resolution: "i18next@npm:22.0.4"
+"i18next@npm:^22.0.5":
+  version: 22.0.5
+  resolution: "i18next@npm:22.0.5"
   dependencies:
     "@babel/runtime": ^7.17.2
-  checksum: aa49e6e48583833ee673c0dd9568081a5e15fde9549aa3e47a99ad91d3fdb7469f8a315864fc45ec466b1e60caa00d5fc8371e47840068048b4ab79a69dc2b19
+  checksum: fb0233ac096456a1a2f85ebeb08dbec26fe9f86056a5c082b8e86b1eb2b4443fd7c582fafddca86afab43583e9e7a92a2c215a29a7ac1e37eb5cb61b1e0c6173
   languageName: node
   linkType: hard
 
@@ -9361,9 +9361,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:^0.48.0":
-  version: 0.48.0
-  resolution: "msw@npm:0.48.0"
+"msw@npm:^0.48.2":
+  version: 0.48.2
+  resolution: "msw@npm:0.48.2"
   dependencies:
     "@mswjs/cookies": ^0.2.2
     "@mswjs/interceptors": ^0.17.5
@@ -9392,7 +9392,7 @@ __metadata:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: a931232d18ad02c8b98ffb5db507824d619860743eab6ecf2c228a403b5a20e2b167d4e0ef6cdd7ca2c0d1e4cc913dce1a690e80d7ef3ec6724d3ee060abc477
+  checksum: 535a5c0cb1c9f456be96096a4e4e699e01b84062d6f45027bd0a951a211abdeb71761bf491e522b908b24a1cd4e4d56a4e943d7d76c4dbbf46a73bbc3094f3e7
   languageName: node
   linkType: hard
 
@@ -11184,20 +11184,20 @@ __metadata:
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.4.0
     "@testing-library/user-event": ^14.4.3
-    "@types/jest": ^29.2.1
+    "@types/jest": ^29.2.2
     "@types/node": ^18.11.9
-    "@types/react": ^18.0.24
+    "@types/react": ^18.0.25
     "@types/react-dom": ^18.0.8
     "@types/react-router-dom": ^5.3.3
     axios: ^1.1.3
     bootstrap: ^5.2.2
-    bootstrap-icons: ^1.9.1
+    bootstrap-icons: ^1.10.2
     cross-env: ^7.0.3
     formik: ^2.2.9
-    i18next: ^22.0.4
-    i18next-browser-languagedetector: ^7.0.0
+    i18next: ^22.0.5
+    i18next-browser-languagedetector: ^7.0.1
     i18next-parser: ^6.6.0
-    msw: ^0.48.0
+    msw: ^0.48.2
     react: ^18.2.0
     react-dom: ^18.2.0
     react-i18next: ^12.0.0
@@ -11205,9 +11205,9 @@ __metadata:
     react-scripts: ^5.0.1
     react-service-container: ^0.2.6
     react-test-renderer: ^18.2.0
-    rooks: ^7.4.1
+    rooks: ^7.4.2
     rxjs: ^7.5.7
-    sass: ^1.55.0
+    sass: ^1.56.1
     typescript: ~4.8.4
     web-vitals: ^3.0.4
   languageName: unknown
@@ -11864,16 +11864,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rooks@npm:^7.4.1":
-  version: 7.4.1
-  resolution: "rooks@npm:7.4.1"
+"rooks@npm:^7.4.2":
+  version: 7.4.2
+  resolution: "rooks@npm:7.4.2"
   dependencies:
     lodash.debounce: ^4.0.8
     raf: ^3.4.1
   peerDependencies:
     react: ^16.8.0  || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
-  checksum: bc40a926c96a1baadff714b117b0d176906ac4f98ac2ad2dc4083b3dea94c526853fab1b1940352643fa476e20cbe9c775a0b1ba5d53f001e83612bdaeb56186
+  checksum: 7eff1e6754835f48fbba6c723c9c008263054bb9aa43e39a8a8d8dd69c125a6ed10ccda8af740564dec02097f1302ec168a385f73a4789bc348493c157baa8b2
   languageName: node
   linkType: hard
 
@@ -11969,16 +11969,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.55.0":
-  version: 1.55.0
-  resolution: "sass@npm:1.55.0"
+"sass@npm:^1.56.1":
+  version: 1.56.1
+  resolution: "sass@npm:1.56.1"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 7d769ed08efce4e6134e0f3dc11c4f07e32c413ac8eb43c5855f2686890fdcbd80da34165c91fb4ba407f478ca108e171574b5a60cb9814a5ed09d80f6014f96
+  checksum: 78e693e5992b149574c95d5adfe39ca3e5b97d80befa11191a20d1daa41fe201a98ac099beab726cd3095e2d2e7991a2c408ba0fcc3fa9f525879de7eee18dad
   languageName: node
   linkType: hard
 
