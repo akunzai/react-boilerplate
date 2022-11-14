@@ -7516,7 +7516,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next-parser@npm:^7.0.0":
+"i18next-parser@npm:^7.0.3":
   version: 7.0.3
   resolution: "i18next-parser@npm:7.0.3"
   dependencies:
@@ -11420,7 +11420,7 @@ __metadata:
     formik: ^2.2.9
     i18next: ^22.0.5
     i18next-browser-languagedetector: ^7.0.1
-    i18next-parser: ^7.0.0
+    i18next-parser: ^7.0.3
     msw: ^0.48.2
     react: ^18.2.0
     react-dom: ^18.2.0
