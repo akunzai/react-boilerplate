@@ -44,6 +44,5 @@ yarn i18n:extract
 - [React RxJS Library](https://github.com/re-rxjs/react-rxjs)
 - [React i18n Library - react-i18next](https://react.i18next.com/)
 - [React Forms Library - Formik](https://github.com/formium/formik)
-- [React Service Container](https://github.com/traviskaufman/react-service-container)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro), [Best practices](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library)
 - [Mock Service Worker](https://mswjs.io/docs/)

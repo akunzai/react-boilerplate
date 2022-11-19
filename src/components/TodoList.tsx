@@ -1,14 +1,13 @@
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { useService } from 'react-service-container';
 import { TodoService } from '../api';
 import { Todo } from '../types';
 
 export function TodoList(): JSX.Element {
   const [title, setTitle] = useState('');
   const [todos, setTodos] = useState<Todo[]>([]);
-  const todoService = useService(TodoService);
+  const todoService = useMemo(() => new TodoService(), []);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -18,7 +17,7 @@ export function TodoList(): JSX.Element {
   }, [todoService]);
 
   const handleRemove = (todo: Todo) => {
-    todoService.deleteTodo(todo).subscribe(_=>{
+    todoService.deleteTodo(todo).subscribe((_) => {
       setTodos(todos.filter((x) => x !== todo));
     });
   };
@@ -55,41 +54,41 @@ export function TodoList(): JSX.Element {
   };
 
   return (
-    <div className="row justify-content-md-center">
-      <div className="col-6">
+    <div className='row justify-content-md-center'>
+      <div className='col-6'>
         <h1>{t('Todo List')}</h1>
         <form onSubmit={handleSubmit}>
-          <div className="input-group">
+          <div className='input-group'>
             <input
-              type="text"
-              className="form-control"
-              name="title"
+              type='text'
+              className='form-control'
+              name='title'
               placeholder={t('What need to be done?')}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
             />
             <button
-              className="btn btn-outline-secondary"
-              type="submit"
-              aria-label="Add"
+              className='btn btn-outline-secondary'
+              type='submit'
+              aria-label='Add'
             >
-              <i className="bi bi-plus"></i>
+              <i className='bi bi-plus'></i>
             </button>
           </div>
         </form>
-        <div className="todo list-group">
+        <div className='todo list-group'>
           {todos.map((todo) => (
             <div
               key={todo.id}
-              className="list-group-item list-group-item-action"
+              className='list-group-item list-group-item-action'
             >
-              <div className="d-flex w-100 justify-content-between">
-                <div className="form-check">
+              <div className='d-flex w-100 justify-content-between'>
+                <div className='form-check'>
                   <input
-                    className="form-check-input"
-                    name="done"
-                    type="checkbox"
+                    className='form-check-input'
+                    name='done'
+                    type='checkbox'
                     checked={todo.done}
                     onChange={(e) => handleUpdate(todo.id, e.target.checked)}
                   />
@@ -101,9 +100,9 @@ export function TodoList(): JSX.Element {
                   {todo.title}
                 </Link>
                 <button
-                  type="button"
-                  className="btn-close"
-                  aria-label="Close"
+                  type='button'
+                  className='btn-close'
+                  aria-label='Close'
                   onClick={(e) => handleRemove(todo)}
                 ></button>
               </div>
