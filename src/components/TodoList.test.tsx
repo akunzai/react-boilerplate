@@ -3,12 +3,10 @@ import {
   render,
   screen,
   waitFor,
-  waitForElementToBeRemoved
+  waitForElementToBeRemoved,
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
-import { ServiceContainer } from 'react-service-container';
-import { TodoService } from '../api';
 import '../i18nForTests';
 import { rest, server } from '../mocks/server';
 import { Todo } from '../types';
@@ -16,11 +14,9 @@ import { TodoList } from './TodoList';
 
 const setup = async () => {
   render(
-    <ServiceContainer providers={[TodoService]}>
-      <MemoryRouter>
-        <TodoList />
-      </MemoryRouter>
-    </ServiceContainer>
+    <MemoryRouter>
+      <TodoList />
+    </MemoryRouter>
   );
   await waitFor(() => expect(screen.getAllByRole('link').length).toBe(3));
 };

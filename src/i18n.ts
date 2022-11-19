@@ -5,8 +5,8 @@ import translation from './locales/zh-Hant/translation.json';
 
 export const resources = {
   'zh-Hant': {
-    translation
-  }
+    translation,
+  },
 } as const;
 
 i18n
@@ -23,7 +23,7 @@ i18n
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
-    resources
+    resources,
   });
 
 export default i18n;

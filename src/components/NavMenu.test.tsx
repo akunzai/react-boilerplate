@@ -6,7 +6,7 @@ import { NavMenu } from './NavMenu';
 const setup = () =>
   render(
     <MemoryRouter>
-      <NavMenu title="Test" />
+      <NavMenu title='Test' />
     </MemoryRouter>
   );
 

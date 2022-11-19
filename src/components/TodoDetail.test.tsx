@@ -1,8 +1,6 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import { ServiceContainer } from 'react-service-container';
-import { TodoService } from '../api';
 import '../i18nForTests';
 import { TodoDetail } from './TodoDetail';
 
@@ -12,13 +10,11 @@ beforeAll(() => {
 
 test('without Todo should render nothing', async () => {
   render(
-    <ServiceContainer providers={[TodoService]}>
-      <MemoryRouter initialEntries={['/todo/0']}>
-        <Routes>
-          <Route path='/todo/:id' element={<TodoDetail />} />
-        </Routes>
-      </MemoryRouter>
-    </ServiceContainer>
+    <MemoryRouter initialEntries={['/todo/0']}>
+      <Routes>
+        <Route path='/todo/:id' element={<TodoDetail />} />
+      </Routes>
+    </MemoryRouter>
   );
   expect(screen.queryAllByRole('textbox')).toStrictEqual([]);
 });
@@ -26,13 +22,11 @@ test('without Todo should render nothing', async () => {
 describe('with Todo', () => {
   const setup = async () => {
     render(
-      <ServiceContainer providers={[TodoService]}>
-        <MemoryRouter initialEntries={['/todo/1']}>
-          <Routes>
-            <Route path='/todo/:id' element={<TodoDetail />} />
-          </Routes>
-        </MemoryRouter>
-      </ServiceContainer>
+      <MemoryRouter initialEntries={['/todo/1']}>
+        <Routes>
+          <Route path='/todo/:id' element={<TodoDetail />} />
+        </Routes>
+      </MemoryRouter>
     );
     await waitFor(() => {
       expect(screen.getByDisplayValue('Pay bills')).toBeInTheDocument();
