@@ -2,7 +2,7 @@
   "name": "react-boilerplate",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "yarn@3.4.0",
   "scripts": {
     "start": "cross-env REACT_APP_MOCK=true GENERATE_SOURCEMAP=false react-scripts start",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
