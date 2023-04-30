@@ -49,7 +49,8 @@
     "json5": "^2.2.3",
     "loader-utils": "^2.0.4",
     "minimatch": "^8.0.0",
-    "nth-check": "^2.1.1"
+    "nth-check": "^2.1.1",
+    "yaml": "^2.2.2"
   },
   "eslintConfig": {
     "extends": [
