@@ -1447,12 +1447,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.19.4, @babel/runtime@npm:^7.20.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
-  version: 7.20.7
-  resolution: "@babel/runtime@npm:7.20.7"
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.19.4, @babel/runtime@npm:^7.20.6, @babel/runtime@npm:^7.22.5, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+  version: 7.22.5
+  resolution: "@babel/runtime@npm:7.22.5"
   dependencies:
     regenerator-runtime: ^0.13.11
-  checksum: 4629ce5c46f06cca9cfb9b7fc00d48003335a809888e2b91ec2069a2dcfbfef738480cff32ba81e0b7c290f8918e5c22ddcf2b710001464ee84ba62c7e32a3a3
+  checksum: 12a50b7de2531beef38840d17af50c55a094253697600cee255311222390c68eed704829308d4fd305e1b3dfbce113272e428e9d9d45b1730e0fede997eaceb1
   languageName: node
   linkType: hard
 
@@ -7557,12 +7557,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:^22.0.4, i18next@npm:^22.5.1":
+"i18next@npm:^22.0.4":
   version: 22.5.1
   resolution: "i18next@npm:22.5.1"
   dependencies:
     "@babel/runtime": ^7.20.6
   checksum: 175f8ab7fac2abcee147b00cc2d8e7d4fa9b05cdc227f02cac841fc2fd9545ed4a6d88774f594f8ad12dc944e4d34cc8e88aa00c8b9947baef9e859d93abd305
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^23.0.0":
+  version: 23.0.1
+  resolution: "i18next@npm:23.0.1"
+  dependencies:
+    "@babel/runtime": ^7.22.5
+  checksum: ee530cb3a4ef6fa907a4a5ac6641d5ab9a91cd79bb0348722d9f58654c24beb686a738c81971021fc2fc87b1a5754a9c6feb0bf001da09108344efd9650bc05a
   languageName: node
   linkType: hard
 
@@ -11419,7 +11428,7 @@ __metadata:
     bootstrap-icons: ^1.10.5
     cross-env: ^7.0.3
     formik: ^2.4.1
-    i18next: ^22.5.1
+    i18next: ^23.0.0
     i18next-browser-languagedetector: ^7.0.2
     i18next-parser: ^8.0.0
     msw: ^1.2.2
