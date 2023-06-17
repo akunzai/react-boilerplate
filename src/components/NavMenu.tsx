@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
 import { useOutsideClickRef } from 'rooks';
+import { Link } from 'wouter';
 
 type Props = {
   title: string;
@@ -25,9 +25,9 @@ export function NavMenu({ title }: Props): JSX.Element {
     <header>
       <nav className='navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3'>
         <div className='container'>
-          <NavLink className='navbar-brand' to='/'>
+          <Link href='/' className='navbar-brand'>
             {title}
-          </NavLink>
+          </Link>
           <button
             className='navbar-toggler'
             type='button'
@@ -47,19 +47,19 @@ export function NavMenu({ title }: Props): JSX.Element {
           >
             <ul className='navbar-nav flex-grow'>
               <li className='nav-item'>
-                <NavLink className='nav-link' to='/'>
+                <Link href='/' className='nav-link'>
                   Home
-                </NavLink>
+                </Link>
               </li>
               <li className='nav-item'>
-                <NavLink className='nav-link' to='/counter'>
+                <Link href='/counter' className='nav-link'>
                   Counter
-                </NavLink>
+                </Link>
               </li>
               <li className='nav-item'>
-                <NavLink className='nav-link' to='/todo-list'>
+                <Link href='/todo-list' className='nav-link'>
                   Todo
-                </NavLink>
+                </Link>
               </li>
               <li className='nav-item dropdown'>
                 <button

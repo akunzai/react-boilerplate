@@ -40,7 +40,7 @@ yarn i18n:extract
 
 ## Reference
 
-- [React Router Library](https://github.com/remix-run/react-router)
+- [wouter](https://github.com/molefrog/wouter)
 - [React RxJS Library](https://github.com/re-rxjs/react-rxjs)
 - [React i18n Library - react-i18next](https://react.i18next.com/)
 - [React Forms Library - Formik](https://github.com/formium/formik)

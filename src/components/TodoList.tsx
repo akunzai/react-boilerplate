@@ -1,6 +1,6 @@
 import { FormEvent, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link } from 'wouter';
 import { TodoService } from '../api';
 import { Todo } from '../types';
 
@@ -94,8 +94,8 @@ export function TodoList(): JSX.Element {
                   />
                 </div>
                 <Link
+                  href={`/todo/${todo.id}`}
                   className={todo.done ? 'text-decoration-line-through' : ''}
-                  to={`/todo/${todo.id}`}
                 >
                   {todo.title}
                 </Link>
