@@ -6777,9 +6777,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"formik@npm:^2.4.1":
-  version: 2.4.1
-  resolution: "formik@npm:2.4.1"
+"formik@npm:^2.4.2":
+  version: 2.4.2
+  resolution: "formik@npm:2.4.2"
   dependencies:
     deepmerge: ^2.1.1
     hoist-non-react-statics: ^3.3.0
@@ -6787,10 +6787,10 @@ __metadata:
     lodash-es: ^4.17.21
     react-fast-compare: ^2.0.1
     tiny-warning: ^1.0.2
-    tslib: ^1.10.0
+    tslib: ^2.0.0
   peerDependencies:
     react: ">=16.8.0"
-  checksum: c4238b81c7780b3772f2ef2a439f676822f5c4a944de45505fd15eaf8dd84051420c91ce2ccc72da047d89e2ab630a76c992719de643fe3f302fb4af948d4bbc
+  checksum: 2a942674ee0271707ccc575ecc025e4ac0658a66613d9a4f21e72ed81588c69e99bd627bd4844e512134268962435d3904401bcff726e49d7509125e5002f107
   languageName: node
   linkType: hard
 
@@ -7559,12 +7559,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:^23.0.0":
-  version: 23.0.1
-  resolution: "i18next@npm:23.0.1"
+"i18next@npm:^23.1.0":
+  version: 23.1.0
+  resolution: "i18next@npm:23.1.0"
   dependencies:
     "@babel/runtime": ^7.22.5
-  checksum: ee530cb3a4ef6fa907a4a5ac6641d5ab9a91cd79bb0348722d9f58654c24beb686a738c81971021fc2fc87b1a5754a9c6feb0bf001da09108344efd9650bc05a
+  checksum: 1d2f28869fb2ea6b0387c77aba9da2c5d933df79c5bef240b6637d48c1e8489127af989c0aeeef87dd2b9123aaef27ab5ece2a79f1010720a54742eed2c100ae
   languageName: node
   linkType: hard
 
@@ -11420,8 +11420,8 @@ __metadata:
     bootstrap: ^5.3.0
     bootstrap-icons: ^1.10.5
     cross-env: ^7.0.3
-    formik: ^2.4.1
-    i18next: ^23.0.0
+    formik: ^2.4.2
+    i18next: ^23.1.0
     i18next-browser-languagedetector: ^7.0.2
     i18next-parser: ^8.0.0
     msw: ^1.2.2
@@ -11432,7 +11432,7 @@ __metadata:
     react-test-renderer: ^18.2.0
     rooks: ^7.14.1
     rxjs: ^7.8.1
-    sass: ^1.63.3
+    sass: ^1.63.4
     typescript: ~4.9.5
     web-vitals: ^3.3.2
     wouter: ^2.11.0
@@ -12164,16 +12164,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.63.3":
-  version: 1.63.3
-  resolution: "sass@npm:1.63.3"
+"sass@npm:^1.63.4":
+  version: 1.63.4
+  resolution: "sass@npm:1.63.4"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 41d1d7e875be738a8b5ef92bc722b20fd88f9fc8db61caa17dec37e0a53739cf28dc3b79481b1998c410c82c30247f473c2559e64cec7c4d851e5cea0434ec4e
+  checksum: 12bde5beff85a7018157d90c8b9d5aec8b56832f89fcfeca146f10936eecf97e669d22fd41f812b3407ed259bbb114d69c9ecbfc7ee9b15308211fb910cdf5eb
   languageName: node
   linkType: hard
 
@@ -13308,17 +13308,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.10.0, tslib@npm:^1.8.1":
+"tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.2.0":
-  version: 2.3.1
-  resolution: "tslib@npm:2.3.1"
-  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.2.0":
+  version: 2.5.3
+  resolution: "tslib@npm:2.5.3"
+  checksum: 88902b309afaf83259131c1e13da1dceb0ad1682a213143a1346a649143924d78cf3760c448b84d796938fd76127183894f8d85cbb3bf9c4fddbfcc140c0003c
   languageName: node
   linkType: hard
 
