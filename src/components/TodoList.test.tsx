@@ -6,7 +6,6 @@ import {
   waitForElementToBeRemoved,
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { MemoryRouter } from 'react-router-dom';
 import '../i18nForTests';
 import { rest, server } from '../mocks/server';
 import { Todo } from '../types';
@@ -14,9 +13,7 @@ import { TodoList } from './TodoList';
 
 const setup = async () => {
   render(
-    <MemoryRouter>
-      <TodoList />
-    </MemoryRouter>
+    <TodoList />
   );
   await waitFor(() => expect(screen.getAllByRole('link').length).toBe(3));
 };

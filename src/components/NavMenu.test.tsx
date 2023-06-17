@@ -1,14 +1,8 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
 import '../i18nForTests';
 import { NavMenu } from './NavMenu';
 
-const setup = () =>
-  render(
-    <MemoryRouter>
-      <NavMenu title='Test' />
-    </MemoryRouter>
-  );
+const setup = () => render(<NavMenu title='Test' />);
 
 test('should render with title: Test', () => {
   setup();

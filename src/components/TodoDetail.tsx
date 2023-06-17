@@ -1,17 +1,17 @@
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
 import { TodoService } from '../api';
 import { Todo } from '../types';
-
-export function TodoDetail(): JSX.Element {
-  const { id } = useParams();
+type Props = {
+  id: number;
+};
+export function TodoDetail({ id }: Props): JSX.Element {
   const { t } = useTranslation();
   const todoService = useMemo(() => new TodoService(), []);
   const [loaded, setLoaded] = useState(false);
   const [todo, setTodo] = useState<Todo>(
-    new Todo(Number(id), '', undefined, false)
+    new Todo(id, '', undefined, false)
   );
 
   useEffect(() => {

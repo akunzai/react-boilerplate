@@ -1,6 +1,5 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import '../i18nForTests';
 import { TodoDetail } from './TodoDetail';
 
@@ -10,11 +9,7 @@ beforeAll(() => {
 
 test('without Todo should render nothing', async () => {
   render(
-    <MemoryRouter initialEntries={['/todo/0']}>
-      <Routes>
-        <Route path='/todo/:id' element={<TodoDetail />} />
-      </Routes>
-    </MemoryRouter>
+    <TodoDetail id={0} />
   );
   expect(screen.queryAllByRole('textbox')).toStrictEqual([]);
 });
@@ -22,11 +17,7 @@ test('without Todo should render nothing', async () => {
 describe('with Todo', () => {
   const setup = async () => {
     render(
-      <MemoryRouter initialEntries={['/todo/1']}>
-        <Routes>
-          <Route path='/todo/:id' element={<TodoDetail />} />
-        </Routes>
-      </MemoryRouter>
+      <TodoDetail id={1} />
     );
     await waitFor(() => {
       expect(screen.getByDisplayValue('Pay bills')).toBeInTheDocument();
