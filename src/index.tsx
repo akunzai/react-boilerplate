@@ -5,9 +5,8 @@ import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
 // Start the mocking conditionally.
-if (process.env.REACT_APP_MOCK === 'true') {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const { worker } = require('./mocks/browser');
+if (import.meta.env.DEV) {
+  const { worker } = await import('./mocks/browser');
   worker.start();
 }
 
