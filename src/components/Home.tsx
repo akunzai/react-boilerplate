@@ -6,7 +6,7 @@ export function Home(): JSX.Element {
     <div>
       <h1>{t('Welcome!')}</h1>
       <p>
-        You are running this application in <b>{process.env.NODE_ENV}</b> mode.
+        You are running this application in <b>{import.meta.env.MODE}</b> mode.
       </p>
     </div>
   );

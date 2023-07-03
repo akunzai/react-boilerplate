@@ -9,8 +9,6 @@
 
 [React](https://reactjs.org/) boilerplate to kick-start new project with SCSS + Bootstrap
 
-> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Requirement
 
 - [Node.js](https://nodejs.org)

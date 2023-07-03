@@ -1,31 +1,28 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 import '../i18nForTests';
 import { TodoDetail } from './TodoDetail';
 
 beforeAll(() => {
-  jest.spyOn(global.console, 'error').mockImplementation(() => undefined);
+  vi.spyOn(global.console, 'error').mockImplementation(() => undefined);
 });
 
 test('without Todo should render nothing', async () => {
-  render(
-    <TodoDetail id={0} />
-  );
+  render(<TodoDetail id={0} />);
   expect(screen.queryAllByRole('textbox')).toStrictEqual([]);
 });
 
 describe('with Todo', () => {
   const setup = async () => {
-    render(
-      <TodoDetail id={1} />
-    );
+    render(<TodoDetail id={1} />);
     await waitFor(() => {
       expect(screen.getByDisplayValue('Pay bills')).toBeInTheDocument();
     });
   };
 
   beforeEach(async () => {
-    window.history.back = jest.fn();
+    window.history.back = vi.fn();
   });
 
   test('should renders as expected', async () => {
