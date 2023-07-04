@@ -61,6 +61,6 @@
     "semver": "^7.5.3"
   },
   "msw": {
-    "workerDirectory": "."
+    "workerDirectory": "public"
   }
 }
