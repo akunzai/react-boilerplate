@@ -2424,7 +2424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.3.2":
+"@types/node@npm:*, @types/node@npm:^20.3.3":
   version: 20.3.3
   resolution: "@types/node@npm:20.3.3"
   checksum: 7a0d00800451ca8cd8df63a8cc218c697edadb3143bf46cd6afeb974542a6a1665c3679459be0016c29216ccfed6616b7e55851747527dfa71c5608d9157528c
@@ -5339,7 +5339,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:^23.2.3":
+"i18next@npm:^23.2.6":
   version: 23.2.6
   resolution: "i18next@npm:23.2.6"
   dependencies:
@@ -7138,7 +7138,7 @@ __metadata:
     "@types/hoist-non-react-statics": ^3.3.1
     "@types/jest": ^29.5.2
     "@types/lodash": ^4.14.195
-    "@types/node": ^20.3.2
+    "@types/node": ^20.3.3
     "@types/react": ^18.2.14
     "@types/react-dom": ^18.2.6
     "@vitejs/plugin-react": ^4.0.1
@@ -7150,7 +7150,7 @@ __metadata:
     eslint: ^8.44.0
     eslint-config-react-app: ^7.0.1
     formik: ^2.4.2
-    i18next: ^23.2.3
+    i18next: ^23.2.6
     i18next-browser-languagedetector: ^7.1.0
     i18next-parser: ^8.0.0
     jsdom: ^22.1.0
