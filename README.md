@@ -29,7 +29,7 @@ yarn start
 # Running unit tests
 yarn test
 
-# build the project in production mode. The build artifacts will be stored in the `build/` directory
+# build the project in production mode. The build artifacts will be stored in the `dist/` directory
 yarn build
 
 # extracts i18n messages from source code
