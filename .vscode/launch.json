@@ -5,39 +5,19 @@
       "name": "Launch Chrome against localhost",
       "type": "chrome",
       "request": "launch",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}/src",
-      "sourceMapPathOverrides": {
-        "webpack:///src/*": "${workspaceFolder}/*"
-      }
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
     },
     {
-      "name": "Debug All Tests",
+      "name": "Debug Current Test File",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
-      "args": ["test", "--runInBand", "--no-cache", "--watchAll=false"],
-      "cwd": "${workspaceRoot}",
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+      "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",
+      "args": ["run", "${relativeFile}"],
+      "smartStep": true,
       "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "env": { "CI": "true" },
-    },
-    {
-      "name": "Debug Current Test",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
-      "args": [
-        "test",
-        "--testPathPattern=${fileBasenameNoExtension}",
-        "--runInBand",
-        "--no-cache",
-        "--watchAll=false"
-      ],
-      "cwd": "${workspaceRoot}",
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "env": { "CI": "true" }
+      "runtimeVersion": "18"
     }
   ]
 }
