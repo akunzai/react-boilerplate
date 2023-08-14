@@ -2084,20 +2084,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^5.17.0":
-  version: 5.17.0
-  resolution: "@testing-library/jest-dom@npm:5.17.0"
+"@testing-library/jest-dom@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@testing-library/jest-dom@npm:6.0.0"
   dependencies:
     "@adobe/css-tools": ^4.0.1
     "@babel/runtime": ^7.9.2
-    "@types/testing-library__jest-dom": ^5.9.1
     aria-query: ^5.0.0
     chalk: ^3.0.0
     css.escape: ^1.5.1
     dom-accessibility-api: ^0.5.6
     lodash: ^4.17.15
     redent: ^3.0.0
-  checksum: 9f28dbca8b50d7c306aae40c3aa8e06f0e115f740360004bd87d57f95acf7ab4b4f4122a7399a76dbf2bdaaafb15c99cc137fdcb0ae457a92e2de0f3fbf9b03b
+  peerDependencies:
+    "@jest/globals": ">= 28"
+    "@types/jest": ">= 28"
+    jest: ">= 28"
+    vitest: ">= 0.32"
+  peerDependenciesMeta:
+    "@jest/globals":
+      optional: true
+    "@types/jest":
+      optional: true
+    jest:
+      optional: true
+    vitest:
+      optional: true
+  checksum: 9b978e993f084553f8e39215b08f6e09e84a4c78e578db35d361bb4259aed84418f1b17ce52f23ead4d81cc7cad5ae5b18a6596d6d531a6d2252be66409e7167
   languageName: node
   linkType: hard
 
@@ -2205,7 +2218,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*, @types/jest@npm:^29.5.3":
+"@types/jest@npm:^29.5.3":
   version: 29.5.3
   resolution: "@types/jest@npm:29.5.3"
   dependencies:
@@ -2332,15 +2345,6 @@ __metadata:
   version: 1.2.0
   resolution: "@types/symlink-or-copy@npm:1.2.0"
   checksum: 18fb73094b2cf6c84544939bd6344d7a8cd1ccf8496a1cfb1320f38491c8dfbea3248bb6e91495322a51a493e04a767582a214d5261f5c5b007aa6ef65fc8b50
-  languageName: node
-  linkType: hard
-
-"@types/testing-library__jest-dom@npm:^5.9.1":
-  version: 5.14.6
-  resolution: "@types/testing-library__jest-dom@npm:5.14.6"
-  dependencies:
-    "@types/jest": "*"
-  checksum: 92f81cefeacba3b5c06d4b3fbea0341fe2bcaa6e425c026ae262de39f1148c2588cf3003112aa4ac0880c3972ffb77641a863f3be71518d1d8080402c944e326
   languageName: node
   linkType: hard
 
@@ -7060,7 +7064,7 @@ __metadata:
   resolution: "react-boilerplate@workspace:."
   dependencies:
     "@react-types/shared": ^3.18.1
-    "@testing-library/jest-dom": ^5.17.0
+    "@testing-library/jest-dom": ^6.0.0
     "@testing-library/react": ^14.0.0
     "@testing-library/user-event": ^14.4.3
     "@types/hoist-non-react-statics": ^3.3.1
