@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { expect, test } from 'vitest';
 import '../i18nForTests';
 import { Home } from './Home';
 

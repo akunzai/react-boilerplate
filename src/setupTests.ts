@@ -3,19 +3,9 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+import { afterAll, afterEach, beforeAll } from 'vitest';
 import { server } from './mocks/server';
 
-beforeAll(() => {
-  // Enable the mocking in tests.
-  server.listen();
-});
-
-afterEach(() => {
-  // Reset any runtime handlers tests may use.
-  server.resetHandlers();
-});
-
-afterAll(() => {
-  // Clean up once the tests are done.
-  server.close();
-});
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());

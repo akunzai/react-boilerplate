@@ -7,6 +7,7 @@ import {
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { HttpResponse, http } from 'msw';
+import { expect, test } from 'vitest';
 import '../i18nForTests';
 import { server } from '../mocks/server';
 import { Todo } from '../types';
