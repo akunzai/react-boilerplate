@@ -14,15 +14,6 @@
     "i18n:extract": "i18next"
   },
   "dependencies": {
-    "@react-types/shared": "^3.21.0",
-    "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.5.1",
-    "@types/hoist-non-react-statics": "^3.3.4",
-    "@types/jest": "^29.5.6",
-    "@types/lodash": "^4.14.200",
-    "@types/node": "^20.8.7",
-    "@types/react-dom": "^18.2.14",
     "axios": "^1.5.1",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.1",
@@ -40,6 +31,15 @@
     "wouter": "^2.12.1"
   },
   "devDependencies": {
+    "@react-types/shared": "^3.21.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/hoist-non-react-statics": "^3.3.4",
+    "@types/jest": "^29.5.6",
+    "@types/lodash": "^4.14.200",
+    "@types/node": "^20.8.7",
+    "@types/react-dom": "^18.2.14",
     "@vitejs/plugin-react": "^4.1.0",
     "@vitest/coverage-v8": "^0.34.6",
     "cross-env": "^7.0.3",

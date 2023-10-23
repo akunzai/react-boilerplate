@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import { expect, test } from 'vitest';
 import '../i18nForTests';
 import { NavMenu } from './NavMenu';
 
