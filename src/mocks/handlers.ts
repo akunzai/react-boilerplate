@@ -1,4 +1,4 @@
-import { rest } from 'msw';
+import { http, HttpResponse } from 'msw';
 import { Todo } from '../types';
 
 const db: Todo[] = [
@@ -8,41 +8,41 @@ const db: Todo[] = [
 ];
 
 export const handlers = [
-  rest.get('/api/todos', (req, res, ctx) => {
-    return res(ctx.json(db));
+  http.get('/api/todos', () => {
+    return HttpResponse.json(db);
   }),
-  rest.get('/api/todos/:id', (req, res, ctx) => {
-    const { id } = req.params;
+  http.get('/api/todos/:id', ({params}) => {
+    const { id } = params;
     const todo = db.find((x) => x.id === Number(id));
     if (todo === undefined) {
-      return res(ctx.status(404));
+      return new HttpResponse(null, { status: 404 });
     }
-    return res(ctx.json(todo));
+    return HttpResponse.json(todo);
   }),
-  rest.post('/api/todos', async (req, res, ctx) => {
-    const todo = await req.json<Todo>();
+  http.post('/api/todos', async ({request}) => {
+    const todo = (await request.json()) as Todo;
     if (!todo.id) {
       todo.id = db.length > 0 ? Math.max(...db.map((x) => x.id)) + 1 : 1;
     }
     db.push(todo);
-    return res(ctx.json(todo));
+    return HttpResponse.json(todo);
   }),
-  rest.delete('/api/todos/:id', (req, res, ctx) => {
-    const { id } = req.params;
+  http.delete('/api/todos/:id', ({params}) => {
+    const { id } = params;
     const index = db.findIndex((x) => x.id === Number(id));
     if (index === -1) {
-      return res(ctx.status(404));
+      return new HttpResponse(null, { status: 404 });
     }
-    return res(ctx.json(db.splice(index, 1)[0]));
+    return HttpResponse.json(db.splice(index, 1)[0]);
   }),
-  rest.put('/api/todos/:id', async (req, res, ctx) => {
-    const { id } = req.params;
+  http.put('/api/todos/:id', async ({params,request}) => {
+    const { id } = params;
     const index = db.findIndex((x) => x.id === Number(id));
     if (index === -1) {
-      return res(ctx.status(404));
+      return new HttpResponse(null, { status: 404 });
     }
-    const todo = await req.json<Todo>();
+    const todo = (await request.json()) as Todo;
     db[index] = todo;
-    return res(ctx.status(200));
+    return new HttpResponse(null, { status: 200 });
   }),
 ];
