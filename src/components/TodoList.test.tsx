@@ -6,15 +6,14 @@ import {
   waitForElementToBeRemoved,
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { HttpResponse, http } from 'msw';
 import '../i18nForTests';
-import { rest, server } from '../mocks/server';
+import { server } from '../mocks/server';
 import { Todo } from '../types';
 import { TodoList } from './TodoList';
 
 const setup = async () => {
-  render(
-    <TodoList />
-  );
+  render(<TodoList />);
   await waitFor(() => expect(screen.getAllByRole('link').length).toBe(3));
 };
 
@@ -41,16 +40,14 @@ test('should renders as expected', async () => {
 test('should remove item when delete button clicked', async () => {
   await setup();
   server.use(
-    rest.delete('/api/todos/3', (req, res, ctx) => {
-      return res(ctx.status(200));
+    http.delete('/api/todos/3', () => {
+      return new HttpResponse(null, { status: 200 });
     }),
-    rest.get('/api/todos', (req, res, ctx) => {
-      return res(
-        ctx.json([
-          new Todo(1, 'Pay bills', '', true),
-          new Todo(2, 'Read a book'),
-        ])
-      );
+    http.get('/api/todos', () => {
+      return HttpResponse.json([
+        new Todo(1, 'Pay bills', '', true),
+        new Todo(2, 'Read a book'),
+      ]);
     })
   );
   const buttons = screen.getAllByRole('button', { name: /Close/i });

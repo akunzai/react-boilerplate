@@ -1,5 +1,6 @@
+import { http, HttpResponse } from 'msw';
 import { vi } from 'vitest';
-import { rest, server } from '../mocks/server';
+import { server } from '../mocks/server';
 import { Todo } from '../types';
 import { TodoService } from './TodoService';
 
@@ -21,8 +22,8 @@ describe('getTodoList', () => {
   test('should return empty result on errors', () =>
     new Promise<void>((done) => {
       server.use(
-        rest.get('/api/todos', (req, res, ctx) => {
-          return res(ctx.status(404));
+        http.get('/api/todos', () => {
+          return new HttpResponse(null, { status: 404 });
         })
       );
       service.getTodoList().subscribe((values) => {
@@ -70,8 +71,8 @@ describe('addTodo', () => {
   test('should return undefined on errors', () =>
     new Promise<void>((done) => {
       server.use(
-        rest.post('/api/todos', (req, res, ctx) => {
-          return res(ctx.status(400));
+        http.post('/api/todos', () => {
+          return new HttpResponse(null, { status: 400 });
         })
       );
       const todo = { title: '' } as Todo;
@@ -101,8 +102,8 @@ describe('updateTodo', () => {
   test('should call console.error on errors', () =>
     new Promise<void>((done) => {
       server.use(
-        rest.put('/api/todos/999', (req, res, ctx) => {
-          return res(ctx.status(404));
+        http.put('/api/todos/999', () => {
+          return new HttpResponse(null, { status: 404 });
         })
       );
       const todo = new Todo(999, 'NotFound');
@@ -118,11 +119,12 @@ describe('deleteTodo', () => {
   test('should cannot retrieve it as expected', () =>
     new Promise<void>((done) => {
       server.use(
-        rest.delete('/api/todos/123', (req, res, ctx) => {
-          return res(ctx.json(req.body));
+        http.delete('/api/todos/123', async ({ request }) => {
+          const item = await request.json();
+          return HttpResponse.json(item);
         }),
-        rest.get('/api/todos/123', (req, res, ctx) => {
-          return res(ctx.status(404));
+        http.get('/api/todos/123', () => {
+          return new HttpResponse(null, { status: 404 });
         })
       );
       const todo = new Todo(123, '');
@@ -137,8 +139,8 @@ describe('deleteTodo', () => {
   test('should return undefined on errors', () =>
     new Promise<void>((done) => {
       server.use(
-        rest.delete('/api/todos/456', (req, res, ctx) => {
-          return res(ctx.status(500));
+        http.delete('/api/todos/456', () => {
+          return new HttpResponse(null, { status: 500 });
         })
       );
       const todo = new Todo(456, '');
