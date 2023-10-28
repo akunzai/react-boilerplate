@@ -8,17 +8,14 @@ beforeAll(() => {
   vi.spyOn(global.console, 'error').mockImplementation(() => undefined);
 });
 
-test('without Todo should render nothing', async () => {
+test('without Todo should render nothing', () => {
   render(<TodoDetail id={0} />);
   expect(screen.queryAllByRole('textbox')).toStrictEqual([]);
 });
 
 describe('with Todo', () => {
-  const setup = async () => {
+  const setup = () => {
     render(<TodoDetail id={1} />);
-    await waitFor(() => {
-      expect(screen.getByDisplayValue('Pay bills')).toBeInTheDocument();
-    });
   };
 
   beforeEach(async () => {
@@ -26,8 +23,8 @@ describe('with Todo', () => {
   });
 
   test('should renders as expected', async () => {
-    await setup();
-    const title = screen.getByRole('textbox', {
+    setup();
+    const title = await screen.findByRole('textbox', {
       name: /Title/i,
     }) as HTMLInputElement;
     expect(title.value).toBe('Pay bills');
@@ -40,13 +37,13 @@ describe('with Todo', () => {
   });
 
   test('should goes back when close button clicked', async () => {
-    await setup();
+    setup();
     fireEvent.click(await screen.findByRole('button', { name: /Close/i }));
     expect(window.history.back).toBeCalled();
   });
 
   test('should update values and goes back when form submitted', async () => {
-    await setup();
+    setup();
     const input = await screen.findByRole('textbox', {
       name: /Title/i,
     });
