@@ -13,14 +13,13 @@ import { server } from '../mocks/server';
 import { Todo } from '../types';
 import { TodoList } from './TodoList';
 
-const setup = async () => {
+const setup = () => {
   render(<TodoList />);
-  await waitFor(() => expect(screen.getAllByRole('link').length).toBe(3));
 };
 
 test('should renders as expected', async () => {
-  await setup();
-  const links = screen.getAllByRole('link');
+  setup();
+  const links = await screen.findAllByRole('link');
   expect(links.length).toBe(3);
   expect(links[0].textContent).toContain('Pay bills');
   expect(links[0].getAttribute('href')).toBe('/todo/1');
@@ -39,7 +38,7 @@ test('should renders as expected', async () => {
 });
 
 test('should remove item when delete button clicked', async () => {
-  await setup();
+  setup();
   server.use(
     http.delete('/api/todos/3', () => {
       return new HttpResponse(null, { status: 200 });
@@ -51,7 +50,7 @@ test('should remove item when delete button clicked', async () => {
       ]);
     })
   );
-  const buttons = screen.getAllByRole('button', { name: /Close/i });
+  const buttons = await screen.findAllByRole('button', { name: /Close/i });
   fireEvent.click(buttons[2]);
   await waitForElementToBeRemoved(
     screen.queryByRole('link', { name: /Buy eggs/ })
@@ -60,8 +59,8 @@ test('should remove item when delete button clicked', async () => {
 });
 
 test('should update item when checkbox checked', async () => {
-  await setup();
-  const inputs = screen.getAllByRole('checkbox');
+  setup();
+  const inputs = await screen.findAllByRole('checkbox');
   fireEvent.click(inputs[2]);
   await waitFor(() => {
     expect(screen.getAllByRole('link')[2].getAttribute('class')).toContain(
@@ -71,21 +70,21 @@ test('should update item when checkbox checked', async () => {
 });
 
 test('should not add item without any input', async () => {
-  await setup();
-  fireEvent.click(screen.getByRole('button', { name: /Add/i }));
+  setup();
+  fireEvent.click(await screen.findByRole('button', { name: /Add/i }));
   expect((await screen.findAllByRole('link')).length).toBe(3);
 });
 
 test('should not add item with blank input', async () => {
-  await setup();
-  await userEvent.type(screen.getByRole('textbox'), '   ');
+  setup();
+  await userEvent.type(await screen.findByRole('textbox'), '   ');
   fireEvent.click(screen.getByRole('button', { name: /Add/i }));
   expect((await screen.findAllByRole('link')).length).toBe(3);
 });
 
 test('should add item and clears the input', async () => {
-  await setup();
-  await userEvent.type(screen.getByRole('textbox'), 'Test');
+  setup();
+  await userEvent.type(await screen.findByRole('textbox'), 'Test');
   fireEvent.click(screen.getByRole('button', { name: /Add/i }));
   await screen.findByText('Test');
   const link = screen.getByRole('link', { name: /Test/i });
