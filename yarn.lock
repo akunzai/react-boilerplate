@@ -3227,10 +3227,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap-icons@npm:^1.11.1":
-  version: 1.11.1
-  resolution: "bootstrap-icons@npm:1.11.1"
-  checksum: cfef41b62847b4b4398c5ae4d93365ffe4b84a1fe6e7d09875c5c4eaee8b50182508c2097a4c3d71ea97f1729ad5a254c6607bf64eb45acea00aebbef29ab5b8
+"bootstrap-icons@npm:^1.11.2":
+  version: 1.11.2
+  resolution: "bootstrap-icons@npm:1.11.2"
+  checksum: b11812c4b4cb9f7c8dd3eb011aea294e5dada5e3cd4d59a86870adcb38134fbaf6439a494b4dcae85e4fd79bfb6d41c1ae92cd969120260059412718c23a586f
   languageName: node
   linkType: hard
 
@@ -6950,7 +6950,7 @@ __metadata:
     "@vitest/coverage-v8": "npm:^0.34.6"
     axios: "npm:^1.6.2"
     bootstrap: "npm:^5.3.2"
-    bootstrap-icons: "npm:^1.11.1"
+    bootstrap-icons: "npm:^1.11.2"
     cross-env: "npm:^7.0.3"
     eslint: "npm:^8.53.0"
     eslint-config-react-app: "npm:^7.0.1"
