@@ -2425,12 +2425,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.9.1":
+"@types/node@npm:*":
   version: 20.9.1
   resolution: "@types/node@npm:20.9.1"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 0cb52c0840fe9a2e8f988564da6823bb3141e34fef8cb7264762c851c0dac5d9ef4859db422dfa41cd1a864ad126a9bd3b588d0285bc9af6de814de3280da9b3
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.10.1":
+  version: 20.10.1
+  resolution: "@types/node@npm:20.10.1"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: c1b4b5a33f57bd39a8a0d074f27e3e370fccc6cda6a1c46caa48cc4c1687677cfdbffd9dc93fc803c6d355696dd9c73cd6f6507c749f61f83beb7326aec077d2
   languageName: node
   linkType: hard
 
@@ -6944,7 +6953,7 @@ __metadata:
     "@types/hoist-non-react-statics": "npm:^3.3.5"
     "@types/jest": "npm:^29.5.10"
     "@types/lodash": "npm:^4.14.201"
-    "@types/node": "npm:^20.9.1"
+    "@types/node": "npm:^20.10.1"
     "@types/react-dom": "npm:^18.2.15"
     "@vitejs/plugin-react": "npm:^4.2.0"
     "@vitest/coverage-v8": "npm:^0.34.6"
