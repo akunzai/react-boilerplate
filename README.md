@@ -12,28 +12,28 @@
 ## Requirement
 
 - [Node.js](https://nodejs.org)
-- [Yarn package manager](https://yarnpkg.com/)
+- [pnpm](https://pnpm.io/)
 
 ## [Getting Started](https://create-react-app.dev/docs/getting-started)
 
 ```sh
-# activate the yarn package manager
+# activate the pnpm package manager
 corepack enable
 
 # install npm packages
-yarn install
+pnpm install
 
 # watch and serve a dev server at http://localhost:5173/
-yarn start
+pnpm start
 
 # Running unit tests
-yarn test
+pnpm test
 
 # build the project in production mode. The build artifacts will be stored in the `dist/` directory
-yarn build
+pnpm build
 
 # extracts i18n messages from source code
-yarn i18n:extract
+pnpm i18n:extract
 ```
 
 ## Reference
