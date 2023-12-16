@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    target: 'esnext'
+    target: 'esnext',
   },
   plugins: [react()],
   server: {
@@ -17,7 +17,16 @@ export default defineConfig({
     setupFiles: './src/setupTests.ts',
     coverage: {
       reporter: ['text', 'clover'],
-      exclude: ['node_modules/', 'src/setupTests.ts'],
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: [
+        'src/@types/*',
+        'src/*.d.ts',
+        'src/i18n.ts',
+        'src/index.{ts,tsx}',
+        'src/reportWebVitals.ts',
+        'src/mocks/*',
+        'src/setupTests.ts',
+      ],
     },
   },
 });
