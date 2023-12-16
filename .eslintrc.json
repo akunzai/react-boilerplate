@@ -1,11 +1,12 @@
 {
   "extends": [
-	"react-app",
-	"react-app/jest",
-	"plugin:react/recommended",
-	"plugin:@typescript-eslint/recommended"
+    "react-app",
+    "react-app/jest",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
+  "ignorePatterns": ["*.md"],
   "rules": {
-	"react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off"
   }
 }
