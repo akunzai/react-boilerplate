@@ -95,8 +95,8 @@ devDependencies:
     specifier: ^7.0.1
     version: 7.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(eslint@8.56.0)(typescript@5.1.6)
   i18next-parser:
-    specifier: ^8.9.0
-    version: 8.9.0
+    specifier: ^8.11.0
+    version: 8.11.0
   jsdom:
     specifier: ^23.0.1
     version: 23.0.1
@@ -3122,8 +3122,8 @@ packages:
     dependencies:
       delayed-stream: 1.0.0
 
-  /commander@11.0.0:
-    resolution: {integrity: sha512-9HMlXtt/BNoYr8ooyjjNRdIilOTkVJXB+GhxMTtOKwk0R4j4lS4NpjuqmRxroBfnfTSHQIHQB7wryHhXarNjmQ==}
+  /commander@11.1.0:
+    resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
     engines: {node: '>=16'}
     dev: true
 
@@ -4394,15 +4394,15 @@ packages:
       '@babel/runtime': 7.23.6
     dev: false
 
-  /i18next-parser@8.9.0:
-    resolution: {integrity: sha512-8B+XTeBscPeswJbpBlGYxzUNXybDRltwTupJD+lLTGzBwfSfviAsSl2MEFpHc/fVlwjjd4Muw19nMpK2O+CB8A==}
+  /i18next-parser@8.11.0:
+    resolution: {integrity: sha512-ZQhGEHIu1yHM8IUBOjW9PIyQB/A9LuNccI3jxGcogwYuP3O3QJmTd5djtZpgE5vr2KHjcR7CdJjwj7xgg8NYcA==}
     engines: {node: '>=16.0.0 || >=18.0.0 || >=20.0.0', npm: '>=6', yarn: '>=1'}
     hasBin: true
     dependencies:
       broccoli-plugin: 4.0.7
       cheerio: 1.0.0-rc.12
       colors: 1.4.0
-      commander: 11.0.0
+      commander: 11.1.0
       eol: 0.9.1
       esbuild: 0.19.9
       fs-extra: 11.2.0
