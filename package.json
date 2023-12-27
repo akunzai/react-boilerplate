@@ -45,7 +45,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
     "eslint-config-react-app": "^7.0.1",
-    "i18next-parser": "^8.9.0",
+    "i18next-parser": "^8.11.0",
     "jsdom": "^23.0.1",
     "msw": "^2.0.11",
     "react-test-renderer": "^18.2.0",
