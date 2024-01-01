@@ -18,8 +18,8 @@ dependencies:
     specifier: ^2.4.5
     version: 2.4.5(react@18.2.0)
   i18next:
-    specifier: ^23.7.11
-    version: 23.7.11
+    specifier: ^23.7.13
+    version: 23.7.13
   i18next-browser-languagedetector:
     specifier: ^7.2.0
     version: 7.2.0
@@ -31,7 +31,7 @@ dependencies:
     version: 18.2.0(react@18.2.0)
   react-i18next:
     specifier: ^14.0.0
-    version: 14.0.0(i18next@23.7.11)(react-dom@18.2.0)(react@18.2.0)
+    version: 14.0.0(i18next@23.7.13)(react-dom@18.2.0)(react@18.2.0)
   rooks:
     specifier: ^7.14.1
     version: 7.14.1(react-dom@18.2.0)(react@18.2.0)
@@ -4407,7 +4407,7 @@ packages:
       esbuild: 0.19.9
       fs-extra: 11.2.0
       gulp-sort: 2.0.0
-      i18next: 23.7.11
+      i18next: 23.7.13
       js-yaml: 4.1.0
       lilconfig: 2.1.0
       rsvp: 4.8.5
@@ -4420,8 +4420,8 @@ packages:
       - supports-color
     dev: true
 
-  /i18next@23.7.11:
-    resolution: {integrity: sha512-A/vOkw8vY99YHU9A1Td3I1dcTiYaPnwBWzrpVzfXUXSYgogK3cmBcmop/0cnXPc6QpUWIyqaugKNxRUEZVk9Nw==}
+  /i18next@23.7.13:
+    resolution: {integrity: sha512-DbCPlw6VmURSZa43iOnycxq9o15e+WuBWDBZ3aj+gQZcDz4sgnuKwrcwmP1n8gSSCwCN7CRFGTpnwTd93A16Mg==}
     dependencies:
       '@babel/runtime': 7.23.6
 
@@ -5595,7 +5595,7 @@ packages:
     resolution: {integrity: sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==}
     dev: false
 
-  /react-i18next@14.0.0(i18next@23.7.11)(react-dom@18.2.0)(react@18.2.0):
+  /react-i18next@14.0.0(i18next@23.7.13)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-OCrS8rHNAmnr8ggGRDxjakzihrMW7HCbsplduTm3EuuQ6fyvWGT41ksZpqbduYoqJurBmEsEVZ1pILSUWkHZng==}
     peerDependencies:
       i18next: '>= 23.2.3'
@@ -5610,7 +5610,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.23.6
       html-parse-stringify: 3.0.1
-      i18next: 23.7.11
+      i18next: 23.7.13
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
