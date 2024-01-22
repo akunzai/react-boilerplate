@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import './i18n';
-import './index.scss';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 // Start the mocking conditionally.

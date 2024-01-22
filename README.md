@@ -7,7 +7,7 @@
 [codecov]: https://codecov.io/gh/akunzai/react-boilerplate
 [codecov-badge]: https://codecov.io/gh/akunzai/react-boilerplate/branch/main/graph/badge.svg?token=gEZ8y4Ta6p
 
-[React](https://reactjs.org/) boilerplate to kick-start new project with SCSS + Bootstrap
+[React](https://reactjs.org/) boilerplate to kick-start new project with CSS + Bootstrap
 
 ## Requirement
 
