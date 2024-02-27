@@ -27,7 +27,7 @@
     "rxjs": "^7.8.1",
     "typescript": "~5.3.3",
     "web-vitals": "^3.5.2",
-    "wouter": "^3.0.0"
+    "wouter": "^3.0.1"
   },
   "devDependencies": {
     "@react-types/shared": "^3.22.0",

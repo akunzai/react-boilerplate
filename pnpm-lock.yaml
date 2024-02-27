@@ -45,8 +45,8 @@ dependencies:
     specifier: ^3.5.2
     version: 3.5.2
   wouter:
-    specifier: ^3.0.0
-    version: 3.0.0(react@18.2.0)
+    specifier: ^3.0.1
+    version: 3.0.1(react@18.2.0)
 
 devDependencies:
   '@react-types/shared':
@@ -6672,8 +6672,8 @@ packages:
       stackback: 0.0.2
     dev: true
 
-  /wouter@3.0.0(react@18.2.0):
-    resolution: {integrity: sha512-mI7KL45peK6D15f5fdE9xpzn/ShbCTnBO5BPUX/XpZm+lwxs7h2t2Nh++Kcr7nozdCzKnomrFxDIObuIEZB1sg==}
+  /wouter@3.0.1(react@18.2.0):
+    resolution: {integrity: sha512-Wv2FSH56LchrKKoiGXn2F8ZA9gLgKiI3JVtI64DhZXXOtbgV/pFKSyMZ5ds94LoKxkGAyNEKK0LAnTMR0LMp3g==}
     peerDependencies:
       react: '>=16.8.0'
     dependencies:
