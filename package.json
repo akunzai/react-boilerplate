@@ -30,7 +30,7 @@
     "wouter": "^3.0.1"
   },
   "devDependencies": {
-    "@react-types/shared": "^3.22.0",
+    "@react-types/shared": "^3.22.1",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
