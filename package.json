@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.15.3",
+  "packageManager": "pnpm@8.15.4",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
@@ -46,7 +46,7 @@
     "eslint-config-react-app": "^7.0.1",
     "i18next-parser": "^8.12.0",
     "jsdom": "^24.0.0",
-    "msw": "^2.2.0",
+    "msw": "^2.2.1",
     "react-test-renderer": "^18.2.0",
     "vite": "^5.1.4",
     "vitest": "^1.2.2"
