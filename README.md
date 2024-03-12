@@ -1,9 +1,9 @@
 # My React Boilerplate
 
-[![Build Status][ci-badge]][ci] [![Code Coverage][codecov-badge]][codecov]
+[![Build Status][build-badge]][build] [![Code Coverage][codecov-badge]][codecov]
 
-[ci]: https://github.com/akunzai/react-boilerplate/actions?query=workflow%3ACI
-[ci-badge]: https://github.com/akunzai/react-boilerplate/workflows/CI/badge.svg
+[build]: https://github.com/akunzai/react-boilerplate/actions/workflows/build.yml
+[build-badge]: https://github.com/akunzai/react-boilerplate/actions/workflows/build.yml/badge.svg
 [codecov]: https://codecov.io/gh/akunzai/react-boilerplate
 [codecov-badge]: https://codecov.io/gh/akunzai/react-boilerplate/branch/main/graph/badge.svg?token=gEZ8y4Ta6p
 
