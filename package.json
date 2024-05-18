@@ -5,7 +5,7 @@
   "private": true,
   "packageManager": "pnpm@9.0.6",
   "scripts": {
-    "start": "vite",
+    "start": "vite --host",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "vitest",
