@@ -17,7 +17,7 @@
       "args": ["run", "${relativeFile}"],
       "smartStep": true,
       "console": "integratedTerminal",
-      "runtimeVersion": "18"
+      "runtimeVersion": "20"
     }
   ]
 }
