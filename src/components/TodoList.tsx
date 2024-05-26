@@ -17,7 +17,7 @@ export function TodoList(): JSX.Element {
   }, [todoService]);
 
   const handleRemove = (todo: Todo) => {
-    todoService.deleteTodo(todo).subscribe((_) => {
+    todoService.deleteTodo(todo).subscribe(() => {
       setTodos(todos.filter((x) => x !== todo));
     });
   };
@@ -26,7 +26,7 @@ export function TodoList(): JSX.Element {
     const todo = todos.find((x) => x.id === id);
     if (todo === undefined) return;
     const newTodo = Object.assign(todo, { done: done });
-    todoService.updateTodo(newTodo).subscribe((_) => {
+    todoService.updateTodo(newTodo).subscribe(() => {
       const index = todos.findIndex((x) => x.id === id);
       if (index > -1) {
         const newTodos = [...todos];
@@ -103,7 +103,7 @@ export function TodoList(): JSX.Element {
                   type='button'
                   className='btn-close'
                   aria-label='Close'
-                  onClick={(e) => handleRemove(todo)}
+                  onClick={() => handleRemove(todo)}
                 ></button>
               </div>
             </div>
