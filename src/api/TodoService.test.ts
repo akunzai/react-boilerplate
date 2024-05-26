@@ -88,7 +88,7 @@ describe('updateTodo', () => {
   test('should can retrieve it as expected', () =>
     new Promise<void>((done) => {
       const todo = new Todo(3, 'Modified', 'Test', true);
-      service.updateTodo(todo).subscribe((_) => {
+      service.updateTodo(todo).subscribe(() => {
         service.getTodo(todo.id).subscribe((value) => {
           done();
           expect(value?.id).toBe(todo.id);
@@ -128,7 +128,7 @@ describe('deleteTodo', () => {
         })
       );
       const todo = new Todo(123, '');
-      service.deleteTodo(todo).subscribe((_) => {
+      service.deleteTodo(todo).subscribe(() => {
         service.getTodo(todo.id).subscribe((value) => {
           done();
           expect(value).toBeUndefined();
