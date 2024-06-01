@@ -6,6 +6,7 @@
         "**/.pnpm-store": true
     },
     "cSpell.words": [
-        "Formik"
+        "Formik",
+        "Todos"
     ]
 }

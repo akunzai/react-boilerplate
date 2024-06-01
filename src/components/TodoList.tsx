@@ -7,49 +7,46 @@ import { Todo } from '../types';
 export function TodoList(): JSX.Element {
   const [title, setTitle] = useState('');
   const [todos, setTodos] = useState<Todo[]>([]);
-  const todoService = useMemo(() => new TodoService(), []);
+  const todoService: TodoService = useMemo(() => new TodoService(), []);
   const { t } = useTranslation();
 
   useEffect(() => {
-    todoService.getTodoList().subscribe((values) => {
+    todoService.getTodoList().then((values) => {
       setTodos(values);
     });
   }, [todoService]);
 
-  const handleRemove = (todo: Todo) => {
-    todoService.deleteTodo(todo).subscribe(() => {
-      setTodos(todos.filter((x) => x !== todo));
-    });
+  const handleRemove = async (todo: Todo) => {
+    await todoService.deleteTodo(todo);
+    setTodos(todos.filter((x: Todo) => x !== todo));
   };
 
-  const handleUpdate = (id: number, done: boolean) => {
-    const todo = todos.find((x) => x.id === id);
+  const handleUpdate = async (id: number, done: boolean) => {
+    const todo = todos.find((x: { id: number }) => x.id === id);
     if (todo === undefined) return;
     const newTodo = Object.assign(todo, { done: done });
-    todoService.updateTodo(newTodo).subscribe(() => {
-      const index = todos.findIndex((x) => x.id === id);
-      if (index > -1) {
-        const newTodos = [...todos];
-        newTodos[index] = newTodo;
-        setTodos(newTodos);
-      }
-    });
+    await todoService.updateTodo(newTodo);
+    const index = todos.findIndex((x: { id: number }) => x.id === id);
+    if (index > -1) {
+      const newTodos = [...todos];
+      newTodos[index] = newTodo;
+      setTodos(newTodos);
+    }
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const trimmedTitle = title.trim();
     if (!trimmedTitle) {
       return;
     }
     const newTodo = { title: trimmedTitle, done: false } as Todo;
-    todoService.addTodo(newTodo).subscribe((value) => {
-      const newTodos = [...todos];
-      if (!newTodos.some((x) => x.id === value.id)) {
-        newTodos.push(value);
-      }
-      setTodos(newTodos);
-    });
+    const value = await todoService.addTodo(newTodo);
+    const newTodos = [...todos];
+    if (!newTodos.some((x) => x.id === value.id)) {
+      newTodos.push(value);
+    }
+    setTodos(newTodos);
     setTitle('');
   };
 

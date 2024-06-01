@@ -1,59 +1,69 @@
-import { catchError, from, map, Observable, of } from 'rxjs';
-import { axiosFactory } from '.';
 import { Todo } from '../types';
 
 export class TodoService {
-  private baseUrl = '/todos';
-  constructor(private axiosInstance = axiosFactory()) {}
+  private baseUrl = '/api/todos';
 
-  getTodoList(): Observable<Todo[]> {
-    return from(this.axiosInstance.get<Todo[]>(this.baseUrl)).pipe(
-      map((response) => response.data),
-      catchError(this.handleError<Todo[]>('getTodoList', []))
-    );
+  getTodoList(): Promise<Todo[]> {
+    return fetch(this.baseUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to get todo list');
+        }
+        return response.json();
+      });
   }
 
-  getTodo(id: number): Observable<Todo | undefined> {
-    const url = `${this.baseUrl}/${id}`;
-    return from(this.axiosInstance.get<Todo>(url)).pipe(
-      map((response) => response.data),
-      catchError(this.handleError<Todo>(`getTodo id=${id}`))
-    );
+  getTodo(id: number): Promise<Todo | undefined> {
+    return fetch(`${this.baseUrl}/${id}`)
+      .then((response) => {
+        if (response.status === 404) {
+          return undefined;
+        }
+        if (!response.ok) {
+          throw new Error(`Failed to get todo with id ${id}`);
+        }
+        return response.json();
+      });
   }
 
-  addTodo(todo: Todo): Observable<Todo> {
-    return from(this.axiosInstance.post<Todo>(this.baseUrl, todo)).pipe(
-      map((response) => response.data),
-      catchError(this.handleError<Todo>('addTodo'))
-    );
+  addTodo(todo: Todo): Promise<Todo> {
+    return fetch(this.baseUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      body: JSON.stringify(todo),
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error('Failed to add todo');
+      }
+      return response.json();
+    });
   }
 
-  deleteTodo(todo: Todo): Observable<Todo> {
-    const url = `${this.baseUrl}/${todo.id}`;
-    return from(this.axiosInstance.delete<Todo>(url)).pipe(
-      map((response) => response.data),
-      catchError(this.handleError<Todo>('deleteTodo'))
-    );
+  deleteTodo(todo: Todo): Promise<void> {
+    return fetch(`${this.baseUrl}/${todo.id}`, {
+      method: 'DELETE',
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to delete todo with id ${todo.id}`);
+      }
+    });
   }
 
-  updateTodo(todo: Todo): Observable<unknown> {
-    const url = `${this.baseUrl}/${todo.id}`;
-    return from(this.axiosInstance.put<Todo>(url, todo)).pipe(
-      catchError(this.handleError<unknown>('updateTodo'))
-    );
-  }
-
-  /**
-   * Handle Http operation that failed.
-   * Let the app continue.
-   * @param operation - name of the operation that failed
-   * @param result - optional value to return as the observable result
-   */
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: unknown): Observable<T> => {
-      console.error(`${operation}:`, error);
-      // Let the app keep running by returning an empty result.
-      return of(result as T);
-    };
+  updateTodo(todo: Todo): Promise<void> {
+    return fetch(`${this.baseUrl}/${todo.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      body: JSON.stringify(todo),
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to update todo with id ${todo.id}`);
+      }
+    });
   }
 }
