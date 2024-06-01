@@ -8,14 +8,12 @@ type Props = {
 };
 export function TodoDetail({ id }: Props): JSX.Element {
   const { t } = useTranslation();
-  const todoService = useMemo(() => new TodoService(), []);
+  const todoService: TodoService = useMemo(() => new TodoService(), []);
   const [loaded, setLoaded] = useState(false);
-  const [todo, setTodo] = useState<Todo>(
-    new Todo(id, '', undefined, false)
-  );
+  const [todo, setTodo] = useState<Todo>(new Todo(id, '', undefined, false));
 
   useEffect(() => {
-    todoService.getTodo(todo.id).subscribe((value) => {
+    todoService.getTodo(todo.id).then((value) => {
       if (value !== undefined) {
         setLoaded(true);
         setTodo(value);
@@ -29,10 +27,9 @@ export function TodoDetail({ id }: Props): JSX.Element {
     <Formik
       enableReinitialize
       initialValues={todo}
-      onSubmit={(values) => {
-        todoService.updateTodo(values).subscribe(() => {
-          window.history.back();
-        });
+      onSubmit={async (values) => {
+        await todoService.updateTodo(values);
+        window.history.back();
       }}
     >
       <Form>
