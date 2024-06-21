@@ -43,7 +43,7 @@
     "@vitest/coverage-v8": "^1.6.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
-    "i18next-parser": "^8.13.0",
+    "i18next-parser": "^9.0.0",
     "jsdom": "^24.1.0",
     "msw": "^2.3.0",
     "react-test-renderer": "^18.3.1",
