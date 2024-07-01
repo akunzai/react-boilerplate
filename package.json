@@ -27,7 +27,7 @@
     "typescript": "~5.4.5",
     "typescript-eslint": "^7.13.1",
     "web-vitals": "^4.0.1",
-    "wouter": "^3.2.0"
+    "wouter": "^3.3.0"
   },
   "devDependencies": {
     "@react-types/shared": "^3.23.1",
