@@ -26,7 +26,7 @@
     "rxjs": "^7.8.1",
     "typescript": "~5.4.5",
     "typescript-eslint": "^7.14.1",
-    "web-vitals": "^4.0.1",
+    "web-vitals": "^4.2.1",
     "wouter": "^3.3.0"
   },
   "devDependencies": {
