@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@9.6.0",
   "scripts": {
     "start": "vite --host",
     "build": "tsc && vite build",
@@ -47,7 +47,7 @@
     "jsdom": "^24.1.0",
     "msw": "^2.3.1",
     "react-test-renderer": "^18.3.1",
-    "vite": "^5.3.2",
+    "vite": "^5.3.5",
     "vitest": "^2.0.5"
   },
   "msw": {
