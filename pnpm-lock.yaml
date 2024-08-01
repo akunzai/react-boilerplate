@@ -52,8 +52,8 @@ importers:
         version: 3.3.0(react@18.3.1)
     devDependencies:
       '@react-types/shared':
-        specifier: ^3.23.1
-        version: 3.23.1(react@18.3.1)
+        specifier: ^3.24.1
+        version: 3.24.1(react@18.3.1)
       '@testing-library/jest-dom':
         specifier: ^6.4.6
         version: 6.4.6(@types/jest@29.5.12)(vitest@2.0.3(@types/node@20.14.11)(jsdom@24.1.0))
@@ -647,10 +647,10 @@ packages:
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
-  '@react-types/shared@3.23.1':
-    resolution: {integrity: sha512-5d+3HbFDxGZjhbMBeFHRQhexMFt4pUce3okyRtUVKbbedQFUrtXSBg9VszgF2RTeQDKDkMCIQDtz5ccP/Lk1gw==}
+  '@react-types/shared@3.24.1':
+    resolution: {integrity: sha512-AUQeGYEm/zDTN6zLzdXolDxz3Jk5dDL7f506F07U8tBwxNNI3WRdhU84G0/AaFikOZzDXhOZDr3MhQMzyE7Ydw==}
     peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0
 
   '@rollup/rollup-android-arm-eabi@4.13.2':
     resolution: {integrity: sha512-3XFIDKWMFZrMnao1mJhnOT1h2g0169Os848NhhmGweEcfJ4rCi+3yMCOLG4zA61rbJdkcrM/DjVZm9Hg5p5w7g==}
@@ -3051,7 +3051,7 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
-  '@react-types/shared@3.23.1(react@18.3.1)':
+  '@react-types/shared@3.24.1(react@18.3.1)':
     dependencies:
       react: 18.3.1
 
