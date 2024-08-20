@@ -18,8 +18,8 @@ importers:
         specifier: ^2.4.6
         version: 2.4.6(react@18.3.1)
       i18next:
-        specifier: ^23.12.2
-        version: 23.12.2
+        specifier: ^23.14.0
+        version: 23.14.0
       i18next-browser-languagedetector:
         specifier: ^8.0.0
         version: 8.0.0
@@ -31,7 +31,7 @@ importers:
         version: 18.3.1(react@18.3.1)
       react-i18next:
         specifier: ^15.0.0
-        version: 15.0.0(i18next@23.12.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 15.0.0(i18next@23.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       rooks:
         specifier: ^7.14.1
         version: 7.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1541,8 +1541,8 @@ packages:
     engines: {node: '>=18.0.0 || >=20.0.0 || >=22.0.0', npm: '>=6', yarn: '>=1'}
     hasBin: true
 
-  i18next@23.12.2:
-    resolution: {integrity: sha512-XIeh5V+bi8SJSWGL3jqbTEBW5oD6rbP5L+E7dVQh1MNTxxYef0x15rhJVcRb7oiuq4jLtgy2SD8eFlf6P2cmqg==}
+  i18next@23.14.0:
+    resolution: {integrity: sha512-Y5GL4OdA8IU2geRrt2+Uc1iIhsjICdHZzT9tNwQ3TVqdNzgxHToGCKf/TPRP80vTCAP6svg2WbbJL+Gx5MFQVA==}
 
   iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
@@ -4071,7 +4071,7 @@ snapshots:
       esbuild: 0.20.1
       fs-extra: 11.2.0
       gulp-sort: 2.0.0
-      i18next: 23.12.2
+      i18next: 23.14.0
       js-yaml: 4.1.0
       lilconfig: 3.0.0
       rsvp: 4.8.5
@@ -4082,9 +4082,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  i18next@23.12.2:
+  i18next@23.14.0:
     dependencies:
-      '@babel/runtime': 7.23.9
+      '@babel/runtime': 7.25.0
 
   iconv-lite@0.6.3:
     dependencies:
@@ -4528,11 +4528,11 @@ snapshots:
 
   react-fast-compare@2.0.4: {}
 
-  react-i18next@15.0.0(i18next@23.12.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-i18next@15.0.0(i18next@23.14.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.25.0
       html-parse-stringify: 3.0.1
-      i18next: 23.12.2
+      i18next: 23.14.0
       react: 18.3.1
     optionalDependencies:
       react-dom: 18.3.1(react@18.3.1)
