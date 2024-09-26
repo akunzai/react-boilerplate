@@ -44,7 +44,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^9.9.1",
     "i18next-parser": "^9.0.2",
-    "jsdom": "^24.1.1",
+    "jsdom": "^25.0.1",
     "msw": "^2.3.1",
     "react-test-renderer": "^18.3.1",
     "vite": "^5.4.2",
