@@ -30,8 +30,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       react-i18next:
-        specifier: ^15.0.1
-        version: 15.0.1(i18next@23.15.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^15.0.2
+        version: 15.0.2(i18next@23.15.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       rooks:
         specifier: ^7.14.1
         version: 7.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1990,8 +1990,8 @@ packages:
   react-fast-compare@2.0.4:
     resolution: {integrity: sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==}
 
-  react-i18next@15.0.1:
-    resolution: {integrity: sha512-NwxLqNM6CLbeGA9xPsjits0EnXdKgCRSS6cgkgOdNcPXqL+1fYNl8fBg1wmnnHvFy812Bt4IWTPE9zjoPmFj3w==}
+  react-i18next@15.0.2:
+    resolution: {integrity: sha512-z0W3/RES9Idv3MmJUcf0mDNeeMOUXe+xoL0kPfQPbDoZHmni/XsIoq5zgT2MCFUiau283GuBUK578uD/mkAbLQ==}
     peerDependencies:
       i18next: '>= 23.2.3'
       react: '>= 16.8.0'
@@ -4498,7 +4498,7 @@ snapshots:
 
   react-fast-compare@2.0.4: {}
 
-  react-i18next@15.0.1(i18next@23.15.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-i18next@15.0.2(i18next@23.15.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.25.0
       html-parse-stringify: 3.0.1
