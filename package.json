@@ -54,5 +54,10 @@
     "workerDirectory": [
       "public"
     ]
+  },
+  "pnpm": {
+    "overrides": {
+      "cookie": "^1.0.1"
+    }
   }
 }
