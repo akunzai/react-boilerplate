@@ -32,7 +32,7 @@
   "devDependencies": {
     "@react-types/shared": "^3.27.0",
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.1.0",
+    "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/hoist-non-react-statics": "^3.3.6",
     "@types/jest": "^29.5.14",
