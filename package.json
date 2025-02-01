@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.15.2",
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "start": "vite --host",
     "build": "tsc && vite build",
@@ -24,31 +24,31 @@
     "react-i18next": "^15.4.0",
     "rooks": "^7.14.1",
     "rxjs": "^7.8.1",
-    "typescript": "~5.6.3",
-    "typescript-eslint": "^8.21.0",
+    "typescript": "~5.7.3",
+    "typescript-eslint": "^8.22.0",
     "web-vitals": "^4.2.4",
-    "wouter": "^3.3.5"
+    "wouter": "^3.5.1"
   },
   "devDependencies": {
     "@react-types/shared": "^3.27.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^14.5.2",
+    "@testing-library/user-event": "^14.6.1",
     "@types/hoist-non-react-statics": "^3.3.6",
     "@types/jest": "^29.5.14",
-    "@types/lodash": "^4.17.14",
+    "@types/lodash": "^4.17.15",
     "@types/node": "^22.13.0",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
-    "@vitest/coverage-v8": "^2.1.8",
+    "@vitest/coverage-v8": "^3.0.4",
     "cross-env": "^7.0.3",
     "eslint": "^9.19.0",
     "i18next-parser": "^9.1.0",
     "jsdom": "^26.0.0",
     "msw": "^2.7.0",
-    "react-test-renderer": "^19.0.0",
+    "react-test-renderer": "^18.3.1",
     "vite": "^6.0.11",
-    "vitest": "^2.1.8"
+    "vitest": "^3.0.4"
   },
   "msw": {
     "workerDirectory": [
