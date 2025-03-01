@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-export function Home(): JSX.Element {
+export function Home(): React.JSX.Element {
   const { t } = useTranslation();
   return (
     <div>

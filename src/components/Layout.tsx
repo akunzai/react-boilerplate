@@ -5,7 +5,7 @@ type Props = {
   children: ReactNode;
 };
 
-export function Layout({ children }: Props): JSX.Element {
+export function Layout({ children }: Props): React.JSX.Element {
   return (
     <div>
       <NavMenu title={document.title} />
