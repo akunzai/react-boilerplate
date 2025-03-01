@@ -6,7 +6,7 @@ import { Todo } from '../types';
 type Props = {
   id: number;
 };
-export function TodoDetail({ id }: Props): JSX.Element {
+export function TodoDetail({ id }: Props): React.JSX.Element {
   const { t } = useTranslation();
   const todoService: TodoService = useMemo(() => new TodoService(), []);
   const [loaded, setLoaded] = useState(false);

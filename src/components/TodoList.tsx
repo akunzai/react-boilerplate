@@ -4,7 +4,7 @@ import { Link } from 'wouter';
 import { TodoService } from '../api';
 import { Todo } from '../types';
 
-export function TodoList(): JSX.Element {
+export function TodoList(): React.JSX.Element {
   const [title, setTitle] = useState('');
   const [todos, setTodos] = useState<Todo[]>([]);
   const todoService: TodoService = useMemo(() => new TodoService(), []);
