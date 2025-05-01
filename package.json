@@ -22,7 +22,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.1",
-    "rooks": "^8.0.0",
+    "rooks": "^8.0.1",
     "rxjs": "^7.8.2",
     "typescript": "~5.7.3",
     "typescript-eslint": "^8.29.0",
