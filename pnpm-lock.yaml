@@ -36,8 +36,8 @@ importers:
         specifier: ^15.4.1
         version: 15.4.1(i18next@24.2.3(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       rooks:
-        specifier: ^8.0.0
-        version: 8.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^8.0.1
+        version: 8.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       rxjs:
         specifier: ^7.8.2
         version: 7.8.2
@@ -2172,12 +2172,12 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  rooks@8.0.0:
-    resolution: {integrity: sha512-wgkKFTZRkcOvf+3dAHBDJb7918Muy4l0vA+nvO/6LilrghCr5Z8DmxdvIDF4gQeNfgjJ3iCubFvI3tMpztjirA==}
+  rooks@8.0.1:
+    resolution: {integrity: sha512-61PUmThdzVPHM47RwRxcBHxS39g97YmlwJLDNxM44QbYA9QrX/qtFWsgK9wRsxP7D9Ao161nUVIqKXkuIebS/w==}
     engines: {node: '>=v10.24.1'}
     peerDependencies:
-      react: 19.0.0
-      react-dom: 19.0.0
+      react: ^19.0.0
+      react-dom: ^19.0.0
 
   rrweb-cssom@0.8.0:
     resolution: {integrity: sha512-guoltQEx+9aMf2gDZ0s62EcV8lsXR+0w8915TC3ITdn2YueuNjdAYh/levpU9nFaoChh9RUS5ZdQMrKfVEN9tw==}
@@ -4752,7 +4752,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.40.1
       fsevents: 2.3.3
 
-  rooks@8.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  rooks@8.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       fast-deep-equal: 3.1.3
       lodash.debounce: 4.0.8
