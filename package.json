@@ -46,7 +46,7 @@
     "eslint": "^9.25.1",
     "i18next-parser": "^9.3.0",
     "jsdom": "^26.0.0",
-    "msw": "^2.7.3",
+    "msw": "^2.7.5",
     "react-test-renderer": "^19.0.0",
     "vite": "^6.2.7",
     "vitest": "^3.0.7"
