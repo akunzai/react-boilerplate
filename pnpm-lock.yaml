@@ -48,8 +48,8 @@ importers:
         specifier: ^8.31.1
         version: 8.33.0(eslint@9.28.0)(typescript@5.8.3)
       web-vitals:
-        specifier: ^4.2.4
-        version: 4.2.4
+        specifier: ^5.0.2
+        version: 5.0.2
       wouter:
         specifier: ^3.7.0
         version: 3.7.1(react@19.1.0)
@@ -2583,8 +2583,8 @@ packages:
     resolution: {integrity: sha512-IC8sL7aB4/ZgFcGI2T1LczZeFWZ06b3zoHH7jBPyHxOtIIz1jppWHjjEXkOFvFojBVAK9pV7g47xOZ4LW3QLfg==}
     engines: {node: 8.* || >= 10.*}
 
-  web-vitals@4.2.4:
-    resolution: {integrity: sha512-r4DIlprAGwJ7YM11VZp4R884m0Vmgr6EAKe3P+kO0PPj3Unqyvv59rczf6UiGcb9Z8QxZVcqKNwv/g0WNdWwsw==}
+  web-vitals@5.0.2:
+    resolution: {integrity: sha512-nhl+fujoz9Io6MdDSyGSiiUSR1DLMvD3Mde1sNaRKrNwsEFYQICripmEIyUvE2DPKDkW1BbHa4saEDo1U/2D/Q==}
 
   webidl-conversions@7.0.0:
     resolution: {integrity: sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==}
@@ -5149,7 +5149,7 @@ snapshots:
       matcher-collection: 2.0.1
       minimatch: 3.1.2
 
-  web-vitals@4.2.4: {}
+  web-vitals@5.0.2: {}
 
   webidl-conversions@7.0.0: {}
 
