@@ -1,7 +1,8 @@
+import React from 'react';
 import { Redirect, Route, Router, Switch } from 'wouter';
 import { Counter, Home, Layout, TodoDetail, TodoList } from './components';
 
-export default function App(): JSX.Element {
+export default function App(): React.ReactElement {
   const baseUrl = document
     .getElementsByTagName('base')[0]
     ?.getAttribute('href')
