@@ -11,7 +11,8 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint src/**/*.{ts,tsx}",
-    "i18n:extract": "i18next"
+    "i18n:extract": "i18next",
+    "msw": "pnpm dlx msw init"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
