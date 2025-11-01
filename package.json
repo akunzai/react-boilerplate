@@ -33,7 +33,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.0",
     "@react-types/shared": "^3.32.0",
-    "@testing-library/jest-dom": "^6.9.0",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/hoist-non-react-statics": "^3.3.7",
