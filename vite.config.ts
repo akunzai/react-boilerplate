@@ -14,7 +14,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './src/setupTests.ts',
+    setupFiles: ['./src/setupStoragePolyfill.ts', './src/setupTests.ts'],
     coverage: {
       reporter: ['text', 'clover'],
       include: ['src/**/*.{ts,tsx}'],
