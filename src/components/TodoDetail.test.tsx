@@ -5,7 +5,7 @@ import '../i18nForTests';
 import { TodoDetail } from './TodoDetail';
 
 beforeAll(() => {
-  vi.spyOn(global.console, 'error').mockImplementation(() => undefined);
+  vi.spyOn(globalThis.console, 'error').mockImplementation(() => undefined);
 });
 
 test('without Todo should render nothing', () => {
