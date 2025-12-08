@@ -1,20 +1,15 @@
 // https://aka.ms/devcontainer.json
 {
-	"name": "Node.js",
-	// https://github.com/devcontainers/images/tree/main/src/javascript-node
-	"image": "mcr.microsoft.com/devcontainers/javascript-node",
+	"name": "Bun",
+	// https://bun.com/docs/guides/ecosystem/docker
+	"image": "oven/bun:latest",
 	"workspaceFolder": "/workspace",
 	// https://code.visualstudio.com/remote/advancedcontainers/improve-performance
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
 	"mounts": [
-		"source=${localWorkspaceFolderBasename}-node_modules,target=/workspace/node_modules,type=volume",
-		"source=${localWorkspaceFolderBasename}-pnpm_store,target=/workspace/.pnpm-store,type=volume"
+		"source=${localWorkspaceFolderBasename}-node_modules,target=/workspace/node_modules,type=volume"
 	],
-	// https://containers.dev/features
-	"features": {
-		"ghcr.io/devcontainers/features/node:1": {}
-	},
-	"postCreateCommand": "sudo chown -R node:node .pnpm-store node_modules; . ${NVM_DIR}/nvm.sh && nvm install --lts; corepack enable",
+	"postCreateCommand": "bun install",
 	"forwardPorts": [
 		5173
 	],

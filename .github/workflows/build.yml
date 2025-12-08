@@ -13,39 +13,20 @@ permissions: read-all
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: ['22', '24']
     steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - name: Set up Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ matrix.node }}
-          package-manager-cache: false
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v4
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-      - name: Set up pnpm cache
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
       - name: Install dependencies
-        run: pnpm install
+        run: bun install --frozen-lockfile
       - name: Build
-        run: pnpm build
+        run: bun run build
       - name: Lint
-        run: pnpm lint
+        run: bun run lint
       - name: Test
-        run: pnpm test:coverage
+        run: bun run test:coverage
       - uses: codecov/codecov-action@v5
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
