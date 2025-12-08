@@ -12,7 +12,7 @@
     "test:coverage": "vitest run --coverage",
     "lint": "eslint src/**/*.{ts,tsx}",
     "i18n:extract": "i18next",
-    "msw": "pnpm dlx msw init"
+    "msw": "msw init public --save"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
