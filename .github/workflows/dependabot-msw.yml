@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - 'package.json'
-      - 'pnpm-lock.yaml'
+      - 'bun.lock'
 
 permissions:
   contents: write
@@ -23,29 +23,23 @@ jobs:
       - name: Check if msw was updated
         id: check-msw
         run: |
-          if git diff origin/${{ github.base_ref }}..HEAD -- pnpm-lock.yaml | grep -q '"msw"'; then
+          if git diff origin/${{ github.base_ref }}..HEAD -- bun.lock | grep -q 'msw'; then
             echo "updated=true" >> $GITHUB_OUTPUT
           else
             echo "updated=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Set up Node.js
+      - name: Set up Bun
         if: steps.check-msw.outputs.updated == 'true'
-        uses: actions/setup-node@v6
-        with:
-          node-version: '24'
-
-      - name: Set up pnpm
-        if: steps.check-msw.outputs.updated == 'true'
-        uses: pnpm/action-setup@v4
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
         if: steps.check-msw.outputs.updated == 'true'
-        run: pnpm install
+        run: bun install --frozen-lockfile
 
       - name: Update mockServiceWorker.js
         if: steps.check-msw.outputs.updated == 'true'
-        run: pnpm msw
+        run: bun run msw
 
       - name: Check for changes
         if: steps.check-msw.outputs.updated == 'true'

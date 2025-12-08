@@ -14,7 +14,15 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
+    environmentOptions: {
+      jsdom: {
+        url: 'http://localhost',
+      },
+    },
     setupFiles: ['./src/setupStoragePolyfill.ts', './src/setupTests.ts'],
+    env: {
+      NODE_NO_WARNINGS: '1',
+    },
     coverage: {
       reporter: ['text', 'clover'],
       include: ['src/**/*.{ts,tsx}'],

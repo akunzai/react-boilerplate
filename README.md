@@ -12,28 +12,25 @@
 ## Requirement
 
 - [Node.js](https://nodejs.org)
-- [pnpm](https://pnpm.io/)
+- [Bun](https://bun.sh/)
 
 ## [Getting Started](https://create-react-app.dev/docs/getting-started)
 
 ```sh
-# activate the pnpm package manager
-corepack enable
-
 # install npm packages
-pnpm install
+bun install
 
 # watch and serve a dev server at http://localhost:5173/
-pnpm start
+bun start
 
 # Running unit tests
-pnpm test
+bun run test
 
 # build the project in production mode. The build artifacts will be stored in the `dist/` directory
-pnpm build
+bun run build
 
 # extracts i18n messages from source code
-pnpm i18n:extract
+bun run i18n:extract
 ```
 
 ## Reference
