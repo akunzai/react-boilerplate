@@ -11,7 +11,6 @@
 
 ## Requirement
 
-- [Node.js](https://nodejs.org)
 - [Bun](https://bun.sh/)
 
 ## [Getting Started](https://create-react-app.dev/docs/getting-started)
