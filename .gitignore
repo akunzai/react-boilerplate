@@ -24,6 +24,8 @@
 .env.production.local
 npm-debug.log
 yarn-error.log
+.claude/
+.agent/
 
 # System Files
 .DS_Store
