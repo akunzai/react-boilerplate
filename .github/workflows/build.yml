@@ -27,6 +27,6 @@ jobs:
         run: bun run lint
       - name: Test
         run: bun run test:coverage
-      - uses: codecov/codecov-action@v5
+      - uses: codecov/codecov-action@v6
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
