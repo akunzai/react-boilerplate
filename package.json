@@ -41,7 +41,7 @@
     "@types/lodash": "^4.17.24",
     "@types/node": "^25.3.3",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.4",
+    "@vitejs/plugin-react": "^6.0.1",
     "@vitest/coverage-v8": "^4.0.18",
     "cross-env": "^10.1.0",
     "eslint": "^10.0.2",
