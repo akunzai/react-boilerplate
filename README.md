@@ -35,7 +35,6 @@ bun run i18n:extract
 ## Reference
 
 - [wouter](https://github.com/molefrog/wouter)
-- [React RxJS Library](https://github.com/re-rxjs/react-rxjs)
 - [React i18n Library - react-i18next](https://react.i18next.com/)
 - [React Forms Library - Formik](https://github.com/formium/formik)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
