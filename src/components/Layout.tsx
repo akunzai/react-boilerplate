@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { NavMenu } from './NavMenu';
+import { ToastProvider } from './shared';
 
 type Props = {
   children: ReactNode;
@@ -7,9 +8,9 @@ type Props = {
 
 export function Layout({ children }: Props): React.JSX.Element {
   return (
-    <div>
+    <ToastProvider>
       <NavMenu title={document.title} />
-      <main className='container'>{children}</main>
-    </div>
+      <main className='container pb-5'>{children}</main>
+    </ToastProvider>
   );
 }
