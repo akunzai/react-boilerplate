@@ -9,7 +9,7 @@ export class Todo {
     public priority: Priority = 'medium',
     public tags: string[] = [],
     public category?: string,
-    public dueDate?: string
+    public dueDate?: string,
   ) {}
 }
 

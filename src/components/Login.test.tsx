@@ -11,7 +11,7 @@ const setup = () => {
   render(
     <Router hook={location.hook}>
       <Login />
-    </Router>
+    </Router>,
   );
   return location;
 };

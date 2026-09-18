@@ -8,7 +8,7 @@ updates:
     # Floating major tags already track latest minor/patch at runtime.
     # Only surface major action upgrades.
     ignore:
-      - dependency-name: "*"
+      - dependency-name: '*'
         update-types:
           - version-update:semver-minor
           - version-update:semver-patch
@@ -19,33 +19,33 @@ updates:
     cooldown:
       default-days: 3
     ignore:
-      - dependency-name: "typescript"
+      - dependency-name: 'typescript'
         update-types:
           - version-update:semver-major
     groups:
       react:
         patterns:
-          - "react"
-          - "react-dom"
-          - "@types/react-dom"
-          - "react-i18next"
+          - 'react'
+          - 'react-dom'
+          - '@types/react-dom'
+          - 'react-i18next'
       i18next:
         patterns:
-          - "i18next"
-          - "i18next-*"
+          - 'i18next'
+          - 'i18next-*'
       testing-library:
         patterns:
-          - "@testing-library/*"
+          - '@testing-library/*'
       vitest:
         patterns:
-          - "vitest"
-          - "@vitest/*"
-      eslint:
+          - 'vitest'
+          - '@vitest/*'
+      oxc:
         patterns:
-          - "eslint"
-          - "@eslint/*"
-          - "typescript-eslint"
+          - 'oxlint'
+          - 'oxfmt'
+          - '@oxc*'
       vite:
         patterns:
-          - "vite"
-          - "@vitejs/*"
+          - 'vite'
+          - '@vitejs/*'

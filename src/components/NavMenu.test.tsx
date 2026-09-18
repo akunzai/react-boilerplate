@@ -11,8 +11,8 @@ const setup = () => {
   const location = memoryLocation({ path: '/', record: true });
   render(
     <Router hook={location.hook}>
-      <NavMenu title='Test' />
-    </Router>
+      <NavMenu title="Test" />
+    </Router>,
   );
   return location;
 };

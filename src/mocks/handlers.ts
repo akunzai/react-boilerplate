@@ -2,13 +2,49 @@ import { http, HttpResponse } from 'msw';
 import { Todo, User } from '../types';
 
 const db: Todo[] = [
-  new Todo(1, 'Pay bills', '', true, 'high', ['finance', 'urgent'], 'personal/errands', '2026-01-10'),
+  new Todo(
+    1,
+    'Pay bills',
+    '',
+    true,
+    'high',
+    ['finance', 'urgent'],
+    'personal/errands',
+    '2026-01-10',
+  ),
   new Todo(2, 'Read a book', undefined, false, 'low', ['reading'], 'personal/health'),
-  new Todo(3, 'Buy eggs', undefined, false, 'medium', ['shopping', 'home'], 'personal/errands', '2099-12-31'),
-  new Todo(4, 'Prepare sprint review', 'Slides and demo', false, 'high', ['urgent'], 'work/meetings', '2026-01-05'),
+  new Todo(
+    3,
+    'Buy eggs',
+    undefined,
+    false,
+    'medium',
+    ['shopping', 'home'],
+    'personal/errands',
+    '2099-12-31',
+  ),
+  new Todo(
+    4,
+    'Prepare sprint review',
+    'Slides and demo',
+    false,
+    'high',
+    ['urgent'],
+    'work/meetings',
+    '2026-01-05',
+  ),
   new Todo(5, 'Refactor Alpha API', undefined, false, 'medium', [], 'work/projects/alpha'),
   new Todo(6, 'Write Beta release notes', undefined, true, 'low', [], 'work/projects/beta'),
-  new Todo(7, 'Book dentist appointment', undefined, false, 'medium', ['home'], 'personal/health', '2099-06-01'),
+  new Todo(
+    7,
+    'Book dentist appointment',
+    undefined,
+    false,
+    'medium',
+    ['home'],
+    'personal/health',
+    '2099-06-01',
+  ),
 ];
 
 const me: User = { name: 'Ada Lovelace', email: 'ada@example.com' };

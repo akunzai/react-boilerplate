@@ -69,11 +69,15 @@ test('should filter by search, status, priority and tag', async () => {
   expect(todoLinks().length).toBe(2);
 
   fireEvent.change(screen.getByRole('combobox', { name: 'Status' }), { target: { value: 'all' } });
-  fireEvent.change(screen.getByRole('combobox', { name: 'Priority' }), { target: { value: 'high' } });
+  fireEvent.change(screen.getByRole('combobox', { name: 'Priority' }), {
+    target: { value: 'high' },
+  });
   expect(todoLinks().map((x) => x.textContent)).toEqual(['Pay bills', 'Prepare sprint review']);
 
   fireEvent.click(screen.getByRole('button', { name: '#finance' }));
-  expect(screen.getByRole('button', { name: '#finance' }).getAttribute('aria-pressed')).toBe('true');
+  expect(screen.getByRole('button', { name: '#finance' }).getAttribute('aria-pressed')).toBe(
+    'true',
+  );
   expect(todoLinks().map((x) => x.textContent)).toEqual(['Pay bills']);
 });
 
@@ -122,14 +126,14 @@ test('should mark all filtered items done from the split button', async () => {
   fireEvent.click(screen.getByRole('button', { name: /Mark all done/ }));
   await waitFor(() => {
     expect(
-      screen.getAllByRole('checkbox').every((x) => (x as HTMLInputElement).checked)
+      screen.getAllByRole('checkbox').every((x) => (x as HTMLInputElement).checked),
     ).toBeTruthy();
   });
   fireEvent.click(screen.getByRole('button', { name: 'More bulk actions' }));
   fireEvent.click(screen.getByRole('button', { name: 'Mark all active' }));
   await waitFor(() => {
     expect(
-      screen.getAllByRole('checkbox').every((x) => !(x as HTMLInputElement).checked)
+      screen.getAllByRole('checkbox').every((x) => !(x as HTMLInputElement).checked),
     ).toBeTruthy();
   });
 });

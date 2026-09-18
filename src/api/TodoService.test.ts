@@ -42,7 +42,7 @@ describe('addTodo', () => {
     server.use(
       http.post('/api/todos', () => {
         return new HttpResponse(null, { status: 400 });
-      })
+      }),
     );
     const todo = { title: '' } as Todo;
     try {
@@ -69,7 +69,7 @@ test('should throws on error', async () => {
   server.use(
     http.put('/api/todos/999', () => {
       return new HttpResponse(null, { status: 404 });
-    })
+    }),
   );
   const todo = new Todo(999, 'NotFound');
   try {
@@ -87,7 +87,7 @@ describe('deleteTodo', () => {
       }),
       http.get('/api/todos/123', () => {
         return new HttpResponse(null, { status: 404 });
-      })
+      }),
     );
     const todo = new Todo(123, '');
     await service.deleteTodo(todo);
@@ -99,7 +99,7 @@ describe('deleteTodo', () => {
     server.use(
       http.delete('/api/todos/456', () => {
         return new HttpResponse(null, { status: 500 });
-      })
+      }),
     );
     const todo = new Todo(456, '');
     try {

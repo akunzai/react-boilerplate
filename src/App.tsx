@@ -12,26 +12,24 @@ export default function App(): React.ReactElement {
     <Router base={baseUrl || ''}>
       <Layout>
         <Switch>
-          <Route path='/'>
+          <Route path="/">
             <Home />
           </Route>
-          <Route path='/counter'>
+          <Route path="/counter">
             <Counter />
           </Route>
-          <Route path='/todo-list'>
+          <Route path="/todo-list">
             <TodoList />
           </Route>
-          <Route path='/settings'>
+          <Route path="/settings">
             <Settings />
           </Route>
-          <Route path='/login'>
+          <Route path="/login">
             <Login />
           </Route>
-          <Route path='/todo/:id'>
-            {(params) => <TodoDetail id={Number(params.id)} />}
-          </Route>
+          <Route path="/todo/:id">{(params) => <TodoDetail id={Number(params.id)} />}</Route>
           <Route>
-            <Redirect to='/' />
+            <Redirect to="/" />
           </Route>
         </Switch>
       </Layout>

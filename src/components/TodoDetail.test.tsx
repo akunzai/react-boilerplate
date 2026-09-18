@@ -36,19 +36,25 @@ describe('with Todo', () => {
     const done = screen.getByRole('checkbox', { name: 'Done' }) as HTMLInputElement;
     expect(done.checked).toBeTruthy();
     expect((screen.getByRole('radio', { name: 'High' }) as HTMLInputElement).checked).toBeTruthy();
-    expect((screen.getByRole('checkbox', { name: '#finance' }) as HTMLInputElement).checked).toBeTruthy();
+    expect(
+      (screen.getByRole('checkbox', { name: '#finance' }) as HTMLInputElement).checked,
+    ).toBeTruthy();
     expect((screen.getByRole('combobox', { name: 'Category' }) as HTMLSelectElement).value).toBe(
-      'personal/errands'
+      'personal/errands',
     );
     expect(screen.getByLabelText('Due date')).toHaveValue('2026-01-10');
     expect(screen.getByRole('switch', { name: 'Remind me on the due date' })).not.toBeChecked();
-    expect(within(screen.getByRole('navigation', { name: 'breadcrumb' })).getByText('Pay bills')).toBeInTheDocument();
+    expect(
+      within(screen.getByRole('navigation', { name: 'breadcrumb' })).getByText('Pay bills'),
+    ).toBeInTheDocument();
   });
 
   test('should switch to activity tab', async () => {
     setup();
     fireEvent.click(await screen.findByRole('tab', { name: 'Activity' }));
-    expect(screen.getByRole('tab', { name: 'Activity' }).getAttribute('aria-selected')).toBe('true');
+    expect(screen.getByRole('tab', { name: 'Activity' }).getAttribute('aria-selected')).toBe(
+      'true',
+    );
     expect(screen.getByText('Marked as done')).toBeInTheDocument();
     expect(screen.queryByRole('textbox', { name: /Title/i })).not.toBeInTheDocument();
   });
@@ -74,7 +80,7 @@ describe('with Todo', () => {
       http.put('/api/todos/1', async ({ request }) => {
         saved = (await request.json()) as Todo;
         return new HttpResponse(null, { status: 200 });
-      })
+      }),
     );
     setup();
     const input = await screen.findByRole('textbox', { name: /Title/i });
