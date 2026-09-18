@@ -1,13 +1,51 @@
+---
 version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: monthly
+      interval: weekly
+    # Floating major tags already track latest minor/patch at runtime.
+    # Only surface major action upgrades.
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-minor
+          - version-update:semver-patch
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: monthly
+      interval: weekly
+    cooldown:
+      default-days: 3
     ignore:
       - dependency-name: "typescript"
-        update-types: ["version-update:semver-major"]
+        update-types:
+          - version-update:semver-major
+    groups:
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react-dom"
+          - "react-i18next"
+      i18next:
+        patterns:
+          - "i18next"
+          - "i18next-*"
+      testing-library:
+        patterns:
+          - "@testing-library/*"
+      vitest:
+        patterns:
+          - "vitest"
+          - "@vitest/*"
+      eslint:
+        patterns:
+          - "eslint"
+          - "@eslint/*"
+          - "typescript-eslint"
+      vite:
+        patterns:
+          - "vite"
+          - "@vitejs/*"
