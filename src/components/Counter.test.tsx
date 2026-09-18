@@ -7,15 +7,11 @@ const setup = () => render(<Counter />);
 
 test('should render counter with 0', async () => {
   setup();
-  expect(screen.getByText(/Current count:/).textContent).toContain(
-    'Current count: 0'
-  );
+  expect(screen.getByText(/Current count:/).textContent).toContain('Current count: 0');
 });
 
 test('should increment the counter on click', async () => {
   setup();
   fireEvent.click(screen.getByText('Increment'));
-  expect(screen.getByText(/Current count:/).textContent).toContain(
-    'Current count: 1'
-  );
+  expect(screen.getByText(/Current count:/).textContent).toContain('Current count: 1');
 });

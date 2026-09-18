@@ -23,46 +23,38 @@ export function ConfirmModal({
   return (
     <>
       <div
-        className='modal d-block'
-        role='dialog'
-        aria-modal='true'
-        aria-labelledby='confirm-modal-title'
+        className="modal d-block"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="confirm-modal-title"
         tabIndex={-1}
       >
-        <div className='modal-dialog modal-dialog-centered'>
-          <div className='modal-content'>
-            <div className='modal-header'>
-              <h5 className='modal-title' id='confirm-modal-title'>
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="confirm-modal-title">
                 {title}
               </h5>
               <button
-                type='button'
-                className='btn-close'
+                type="button"
+                className="btn-close"
                 aria-label={t('Cancel')}
                 onClick={onCancel}
               ></button>
             </div>
-            <div className='modal-body'>{children}</div>
-            <div className='modal-footer'>
-              <button
-                type='button'
-                className='btn btn-outline-secondary'
-                onClick={onCancel}
-              >
+            <div className="modal-body">{children}</div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-outline-secondary" onClick={onCancel}>
                 {t('Cancel')}
               </button>
-              <button
-                type='button'
-                className='btn btn-danger'
-                onClick={onConfirm}
-              >
+              <button type="button" className="btn btn-danger" onClick={onConfirm}>
                 {confirmLabel}
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className='modal-backdrop show'></div>
+      <div className="modal-backdrop show"></div>
     </>
   );
 }

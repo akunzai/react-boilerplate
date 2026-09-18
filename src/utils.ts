@@ -20,7 +20,7 @@ export function categoryLabel(value?: string): string {
 
 export function flattenCategories(
   nodes: Category[] = categories,
-  depth = 0
+  depth = 0,
 ): { value: string; label: string; depth: number }[] {
   return nodes.flatMap((node) => [
     { value: node.value, label: node.label, depth },

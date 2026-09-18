@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "jsxSingleQuote": false,
+  "printWidth": 100,
+  "trailingComma": "all",
+  "sortPackageJson": true,
+  "ignorePatterns": ["public/mockServiceWorker.js", "dist/**", "coverage/**"]
+}

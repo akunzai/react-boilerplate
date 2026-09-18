@@ -1,12 +1,9 @@
 {
-    "files.exclude": {
-        "**/.git": true,
-        "**/.DS_Store": true,
-        "**/node_modules": true,
-        "**/.pnpm-store": true
-    },
-    "cSpell.words": [
-        "Formik",
-        "Todos"
-    ]
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/.pnpm-store": true
+  },
+  "cSpell.words": ["Formik", "Todos"]
 }

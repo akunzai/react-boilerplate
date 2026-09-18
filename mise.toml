@@ -1,0 +1,26 @@
+[tools]
+bun = "1.4"
+
+[tasks.build]
+description = "Typecheck and build for production"
+run = "bun run build"
+
+[tasks.lint]
+description = "Lint source files with oxlint"
+run = "bun run lint"
+
+[tasks.format]
+description = "Format source files with oxfmt"
+run = "bun run format"
+
+[tasks."format:check"]
+description = "Check source formatting with oxfmt"
+run = "bun run format:check"
+
+[tasks.test]
+description = "Run tests with coverage"
+run = "bun run test:coverage"
+
+[tasks.dev]
+description = "Start development server"
+run = "bun run start -- --no-open"

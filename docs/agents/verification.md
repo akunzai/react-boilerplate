@@ -25,19 +25,20 @@ test:coverage` prints a coverage table to stdout.
 
 ## Checks
 
-| What | Command |
-| --- | --- |
-| TypeScript + Vite build | `bun run build` |
-| ESLint | `bun run lint` |
-| Vitest with coverage | `bun run test:coverage` |
-| Single test file | `bun run test ComponentName` |
+| What                        | Command                      |
+| --------------------------- | ---------------------------- |
+| TypeScript + Vite build     | `bun run build`              |
+| Oxlint                      | `bun run lint`               |
+| Oxfmt check                 | `bun run format:check`       |
+| Vitest with coverage        | `bun run test:coverage`      |
+| Single test file            | `bun run test ComponentName` |
 | Dev server (headless/agent) | `bun run start -- --no-open` |
 
 ## Human prerequisites
 
 Run once, by a person. The start command fails until they are done.
 
-- [ ] Install [Bun](https://bun.sh/) 1.3.4 or later
+- [ ] Install [Bun](https://bun.sh/) 1.4.2 or later (or run `mise install`)
 - [ ] Run `bun install`
 
 ## Capturing evidence

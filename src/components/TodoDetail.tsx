@@ -44,33 +44,33 @@ export function TodoDetail({ id }: Props): React.JSX.Element {
   };
 
   return (
-    <div className='row justify-content-md-center'>
-      <div className='col-lg-8'>
-        <nav aria-label='breadcrumb'>
-          <ol className='breadcrumb'>
-            <li className='breadcrumb-item'>
-              <Link href='/todo-list'>{t('Todo List')}</Link>
+    <div className="row justify-content-md-center">
+      <div className="col-lg-8">
+        <nav aria-label="breadcrumb">
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item">
+              <Link href="/todo-list">{t('Todo List')}</Link>
             </li>
-            <li className='breadcrumb-item active' aria-current='page'>
+            <li className="breadcrumb-item active" aria-current="page">
               {todo.title}
             </li>
           </ol>
         </nav>
-        <div className='d-flex justify-content-between align-items-center mb-3'>
-          <h1 className='h3 mb-0'>{todo.title}</h1>
+        <div className="d-flex justify-content-between align-items-center mb-3">
+          <h1 className="h3 mb-0">{todo.title}</h1>
           <button
-            type='button'
-            className='btn-close'
-            aria-label='Close'
+            type="button"
+            className="btn-close"
+            aria-label="Close"
             onClick={() => window.history.back()}
           ></button>
         </div>
-        <ul className='nav nav-tabs mb-3' role='tablist'>
+        <ul className="nav nav-tabs mb-3" role="tablist">
           {(['details', 'activity'] as Tab[]).map((key) => (
-            <li className='nav-item' role='presentation' key={key}>
+            <li className="nav-item" role="presentation" key={key}>
               <button
-                type='button'
-                role='tab'
+                type="button"
+                role="tab"
                 aria-selected={tab === key}
                 className={`nav-link ${tab === key ? 'active' : ''}`}
                 onClick={() => setTab(key)}
@@ -82,14 +82,14 @@ export function TodoDetail({ id }: Props): React.JSX.Element {
         </ul>
 
         {tab === 'activity' ? (
-          <ul className='list-group' role='tabpanel'>
-            <li className='list-group-item'>
-              <i className='bi bi-plus-circle me-2 text-success'></i>
+          <ul className="list-group" role="tabpanel">
+            <li className="list-group-item">
+              <i className="bi bi-plus-circle me-2 text-success"></i>
               {t('Created')}
             </li>
             {todo.done && (
-              <li className='list-group-item'>
-                <i className='bi bi-check-circle me-2 text-primary'></i>
+              <li className="list-group-item">
+                <i className="bi bi-check-circle me-2 text-primary"></i>
                 {t('Marked as done')}
               </li>
             )}
@@ -114,64 +114,67 @@ export function TodoDetail({ id }: Props): React.JSX.Element {
                   values.priority,
                   values.tags,
                   values.category || undefined,
-                  values.dueDate || undefined
-                )
+                  values.dueDate || undefined,
+                ),
               );
               toast(t('Saved'));
               window.history.back();
             }}
           >
             {({ errors, touched, isSubmitting, values, setFieldValue }) => (
-              <Form role='tabpanel' noValidate>
-                <div className='mb-3'>
-                  <label className='form-label' htmlFor='title'>
+              <Form role="tabpanel" noValidate>
+                <div className="mb-3">
+                  <label className="form-label" htmlFor="title">
                     {t('Title')}
                   </label>
                   <Field
-                    id='title'
-                    name='title'
+                    id="title"
+                    name="title"
                     className={`form-control ${touched.title && errors.title ? 'is-invalid' : ''}`}
-                    aria-label='Title'
+                    aria-label="Title"
                     placeholder={t('Title')}
                     required
                   />
                   {touched.title && errors.title && (
-                    <div className='invalid-feedback'>{errors.title}</div>
+                    <div className="invalid-feedback">{errors.title}</div>
                   )}
                 </div>
-                <div className='mb-3'>
-                  <label className='form-label' htmlFor='description'>
+                <div className="mb-3">
+                  <label className="form-label" htmlFor="description">
                     {t('Description')}
                   </label>
                   <Field
-                    as='textarea'
-                    id='description'
-                    name='description'
+                    as="textarea"
+                    id="description"
+                    name="description"
                     rows={3}
-                    className='form-control'
-                    aria-label='Description'
+                    className="form-control"
+                    aria-label="Description"
                     placeholder={t('Description')}
                   />
-                  <div className='form-text'>{t('Markdown is not supported')}</div>
+                  <div className="form-text">{t('Markdown is not supported')}</div>
                 </div>
-                <fieldset className='mb-3'>
-                  <legend className='form-label fs-6'>{t('Priority')}</legend>
-                  <div className='btn-group' role='radiogroup'>
+                <fieldset className="mb-3">
+                  <legend className="form-label fs-6">{t('Priority')}</legend>
+                  <div className="btn-group" role="radiogroup">
                     {priorities.map((p) => (
-                      <label key={p} className={`btn btn-outline-primary ${values.priority === p ? 'active' : ''}`}>
-                        <Field type='radio' name='priority' value={p} className='btn-check' />
+                      <label
+                        key={p}
+                        className={`btn btn-outline-primary ${values.priority === p ? 'active' : ''}`}
+                      >
+                        <Field type="radio" name="priority" value={p} className="btn-check" />
                         {priorityLabel(p)}
                       </label>
                     ))}
                   </div>
                 </fieldset>
-                <div className='row g-3 mb-3'>
-                  <div className='col-md-6'>
-                    <label className='form-label' htmlFor='category'>
+                <div className="row g-3 mb-3">
+                  <div className="col-md-6">
+                    <label className="form-label" htmlFor="category">
                       {t('Category')}
                     </label>
-                    <Field as='select' id='category' name='category' className='form-select'>
-                      <option value=''>{t('None')}</option>
+                    <Field as="select" id="category" name="category" className="form-select">
+                      <option value="">{t('None')}</option>
                       {flattenCategories().map((c) => (
                         <option key={c.value} value={c.value}>
                           {'  '.repeat(c.depth)}
@@ -180,20 +183,20 @@ export function TodoDetail({ id }: Props): React.JSX.Element {
                       ))}
                     </Field>
                   </div>
-                  <div className='col-md-6'>
-                    <label className='form-label' htmlFor='dueDate'>
+                  <div className="col-md-6">
+                    <label className="form-label" htmlFor="dueDate">
                       {t('Due date')}
                     </label>
-                    <Field type='date' id='dueDate' name='dueDate' className='form-control' />
+                    <Field type="date" id="dueDate" name="dueDate" className="form-control" />
                   </div>
                 </div>
-                <div className='mb-3'>
-                  <span className='form-label d-block'>{t('Tags')}</span>
+                <div className="mb-3">
+                  <span className="form-label d-block">{t('Tags')}</span>
                   {allTags.map((tag) => (
-                    <div className='form-check form-check-inline' key={tag}>
+                    <div className="form-check form-check-inline" key={tag}>
                       <input
-                        className='form-check-input'
-                        type='checkbox'
+                        className="form-check-input"
+                        type="checkbox"
                         id={`tag-${tag}`}
                         checked={(values.tags ?? []).includes(tag)}
                         onChange={(e) =>
@@ -201,41 +204,65 @@ export function TodoDetail({ id }: Props): React.JSX.Element {
                             'tags',
                             e.target.checked
                               ? [...(values.tags ?? []), tag]
-                              : (values.tags ?? []).filter((x) => x !== tag)
+                              : (values.tags ?? []).filter((x) => x !== tag),
                           )
                         }
                       />
-                      <label className='form-check-label' htmlFor={`tag-${tag}`}>
+                      <label className="form-check-label" htmlFor={`tag-${tag}`}>
                         #{tag}
                       </label>
                     </div>
                   ))}
                 </div>
-                <div className='mb-3'>
-                  <div className='form-check'>
-                    <Field id='done' name='done' type='checkbox' className='form-check-input' />
-                    <label className='form-check-label' htmlFor='done'>
+                <div className="mb-3">
+                  <div className="form-check">
+                    <Field id="done" name="done" type="checkbox" className="form-check-input" />
+                    <label className="form-check-label" htmlFor="done">
                       {t('Done')}
                     </label>
                   </div>
-                  <div className='form-check form-switch'>
-                    <Field id='notify' name='notify' type='checkbox' role='switch' className='form-check-input' />
-                    <label className='form-check-label' htmlFor='notify'>
+                  <div className="form-check form-switch">
+                    <Field
+                      id="notify"
+                      name="notify"
+                      type="checkbox"
+                      role="switch"
+                      className="form-check-input"
+                    />
+                    <label className="form-check-label" htmlFor="notify">
                       {t('Remind me on the due date')}
                     </label>
                   </div>
                 </div>
-                <div className='d-flex justify-content-between'>
-                  <button type='button' className='btn btn-outline-danger' onClick={() => setConfirmDelete(true)}>
-                    <i className='bi bi-trash me-1'></i>
+                <div className="d-flex justify-content-between">
+                  <button
+                    type="button"
+                    className="btn btn-outline-danger"
+                    onClick={() => setConfirmDelete(true)}
+                  >
+                    <i className="bi bi-trash me-1"></i>
                     {t('Delete')}
                   </button>
-                  <div className='d-flex gap-2'>
-                    <button type='button' className='btn btn-outline-secondary' onClick={() => window.history.back()}>
+                  <div className="d-flex gap-2">
+                    <button
+                      type="button"
+                      className="btn btn-outline-secondary"
+                      onClick={() => window.history.back()}
+                    >
                       {t('Cancel')}
                     </button>
-                    <button type='submit' className='btn btn-primary' aria-label='Save' disabled={isSubmitting}>
-                      {isSubmitting && <span className='spinner-border spinner-border-sm me-1' aria-hidden='true'></span>}
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                      aria-label="Save"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting && (
+                        <span
+                          className="spinner-border spinner-border-sm me-1"
+                          aria-hidden="true"
+                        ></span>
+                      )}
                       {t('Save')}
                     </button>
                   </div>

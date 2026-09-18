@@ -12,7 +12,7 @@ const setup = () =>
   render(
     <ToastProvider>
       <Settings />
-    </ToastProvider>
+    </ToastProvider>,
   );
 
 test('should load and save the profile', async () => {
@@ -21,7 +21,7 @@ test('should load and save the profile', async () => {
     http.put('/api/me', async ({ request }) => {
       saved = (await request.json()) as User;
       return HttpResponse.json(saved);
-    })
+    }),
   );
   setup();
   const name = screen.getByLabelText('Name');

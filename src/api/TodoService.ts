@@ -4,26 +4,24 @@ export class TodoService {
   private baseUrl = '/api/todos';
 
   getTodoList(): Promise<Todo[]> {
-    return fetch(this.baseUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to get todo list');
-        }
-        return response.json();
-      });
+    return fetch(this.baseUrl).then((response) => {
+      if (!response.ok) {
+        throw new Error('Failed to get todo list');
+      }
+      return response.json();
+    });
   }
 
   getTodo(id: number): Promise<Todo | undefined> {
-    return fetch(`${this.baseUrl}/${id}`)
-      .then((response) => {
-        if (response.status === 404) {
-          return undefined;
-        }
-        if (!response.ok) {
-          throw new Error(`Failed to get todo with id ${id}`);
-        }
-        return response.json();
-      });
+    return fetch(`${this.baseUrl}/${id}`).then((response) => {
+      if (response.status === 404) {
+        return undefined;
+      }
+      if (!response.ok) {
+        throw new Error(`Failed to get todo with id ${id}`);
+      }
+      return response.json();
+    });
   }
 
   addTodo(todo: Todo): Promise<Todo> {

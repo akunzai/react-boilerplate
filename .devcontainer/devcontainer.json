@@ -1,34 +1,32 @@
 // https://aka.ms/devcontainer.json
 {
-	"name": "Bun",
-	// https://bun.com/docs/guides/ecosystem/docker
-	"image": "oven/bun:latest",
-	"workspaceFolder": "/workspace",
-	// https://code.visualstudio.com/remote/advancedcontainers/improve-performance
-	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-	"mounts": [
-		"source=${localWorkspaceFolderBasename}-node_modules,target=/workspace/node_modules,type=volume"
-	],
-	"postCreateCommand": "bun install",
-	"forwardPorts": [
-		5173
-	],
-	"portsAttributes": {
-		"5173": {
-			"label": "vite"
-		}
-	},
-	"otherPortsAttributes": {
-		"onAutoForward": "ignore"
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-				"mhutchie.git-graph",
-				"pflannery.vscode-versionlens",
-				"streetsidesoftware.code-spell-checker"
-			]
-		}
-	}
+  "name": "Bun",
+  // https://bun.com/docs/guides/ecosystem/docker
+  "image": "oven/bun:latest",
+  "workspaceFolder": "/workspace",
+  // https://code.visualstudio.com/remote/advancedcontainers/improve-performance
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=/workspace/node_modules,type=volume"
+  ],
+  "postCreateCommand": "bun install",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "vite"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "ignore"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "mhutchie.git-graph",
+        "pflannery.vscode-versionlens",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  }
 }

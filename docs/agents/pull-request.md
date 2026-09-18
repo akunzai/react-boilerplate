@@ -23,14 +23,14 @@ characters — they live in history and get searched by tooling.
    not write it would need it.
 2. A visual the forge renders inline, chosen by what changed:
 
-   | Change | Visual |
-   | --- | --- |
-   | Flow or state transition | Mermaid `flowchart` / `stateDiagram` |
-   | Cross-service or API interaction | Mermaid `sequenceDiagram` |
-   | Data model | Mermaid `erDiagram` |
-   | Appearance | Before/after screenshots |
-   | Multi-step interaction | Short recording |
-   | Backend or library only | None; test output instead |
+   | Change                           | Visual                               |
+   | -------------------------------- | ------------------------------------ |
+   | Flow or state transition         | Mermaid `flowchart` / `stateDiagram` |
+   | Cross-service or API interaction | Mermaid `sequenceDiagram`            |
+   | Data model                       | Mermaid `erDiagram`                  |
+   | Appearance                       | Before/after screenshots             |
+   | Multi-step interaction           | Short recording                      |
+   | Backend or library only          | None; test output instead            |
 
    Pair before and after. At most one diagram unless it is such a pair.
 
@@ -44,6 +44,7 @@ characters — they live in history and get searched by tooling.
    references as `![alt](./after.png)` is rewritten to point at the
    uploaded asset. Only when capture is genuinely impossible, leave a
    named placeholder comment.
+
 3. A collapsed technical trailer holding implementation notes, verification,
    and lessons learned. Skip affected paths — the forge's own diff view
    already shows those.

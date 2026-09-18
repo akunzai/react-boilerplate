@@ -3,8 +3,8 @@ name: Update MSW Worker
 on:
   pull_request_target:
     paths:
-      - "package.json"
-      - "bun.lock"
+      - 'package.json'
+      - 'bun.lock'
   workflow_dispatch:
 
 permissions:
