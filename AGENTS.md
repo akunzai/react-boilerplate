@@ -7,34 +7,23 @@ This project uses Bun (not npm/pnpm/yarn).
 ## Commands
 
 ```sh
-bun install                  # install dependencies
-bun start                    # dev server at http://localhost:5173/
-bun run build                # typecheck (tsc) + production build
-bun run lint                 # ESLint
-bun run test                 # Vitest (watch mode)
-bun run test:coverage        # Vitest with coverage
-bun run test ComponentName   # run a single test file
-bun run i18n:extract         # extract i18n messages
+bun start                    # dev server at http://localhost:5173/ (use -- --no-open in headless/agent environments)
+bun run test <ComponentName> # run a single test file (e.g. bun run test Counter)
+bun run i18n:extract         # extract i18n translation keys
 ```
+
+Verification, build, lint, and coverage commands are defined in `docs/agents/verification.md`.
 
 ## Pointers
 
 - Coding style and component conventions: `docs/agents/coding-style.md`
-- CI workflow: `.github/workflows/build.yml`
-- Vite + Vitest config: `vite.config.ts`
-- ESLint config: `eslint.config.js`
-- TypeScript config: `tsconfig.json`
-- i18n locale files: `src/i18n/locales/`
-- MSW mock handlers: `src/mocks/handlers.ts`
+- When filing or triaging an issue, read `docs/agents/issue-tracker.md`
+- When opening a pull request, read `docs/agents/pull-request.md`
+- Before running or reporting verification, read `docs/agents/verification.md`
 - Gold-standard component test: `src/components/Counter.test.tsx`
-
-## Editing Guidelines
-
-- Prefer editing existing files over creating new ones
-- Delete unused code completely (no commented-out leftovers)
-- Only add comments where logic is not self-evident
-- Commit messages: concise, English, focus on "why" over "what"
-- Don't add dependencies without justification; check `package.json` first
+- MSW mock handlers: `src/mocks/handlers.ts`
+- i18n locale files: `src/i18n/locales/`
+- CI workflow: `.github/workflows/build.yml`
 
 ## Claude Code Compatibility
 
