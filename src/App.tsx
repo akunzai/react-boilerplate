@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route, Router, Switch } from 'wouter';
-import { Counter, Home, Layout, TodoDetail, TodoList } from './components';
+import { Counter, Home, Layout, Login, Settings, TodoDetail, TodoList } from './components';
 
 export default function App(): React.ReactElement {
   const baseUrl = document
@@ -20,6 +20,12 @@ export default function App(): React.ReactElement {
           </Route>
           <Route path='/todo-list'>
             <TodoList />
+          </Route>
+          <Route path='/settings'>
+            <Settings />
+          </Route>
+          <Route path='/login'>
+            <Login />
           </Route>
           <Route path='/todo/:id'>
             {(params) => <TodoDetail id={Number(params.id)} />}
