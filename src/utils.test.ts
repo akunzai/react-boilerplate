@@ -33,6 +33,8 @@ describe('flattenCategories', () => {
 
 describe('getBaseUrl', () => {
   test('returns stripped base href or empty', () => {
+    expect(getBaseUrl()).toBe('');
+
     const base = document.createElement('base');
     base.setAttribute('href', '/react-showcase/');
     document.head.appendChild(base);
@@ -43,5 +45,15 @@ describe('getBaseUrl', () => {
     expect(getBaseUrl()).toBe('');
 
     document.head.removeChild(base);
+  });
+
+  test('handles undefined document environment', () => {
+    const originalDocument = globalThis.document;
+    // @ts-expect-error testing SSR environment
+    delete globalThis.document;
+
+    expect(getBaseUrl()).toBe('');
+
+    globalThis.document = originalDocument;
   });
 });
