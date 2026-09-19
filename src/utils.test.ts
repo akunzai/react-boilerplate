@@ -34,10 +34,10 @@ describe('flattenCategories', () => {
 describe('getBaseUrl', () => {
   test('returns stripped base href or empty', () => {
     const base = document.createElement('base');
-    base.setAttribute('href', '/react-boilerplate/');
+    base.setAttribute('href', '/react-showcase/');
     document.head.appendChild(base);
 
-    expect(getBaseUrl()).toBe('/react-boilerplate');
+    expect(getBaseUrl()).toBe('/react-showcase');
 
     base.setAttribute('href', '/');
     expect(getBaseUrl()).toBe('');

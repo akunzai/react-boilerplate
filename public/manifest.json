@@ -1,6 +1,6 @@
 {
-  "short_name": "react-boilerplate",
-  "name": "My React boilerplate",
+  "short_name": "react-showcase",
+  "name": "React Showcase",
   "icons": [
     {
       "src": "favicon.ico",
