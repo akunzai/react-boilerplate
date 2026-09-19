@@ -53,7 +53,7 @@ paths as readily as a shared environment does. Assert on the frame, a
 marker, or fixture data, and crop or mask what the tool happened to be
 showing.
 
-The app uses i18next with locale files in `src/i18n/locales/`.
+The app uses i18next with locale files in `src/locales/`.
 UI locale: **`en`**. The app picks it from the browser's
 language detection via `i18next-browser-languagedetector`; browser
 automation defaults to `en-US`, which matches.

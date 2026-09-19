@@ -32,10 +32,7 @@ export function Home(): React.JSX.Element {
 
   return (
     <div>
-      <h1>{t('Welcome!')}</h1>
-      <p className="text-muted">
-        You are running this application in <b>{import.meta.env.MODE}</b> mode.
-      </p>
+      <h1 className="mb-3">{t('Welcome!')}</h1>
       {showTip && (
         <div className="alert alert-info alert-dismissible d-flex gap-2" role="alert">
           <i className="bi bi-info-circle"></i>

@@ -1,15 +1,19 @@
 import { Form, Formik } from 'formik';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'wouter';
-import { UserService } from '../api';
+import { useLocation, useSearch } from 'wouter';
+import { useAuth } from './shared';
 
 export function Login(): React.JSX.Element {
   const { t } = useTranslation();
-  const userService = useMemo(() => new UserService(), []);
+  const { login } = useAuth();
   const [, navigate] = useLocation();
+  const search = useSearch();
   const [failed, setFailed] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+
+  const searchParams = new URLSearchParams(search);
+  const from = searchParams.get('from') || '/';
 
   return (
     <div className="d-flex justify-content-center py-5">
@@ -33,9 +37,9 @@ export function Login(): React.JSX.Element {
               return errors;
             }}
             onSubmit={async (values) => {
-              const user = await userService.login(values.email, values.password);
+              const user = await login(values.email, values.password);
               if (user) {
-                navigate('/');
+                navigate(from);
               } else {
                 setFailed(true);
               }
@@ -115,6 +119,24 @@ export function Login(): React.JSX.Element {
                     ></span>
                   )}
                   {t('Sign in')}
+                </button>
+                <div className="d-flex align-items-center my-1">
+                  <hr className="flex-grow-1" />
+                  <span className="px-2 text-muted small">{t('or')}</span>
+                  <hr className="flex-grow-1" />
+                </div>
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary w-100"
+                  onClick={async () => {
+                    const user = await login('ada@example.com', 'password');
+                    if (user) {
+                      navigate(from);
+                    }
+                  }}
+                >
+                  <i className="bi bi-box-arrow-in-right me-1"></i>
+                  {t('Quick Demo Sign In')}
                 </button>
               </Form>
             )}

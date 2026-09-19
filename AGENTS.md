@@ -8,7 +8,7 @@ This project uses Bun (not npm/pnpm/yarn).
 
 ```sh
 bun start                    # dev server at http://localhost:5173/ (use -- --no-open in headless/agent environments)
-bun run test <ComponentName> # run a single test file (e.g. bun run test Counter)
+bun run test <ComponentName> # run a single test file (e.g. bun run test TodoList)
 bun run i18n:extract         # extract i18n translation keys
 ```
 
@@ -20,9 +20,9 @@ Verification, build, lint, and coverage commands are defined in `docs/agents/ver
 - When filing or triaging an issue, read `docs/agents/issue-tracker.md`
 - When opening a pull request, read `docs/agents/pull-request.md`
 - Before running or reporting verification, read `docs/agents/verification.md`
-- Gold-standard component test: `src/components/Counter.test.tsx`
+- Gold-standard component test: `src/components/TodoList.test.tsx`
 - MSW mock handlers: `src/mocks/handlers.ts`
-- i18n locale files: `src/i18n/locales/`
+- i18n locale files: `src/locales/`
 - CI workflow: `.github/workflows/build.yml`
 
 ## Claude Code Compatibility

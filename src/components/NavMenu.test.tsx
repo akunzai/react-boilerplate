@@ -6,12 +6,15 @@ import { memoryLocation } from 'wouter/memory-location';
 import '../i18nForTests';
 import { server } from '../mocks/server';
 import { NavMenu } from './NavMenu';
+import { AuthProvider } from './shared';
 
 const setup = () => {
   const location = memoryLocation({ path: '/', record: true });
   render(
     <Router hook={location.hook}>
-      <NavMenu title="Test" />
+      <AuthProvider>
+        <NavMenu title="Test" />
+      </AuthProvider>
     </Router>,
   );
   return location;
@@ -24,7 +27,8 @@ test('should render with title: Test', async () => {
 
 test('should highlight the active link', async () => {
   setup();
-  expect(screen.getByRole('link', { name: 'Home' }).getAttribute('class')).toContain('active');
+  const homeLink = await screen.findByRole('link', { name: 'Home' });
+  expect(homeLink.getAttribute('class')).toContain('active');
   expect(screen.getByRole('link', { name: 'Todo' }).getAttribute('class')).not.toContain('active');
 });
 
@@ -55,8 +59,11 @@ test('should show the account menu and sign out', async () => {
   expect(await screen.findByRole('link', { name: 'Sign in' })).toBeInTheDocument();
 });
 
-test('should show sign in when there is no current user', async () => {
+test('should show sign in and hide protected links when there is no current user', async () => {
   server.use(http.get('/api/me', () => new HttpResponse(null, { status: 401 })));
   setup();
   expect(await screen.findByRole('link', { name: 'Sign in' })).toBeInTheDocument();
+  expect(screen.queryByRole('link', { name: 'Home' })).not.toBeInTheDocument();
+  expect(screen.queryByRole('link', { name: 'Todo' })).not.toBeInTheDocument();
+  expect(screen.queryByRole('link', { name: 'Settings' })).not.toBeInTheDocument();
 });

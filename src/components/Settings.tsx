@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { UserService } from '../api';
-import { ConfirmModal, useToast } from './shared';
+import { ConfirmModal, useAuth, useToast } from './shared';
 
 type View = 'list' | 'compact';
 
@@ -9,6 +9,7 @@ export function Settings(): React.JSX.Element {
   const { t, i18n } = useTranslation();
   const userService = useMemo(() => new UserService(), []);
   const toast = useToast();
+  const { setUser } = useAuth();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [emailNotifications, setEmailNotifications] = useState(true);
@@ -32,6 +33,7 @@ export function Settings(): React.JSX.Element {
   const saveProfile = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await userService.updateMe({ name, email });
+    setUser({ name, email });
     toast(t('Profile saved'));
   };
 
