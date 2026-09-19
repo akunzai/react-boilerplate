@@ -118,6 +118,9 @@ export function TodoList(): React.JSX.Element {
     }
     setTodos(newTodos);
     setTitle('');
+    // Show the new item: drop filters that could hide it and jump to its page.
+    clearFilters();
+    setPage(Math.ceil(newTodos.length / PAGE_SIZE));
   };
 
   return (
