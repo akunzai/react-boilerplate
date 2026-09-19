@@ -21,6 +21,7 @@ export default defineConfig({
       },
     },
     setupFiles: ['./src/setupStoragePolyfill.ts', './src/setupTests.ts'],
+    include: ['src/**/*.{test,spec}.{ts,tsx}'],
     env: {
       NODE_NO_WARNINGS: '1',
     },

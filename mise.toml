@@ -21,6 +21,10 @@ run = "bun run format:check"
 description = "Run tests with coverage"
 run = "bun run test:coverage"
 
+[tasks."test:e2e"]
+description = "Run Playwright E2E tests"
+run = "bun run test:e2e"
+
 [tasks.dev]
 description = "Start development server"
 run = "bun run start -- --no-open"
