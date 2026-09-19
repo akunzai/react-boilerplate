@@ -1,14 +1,16 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { HttpResponse, http } from 'msw';
 import { expect, test } from 'vitest';
 import { Router } from 'wouter';
 import { memoryLocation } from 'wouter/memory-location';
 import '../i18nForTests';
-import { server } from '../mocks/server';
+import { setAuth } from '../mocks/handlers';
 import { NavMenu } from './NavMenu';
 import { AuthProvider } from './shared';
 
-const setup = () => {
+const setup = (authenticated = true) => {
+  if (authenticated) {
+    setAuth();
+  }
   const location = memoryLocation({ path: '/', record: true });
   render(
     <Router hook={location.hook}>
@@ -60,8 +62,7 @@ test('should show the account menu and sign out', async () => {
 });
 
 test('should show sign in and hide protected links when there is no current user', async () => {
-  server.use(http.get('/api/me', () => new HttpResponse(null, { status: 401 })));
-  setup();
+  setup(false);
   expect(await screen.findByRole('link', { name: 'Sign in' })).toBeInTheDocument();
   expect(screen.queryByRole('link', { name: 'Home' })).not.toBeInTheDocument();
   expect(screen.queryByRole('link', { name: 'Todo' })).not.toBeInTheDocument();

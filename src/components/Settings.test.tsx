@@ -1,12 +1,17 @@
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { HttpResponse, http } from 'msw';
-import { expect, test } from 'vitest';
+import { beforeEach, expect, test } from 'vitest';
 import '../i18nForTests';
+import { setAuth } from '../mocks/handlers';
 import { server } from '../mocks/server';
 import { User } from '../types';
 import { Settings } from './Settings';
 import { ToastProvider } from './shared';
+
+beforeEach(() => {
+  setAuth();
+});
 
 const setup = () =>
   render(

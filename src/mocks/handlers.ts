@@ -47,11 +47,15 @@ const db: Todo[] = [
   ),
 ];
 
-const defaultUser: User = { name: 'Ada Lovelace', email: 'ada@example.com' };
-let currentUser: User | null = { ...defaultUser };
+export const defaultUser: User = { name: 'Ada Lovelace', email: 'ada@example.com' };
+let currentUser: User | null = null;
 
 export function resetAuth(): void {
-  currentUser = { ...defaultUser };
+  currentUser = null;
+}
+
+export function setAuth(user: User | null = defaultUser): void {
+  currentUser = user ? { ...user } : null;
 }
 
 export const handlers = [
