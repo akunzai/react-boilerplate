@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: bun install
       - name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Build
         env:
           GITHUB_PAGES: 'true'
@@ -39,9 +39,9 @@ jobs:
           mise run build
           cp dist/index.html dist/404.html
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
