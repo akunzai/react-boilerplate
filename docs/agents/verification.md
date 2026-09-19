@@ -31,6 +31,7 @@ test:coverage` prints a coverage table to stdout.
 | Oxlint                      | `bun run lint`               |
 | Oxfmt check                 | `bun run format:check`       |
 | Vitest with coverage        | `bun run test:coverage`      |
+| Playwright E2E tests        | `bun run test:e2e`           |
 | Single test file            | `bun run test ComponentName` |
 | Dev server (headless/agent) | `bun run start -- --no-open` |
 
