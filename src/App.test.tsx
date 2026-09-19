@@ -1,10 +1,9 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { HttpResponse, http } from 'msw';
 import { expect, test } from 'vitest';
 import App from './App';
 import './i18nForTests';
-import { server } from './mocks/server';
+import { setAuth } from './mocks/handlers';
 
 test('renders without crashing', async () => {
   document.title = 'React Showcase';
@@ -13,6 +12,7 @@ test('renders without crashing', async () => {
 });
 
 test('should synchronize auth state across navmenu when signing out and logging back in', async () => {
+  setAuth();
   render(<App />);
   const accountBtn = await screen.findByRole('button', { name: 'Account' });
   expect(accountBtn).toBeInTheDocument();
@@ -30,7 +30,6 @@ test('should synchronize auth state across navmenu when signing out and logging 
 });
 
 test('should guard protected route and support quick demo login', async () => {
-  server.use(http.get('/api/me', () => new HttpResponse(null, { status: 401 })));
   render(<App />);
 
   const quickDemoBtn = await screen.findByRole('button', { name: /Quick Demo Sign In/i });
