@@ -55,20 +55,20 @@ export function resetAuth(): void {
 }
 
 export const handlers = [
-  http.get('/api/me', () => {
+  http.get('*/api/me', () => {
     if (!currentUser) {
       return new HttpResponse(null, { status: 401 });
     }
     return HttpResponse.json(currentUser);
   }),
-  http.put('/api/me', async ({ request }) => {
+  http.put('*/api/me', async ({ request }) => {
     if (!currentUser) {
       return new HttpResponse(null, { status: 401 });
     }
     Object.assign(currentUser, (await request.json()) as User);
     return HttpResponse.json(currentUser);
   }),
-  http.post('/api/login', async ({ request }) => {
+  http.post('*/api/login', async ({ request }) => {
     const { email, password } = (await request.json()) as {
       email: string;
       password: string;
@@ -80,14 +80,14 @@ export const handlers = [
     }
     return new HttpResponse(null, { status: 401 });
   }),
-  http.post('/api/logout', () => {
+  http.post('*/api/logout', () => {
     currentUser = null;
     return new HttpResponse(null, { status: 200 });
   }),
-  http.get('/api/todos', () => {
+  http.get('*/api/todos', () => {
     return HttpResponse.json(db);
   }),
-  http.get('/api/todos/:id', ({ params }) => {
+  http.get('*/api/todos/:id', ({ params }) => {
     const { id } = params;
     const todo = db.find((x) => x.id === Number(id));
     if (todo === undefined) {
@@ -95,7 +95,7 @@ export const handlers = [
     }
     return HttpResponse.json(todo);
   }),
-  http.post('/api/todos', async ({ request }) => {
+  http.post('*/api/todos', async ({ request }) => {
     const todo = (await request.json()) as Todo;
     if (!todo.id) {
       todo.id = db.length > 0 ? Math.max(...db.map((x) => x.id)) + 1 : 1;
@@ -103,7 +103,7 @@ export const handlers = [
     db.push(todo);
     return HttpResponse.json(todo);
   }),
-  http.delete('/api/todos/:id', ({ params }) => {
+  http.delete('*/api/todos/:id', ({ params }) => {
     const { id } = params;
     const index = db.findIndex((x) => x.id === Number(id));
     if (index === -1) {
@@ -111,7 +111,7 @@ export const handlers = [
     }
     return HttpResponse.json(db.splice(index, 1)[0]);
   }),
-  http.put('/api/todos/:id', async ({ params, request }) => {
+  http.put('*/api/todos/:id', async ({ params, request }) => {
     const { id } = params;
     const index = db.findIndex((x) => x.id === Number(id));
     if (index === -1) {

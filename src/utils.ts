@@ -27,3 +27,9 @@ export function flattenCategories(
     ...flattenCategories(node.children ?? [], depth + 1),
   ]);
 }
+
+export function getBaseUrl(): string {
+  if (typeof document === 'undefined') return '';
+  const base = document.getElementsByTagName('base')[0]?.getAttribute('href') || '/';
+  return base.replace(/[/]$/, '');
+}

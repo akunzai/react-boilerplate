@@ -1,7 +1,10 @@
 import { Todo } from '../types';
+import { getBaseUrl } from '../utils';
 
 export class TodoService {
-  private baseUrl = '/api/todos';
+  private get baseUrl(): string {
+    return `${getBaseUrl()}/api/todos`;
+  }
 
   getTodoList(): Promise<Todo[]> {
     return fetch(this.baseUrl).then((response) => {
