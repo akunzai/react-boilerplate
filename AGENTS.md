@@ -1,6 +1,6 @@
-# React Boilerplate Developer Guidelines
+# React Showcase Developer Guidelines
 
-React TypeScript boilerplate with CSS + Bootstrap, built with Bun and Vite.
+Modern React showcase app with CSS + Bootstrap, built with Bun and Vite.
 
 This project uses Bun (not npm/pnpm/yarn).
 

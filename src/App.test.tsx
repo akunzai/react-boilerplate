@@ -7,9 +7,9 @@ import './i18nForTests';
 import { server } from './mocks/server';
 
 test('renders without crashing', async () => {
-  document.title = 'React Boilerplate';
+  document.title = 'React Showcase';
   render(<App />);
-  expect(screen.getByText('React Boilerplate')).toBeInTheDocument();
+  expect(screen.getByText('React Showcase')).toBeInTheDocument();
 });
 
 test('should synchronize auth state across navmenu when signing out and logging back in', async () => {

@@ -6,7 +6,7 @@ agent needs.
 
 ## Starting the environment
 
-This is a front-end library/boilerplate with no server stack to start.
+This is a front-end showcase application with no server stack to start.
 The gate command runs without a listening process:
 
 ```sh

@@ -1,7 +1,7 @@
 # Coding Style Guide
 
 This document covers project-specific coding conventions for the
-react-boilerplate repository. Generic TypeScript and React best practices
+react-showcase repository. Generic TypeScript and React best practices
 (type safety, const over var, clean functions) are assumed; only
 project-specific rules and patterns are recorded here.
 

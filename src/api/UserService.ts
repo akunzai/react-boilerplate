@@ -1,8 +1,13 @@
 import { User } from '../types';
+import { getBaseUrl } from '../utils';
 
 export class UserService {
+  private get baseUrl(): string {
+    return getBaseUrl();
+  }
+
   getMe(): Promise<User> {
-    return fetch('/api/me').then((response) => {
+    return fetch(`${this.baseUrl}/api/me`).then((response) => {
       if (!response.ok) {
         throw new Error('Failed to get current user');
       }
@@ -11,7 +16,7 @@ export class UserService {
   }
 
   updateMe(user: User): Promise<User> {
-    return fetch('/api/me', {
+    return fetch(`${this.baseUrl}/api/me`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user),
@@ -24,7 +29,7 @@ export class UserService {
   }
 
   login(email: string, password: string): Promise<User | undefined> {
-    return fetch('/api/login', {
+    return fetch(`${this.baseUrl}/api/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -40,7 +45,7 @@ export class UserService {
   }
 
   logout(): Promise<void> {
-    return fetch('/api/logout', {
+    return fetch(`${this.baseUrl}/api/logout`, {
       method: 'POST',
     }).then((response) => {
       if (!response.ok) {
