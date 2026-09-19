@@ -38,4 +38,14 @@ export class UserService {
       return response.json();
     });
   }
+
+  logout(): Promise<void> {
+    return fetch('/api/logout', {
+      method: 'POST',
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error('Failed to logout');
+      }
+    });
+  }
 }

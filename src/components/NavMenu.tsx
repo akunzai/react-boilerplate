@@ -1,9 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useOutsideClickRef } from 'rooks';
 import { Link, useLocation } from 'wouter';
-import { UserService } from '../api';
-import { User } from '../types';
+import { useAuth } from './shared';
 
 type Props = {
   title: string;
@@ -22,23 +21,15 @@ export function NavMenu({ title }: Props): React.JSX.Element {
   const [collapsed, setCollapsed] = useState(true);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
-  const [user, setUser] = useState<User>();
+  const { user, logout } = useAuth();
   const [location, navigate] = useLocation();
   const { t, i18n } = useTranslation();
-  const userService = useMemo(() => new UserService(), []);
   const [languageRef] = useOutsideClickRef(() => {
     setLanguageOpen(false);
   }, languageOpen);
   const [accountRef] = useOutsideClickRef(() => {
     setAccountOpen(false);
   }, accountOpen);
-
-  useEffect(() => {
-    userService
-      .getMe()
-      .then(setUser)
-      .catch(() => setUser(undefined));
-  }, [userService]);
 
   const isCurrentLanguage = (pattern: RegExp): boolean => {
     return pattern.test(i18n.languages[0]);
@@ -75,27 +66,26 @@ export function NavMenu({ title }: Props): React.JSX.Element {
             role="menu"
           >
             <ul className="navbar-nav flex-grow align-items-sm-center gap-sm-1">
-              <li className="nav-item">
-                <Link href="/" className={navClass('/')}>
-                  {t('Home')}
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/counter" className={navClass('/counter')}>
-                  {t('Counter')}
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/todo-list" className={navClass('/todo-list')}>
-                  {t('Todo')}
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/settings" className={navClass('/settings')}>
-                  {t('Settings')}
-                </Link>
-              </li>
-              <li className="nav-item dropdown">
+              {user && (
+                <>
+                  <li className="nav-item">
+                    <Link href="/" className={navClass('/')}>
+                      {t('Home')}
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link href="/todo-list" className={navClass('/todo-list')}>
+                      {t('Todo')}
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link href="/settings" className={navClass('/settings')}>
+                      {t('Settings')}
+                    </Link>
+                  </li>
+                </>
+              )}
+              <li className="nav-item dropdown ms-sm-auto">
                 <button
                   className={`btn dropdown-toggle ${languageOpen ? 'show' : ''}`}
                   id="i18nDropdown"
@@ -172,7 +162,7 @@ export function NavMenu({ title }: Props): React.JSX.Element {
                         className="dropdown-item text-danger"
                         onClick={() => {
                           setAccountOpen(false);
-                          setUser(undefined);
+                          logout();
                           navigate('/login');
                         }}
                       >

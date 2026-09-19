@@ -47,23 +47,42 @@ const db: Todo[] = [
   ),
 ];
 
-const me: User = { name: 'Ada Lovelace', email: 'ada@example.com' };
+const defaultUser: User = { name: 'Ada Lovelace', email: 'ada@example.com' };
+let currentUser: User | null = { ...defaultUser };
+
+export function resetAuth(): void {
+  currentUser = { ...defaultUser };
+}
 
 export const handlers = [
-  http.get('/api/me', () => HttpResponse.json(me)),
+  http.get('/api/me', () => {
+    if (!currentUser) {
+      return new HttpResponse(null, { status: 401 });
+    }
+    return HttpResponse.json(currentUser);
+  }),
   http.put('/api/me', async ({ request }) => {
-    Object.assign(me, (await request.json()) as User);
-    return HttpResponse.json(me);
+    if (!currentUser) {
+      return new HttpResponse(null, { status: 401 });
+    }
+    Object.assign(currentUser, (await request.json()) as User);
+    return HttpResponse.json(currentUser);
   }),
   http.post('/api/login', async ({ request }) => {
     const { email, password } = (await request.json()) as {
       email: string;
       password: string;
     };
-    if (email === me.email && password === 'password') {
-      return HttpResponse.json(me);
+    const validEmail = currentUser?.email ?? defaultUser.email;
+    if (email === validEmail && password === 'password') {
+      currentUser = { ...defaultUser, email: validEmail };
+      return HttpResponse.json(currentUser);
     }
     return new HttpResponse(null, { status: 401 });
+  }),
+  http.post('/api/logout', () => {
+    currentUser = null;
+    return new HttpResponse(null, { status: 200 });
   }),
   http.get('/api/todos', () => {
     return HttpResponse.json(db);

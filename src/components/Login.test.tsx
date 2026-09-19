@@ -5,12 +5,15 @@ import { Router } from 'wouter';
 import { memoryLocation } from 'wouter/memory-location';
 import '../i18nForTests';
 import { Login } from './Login';
+import { AuthProvider } from './shared';
 
 const setup = () => {
   const location = memoryLocation({ path: '/login', record: true });
   render(
     <Router hook={location.hook}>
-      <Login />
+      <AuthProvider>
+        <Login />
+      </AuthProvider>
     </Router>,
   );
   return location;
@@ -47,4 +50,17 @@ test('should sign in and redirect home', async () => {
   expect(screen.getByLabelText('Password')).toHaveAttribute('type', 'text');
   fireEvent.click(screen.getByRole('button', { name: 'Sign in' }));
   await waitFor(() => expect(location.history.at(-1)).toBe('/'));
+});
+
+test('should sign in with quick demo button and redirect to return url', async () => {
+  const location = memoryLocation({ path: '/login?from=%2Fsettings', record: true });
+  render(
+    <Router hook={location.hook}>
+      <AuthProvider>
+        <Login />
+      </AuthProvider>
+    </Router>,
+  );
+  fireEvent.click(screen.getByRole('button', { name: /Quick Demo Sign In/i }));
+  await waitFor(() => expect(location.history.at(-1)).toBe('/settings'));
 });

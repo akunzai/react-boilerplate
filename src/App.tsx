@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect, Route, Router, Switch } from 'wouter';
-import { Counter, Home, Layout, Login, Settings, TodoDetail, TodoList } from './components';
+import { Home, Layout, Login, Settings, TodoDetail, TodoList } from './components';
+import { ProtectedRoute } from './components/shared';
 
 export default function App(): React.ReactElement {
   const baseUrl = document
@@ -12,22 +13,31 @@ export default function App(): React.ReactElement {
     <Router base={baseUrl || ''}>
       <Layout>
         <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-          <Route path="/counter">
-            <Counter />
-          </Route>
-          <Route path="/todo-list">
-            <TodoList />
-          </Route>
-          <Route path="/settings">
-            <Settings />
-          </Route>
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/todo/:id">{(params) => <TodoDetail id={Number(params.id)} />}</Route>
+          <Route path="/">
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          </Route>
+          <Route path="/todo-list">
+            <ProtectedRoute>
+              <TodoList />
+            </ProtectedRoute>
+          </Route>
+          <Route path="/settings">
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          </Route>
+          <Route path="/todo/:id">
+            {(params) => (
+              <ProtectedRoute>
+                <TodoDetail id={Number(params.id)} />
+              </ProtectedRoute>
+            )}
+          </Route>
           <Route>
             <Redirect to="/" />
           </Route>
