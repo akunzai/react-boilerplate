@@ -25,10 +25,6 @@ Verification, build, lint, and coverage commands are defined in `docs/agents/ver
 - i18n locale files: `src/locales/`
 - CI workflow: `.github/workflows/build.yml`
 
-## Claude Code Compatibility
-
-`CLAUDE.md` is a symbolic link pointing to `AGENTS.md`. Edit `AGENTS.md` directly.
-
 ## Prevent Recurrence
 
 - **Candidate**: Name who hits this again, in which file, on what change. No such scenario, nothing to propose.
