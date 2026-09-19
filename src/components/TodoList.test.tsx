@@ -160,7 +160,17 @@ test('should add item and clears the input', async () => {
   await userEvent.type(input, 'Test');
   fireEvent.click(screen.getByRole('button', { name: /Add/i }));
   await waitFor(() => expect(input.value).toBe(''));
-  fireEvent.click(screen.getByRole('button', { name: '2' }));
+  expect(screen.getByRole('button', { name: '2' }).getAttribute('aria-current')).toBe('page');
   const link = screen.getByRole('link', { name: /Test/i });
   expect(link.getAttribute('href')).toBe('/todo/8');
+});
+
+test('should reveal the new item even when a filter would hide it', async () => {
+  setup();
+  await screen.findByText('Pay bills');
+  await userEvent.type(screen.getByRole('searchbox', { name: 'Search' }), 'Pay bills');
+  expect(todoLinks().length).toBe(1);
+  await userEvent.type(screen.getByRole('textbox', { name: 'New todo' }), 'Reveal me');
+  fireEvent.click(screen.getByRole('button', { name: /Add/i }));
+  expect(await screen.findByRole('link', { name: /Reveal me/i })).toBeInTheDocument();
 });
